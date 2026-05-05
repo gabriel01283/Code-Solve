@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**CodeVerse**
+Explore o universo da programação de forma moderna, dinâmica e organizada.
+O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúdos sobre programação, tecnologia e inovação. O projeto utiliza tecnologias modernas como Next.js para oferecer uma experiência rápida, responsiva e escalável.
 
-## Getting Started
+**Preview**
+ 
 
-First, run the development server:
+**Funcionalidades**
+Busca de conteúdos sobre programação
+Oganização por linguagens e tecnologias
+Conteúdos sobre Inteligência Artificial
+Seção dedicada a frameworks e ferramentas
+Sistema de comentários (em desenvolvimento)
+Operações CRUD (em desenvolvimento)
+Interface moderna e responsiva
+Tecnologias utilizadas
+React
+▲ Next.js
+ Backend & Banco de Dados (em desenvolvimento)
 
-```bash
+ 
+**O projeto está em evolução e em breve contará com:**
+Autenticação de usuários
+Banco de dados integrado
+API para conteúdos dinâmicos
+Sistema de gerenciamento de conteúdos
+
+**Como executar o projeto**
+Clone o repositório:
+git clone https://github.com/seu-usuario/codeverse.git
+Acesse a pasta:
+cd codeverse
+Instale as dependências:
+npm install
+Execute o projeto:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Abra no navegador:
+http://localhost:3000
+**Objetivo**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Melhorias futuras
+* Integração com banco de dados
+* Sistema de favoritos
+* Dashboard do usuário
+* Recomendações com IA
+**Autores**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por Gabriel Saraiva e Maria Clara 
