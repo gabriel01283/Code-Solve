@@ -6,17 +6,17 @@ O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúd
  
 
 **Funcionalidades**
-Busca de conteúdos sobre programação
-Oganização por linguagens e tecnologias
-Conteúdos sobre Inteligência Artificial
-Seção dedicada a frameworks e ferramentas
-Sistema de comentários (em desenvolvimento)
-Operações CRUD (em desenvolvimento)
-Interface moderna e responsiva
-Tecnologias utilizadas
-React
-▲ Next.js
- Backend & Banco de Dados (em desenvolvimento)
+*Busca de conteúdos sobre programação
+*Oganização por linguagens e tecnologias
+*Conteúdos sobre Inteligência Artificial
+*Seção dedicada a frameworks e ferramentas
+*Sistema de comentários (em desenvolvimento)
+*Operações CRUD (em desenvolvimento)
+*Interface moderna e responsiva
+*Tecnologias utilizadas
+*React
+*▲ Next.js
+*Backend & Banco de Dados (em desenvolvimento)
 
  
 **O projeto está em evolução e em breve contará com:**
@@ -45,6 +45,8 @@ O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem prog
 * Sistema de favoritos
 * Dashboard do usuário
 * Recomendações com IA
+
+  
 **Autores**
 
 Desenvolvido por Gabriel Saraiva e Maria Clara 
