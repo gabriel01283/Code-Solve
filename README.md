@@ -6,6 +6,8 @@ O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúd
  
 
 **Funcionalidades**
+
+
 *Busca de conteúdos sobre programação
 *Oganização por linguagens e tecnologias
 *Conteúdos sobre Inteligência Artificial
