@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
 
   const apiKey = process.env.GOOGLE_API_KEY;
   const cx = process.env.GOOGLE_CX;
-
+  
   try {
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query + ' programação')}&num=8`;
     const res = await fetch(url);
