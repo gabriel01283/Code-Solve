@@ -1,34 +1,53 @@
-**CodeVerse**
+# CodeVerse
 
 Explore o universo da programação de forma moderna, dinâmica e organizada.
-
 O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúdos sobre programação, tecnologia e inovação. O projeto utiliza tecnologias modernas como Next.js para oferecer uma experiência rápida, responsiva e escalável.
 
-**Preview**
+---
 
-(adicione aqui sua imagem ou GIF do projeto)
+## Pré-visualização
+<img width="757" height="807" alt="image" src="https://github.com/user-attachments/assets/11119184-7d02-4927-8bc9-7243e793f11b" />
 
-**Funcionalidades**
-Busca de conteúdos sobre programação
-Organização por linguagens e tecnologias
-Conteúdos sobre Inteligência Artificial
-Seção dedicada a frameworks e ferramentas
-Sistema de comentários (em desenvolvimento)
-Operações CRUD (em desenvolvimento)
-Interface moderna e responsiva
-Tecnologias utilizadas
-React
-Next.js
-Backend & Banco de Dados (em desenvolvimento)
-O projeto está em evolução e em breve contará com:
-Autenticação de usuários
-Banco de dados integrado
-API para conteúdos dinâmicos
-Sistema de gerenciamento de conteúdos
-**Como executar o projeto**
-Clone o repositório:
+(https://www.figma.com/site/U19QzQR2DuQEVOSovuvfyH/programa%C3%A7%C3%A3o-web?node-id=0-1&p=f&t=iTHuUKBLZgwUUmxe-0)
+
+---
+
+## Funcionalidades
+
+- Busca de conteúdos sobre programação  
+- Organização por linguagens e tecnologias  
+- Conteúdos sobre Inteligência Artificial  
+- Seção dedicada a frameworks e ferramentas  
+- Sistema de comentários (em desenvolvimento)  
+- Operações CRUD (em desenvolvimento)  
+- Interface moderna e responsiva  
+
+---
+
+## Tecnologias utilizadas
+
+- React  
+- Next.js  
+- Backend & Banco de Dados (em desenvolvimento)  
+
+---
+
+## O projeto está em evolução e em breve contará com:
+
+- Autenticação de usuários  
+- Banco de dados integrado  
+- API para conteúdos dinâmicos  
+- Sistema de gerenciamento de conteúdos  
+
+---
+
+## Como executar o projeto
+
+### Clone o repositório:
+```bash
 git clone https://github.com/seu-usuario/codeverse.git
-Acesse a pasta:
+### Acesse a pasta:
+```bash
 cd codeverse
 Instale as dependências:
 npm install
@@ -37,14 +56,14 @@ npm run dev
 Abra no navegador:
 http://localhost:3000
 Objetivo
+-- 
+### O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível.
 
-O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível.
-
-**Melhorias futuras**
+** Melhorias futuras**
 Integração com banco de dados
 Sistema de favoritos
 Dashboard do usuário
 Recomendações com IA
 Autores
 
-**Desenvolvido por** Gabriel Saraiva e Maria Clara
+Desenvolvido por Gabriel Saraiva e Maria Clara
