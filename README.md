@@ -43,27 +43,15 @@ O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúd
 
 ## Como executar o projeto
 
-### Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/codeverse.git
-### Acesse a pasta:
-```bash
-cd codeverse
-Instale as dependências:
-npm install
-Execute o projeto:
-npm run dev
-Abra no navegador:
-http://localhost:3000
-Objetivo
--- 
-### O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível.
+**Como executar o projeto** Clone o repositório: git clone https://github.com/seu-usuario/codeverse.git Acesse a pasta: cd codeverse Instale as dependências: npm install Execute o projeto: npm run dev Abra no navegador: http://localhost:3000 
 
-** Melhorias futuras**
-Integração com banco de dados
-Sistema de favoritos
-Dashboard do usuário
-Recomendações com IA
-Autores
+**Objetivo** O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível. 
 
-Desenvolvido por Gabriel Saraiva e Maria Clara
+**Melhorias futuras**
+- Integração com banco de dados
+- Sistema de favoritos
+- Dashboard do usuário
+- Recomendações com IA
+
+
+**Autores** Desenvolvido por Gabriel Saraiva e Maria Clara
