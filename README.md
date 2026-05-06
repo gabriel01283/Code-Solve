@@ -62,3 +62,19 @@ O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúd
 
 
 **Autores** Desenvolvido por Gabriel Saraiva e Maria Clara
+
+
+
+
+
+
+
+
+
+**Diagrama de Classes**
+<img width="1536" height="1024" alt="d1943a33-a52e-40db-8cd1-c9de0f1f7ef3" src="https://github.com/user-attachments/assets/33454d5d-703f-43bb-ab0e-ddbd5e6beba4" />
+
+
+
+
+
