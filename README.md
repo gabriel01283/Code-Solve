@@ -1,7 +1,7 @@
-# CodeVerse
+# Solve Code
 
 Explore o universo da programação de forma moderna, dinâmica e organizada.
-O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúdos sobre programação, tecnologia e inovação. O projeto utiliza tecnologias modernas como Next.js para oferecer uma experiência rápida, responsiva e escalável.
+O Solve code é uma plataforma web desenvolvida com foco em compartilhar conteúdos sobre programação, tecnologia e inovação. O projeto utiliza tecnologias modernas como Next.js para oferecer uma experiência rápida, responsiva e escalável.
 
 ---
 
