@@ -1,32 +1,30 @@
 **CodeVerse**
+
 Explore o universo da programação de forma moderna, dinâmica e organizada.
+
 O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúdos sobre programação, tecnologia e inovação. O projeto utiliza tecnologias modernas como Next.js para oferecer uma experiência rápida, responsiva e escalável.
 
 **Preview**
- 
+
+(adicione aqui sua imagem ou GIF do projeto)
 
 **Funcionalidades**
-
-
-*Busca de conteúdos sobre programação
-*Oganização por linguagens e tecnologias
-*Conteúdos sobre Inteligência Artificial
-*Seção dedicada a frameworks e ferramentas
-*Sistema de comentários (em desenvolvimento)
-*Operações CRUD (em desenvolvimento)
-*Interface moderna e responsiva
-*Tecnologias utilizadas
-*React
-*▲ Next.js
-*Backend & Banco de Dados (em desenvolvimento)
-
- 
-**O projeto está em evolução e em breve contará com:**
+Busca de conteúdos sobre programação
+Organização por linguagens e tecnologias
+Conteúdos sobre Inteligência Artificial
+Seção dedicada a frameworks e ferramentas
+Sistema de comentários (em desenvolvimento)
+Operações CRUD (em desenvolvimento)
+Interface moderna e responsiva
+Tecnologias utilizadas
+React
+Next.js
+Backend & Banco de Dados (em desenvolvimento)
+O projeto está em evolução e em breve contará com:
 Autenticação de usuários
 Banco de dados integrado
 API para conteúdos dinâmicos
 Sistema de gerenciamento de conteúdos
-
 **Como executar o projeto**
 Clone o repositório:
 git clone https://github.com/seu-usuario/codeverse.git
@@ -38,17 +36,15 @@ Execute o projeto:
 npm run dev
 Abra no navegador:
 http://localhost:3000
-**Objetivo**
+Objetivo
 
 O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível.
 
-* Melhorias futuras
-* Integração com banco de dados
-* Sistema de favoritos
-* Dashboard do usuário
-* Recomendações com IA
+**Melhorias futuras**
+Integração com banco de dados
+Sistema de favoritos
+Dashboard do usuário
+Recomendações com IA
+Autores
 
-  
-**Autores**
-
-Desenvolvido por Gabriel Saraiva e Maria Clara 
+**Desenvolvido por** Gabriel Saraiva e Maria Clara
