@@ -49,7 +49,8 @@ O CodeVerse é uma plataforma web desenvolvida com foco em compartilhar conteúd
 (https://github.com/gabriel01283/Code-Solve/blob/main/README.md) 
 - Acesse a pasta: cd codeverse 
 - Instale as dependências: npm install 
-- Execute o projeto: npm run dev Abra no navegador: http://localhost:3000 
+- Execute o projeto: npm run dev
+- Abra no navegador: http://localhost:3000 
 
 **Objetivo** O objetivo do CodeVerse é ajudar estudantes e desenvolvedores a aprenderem programação de forma simples, organizada e acessível. 
 
