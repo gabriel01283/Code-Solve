@@ -1,0 +1,138 @@
+
+/* fundo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(53, 128, 249, 0.3), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(74, 152, 246, 0.22), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(23, 171, 240, 0.18), transparent 50%),
+        linear-gradient(180deg, #070b14, #05030a);
+
+    background-attachment: fixed;
+
+    color: #e5e7eb;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+    margin: 12px auto;
+
+    max-width: 900px;
+
+    background: rgba(10, 20, 40, 0.6);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 999px;
+
+    box-shadow:
+        0 0 15px rgba(59, 130, 246, 0.15),
+        0 0 35px rgba(59, 130, 246, 0.08);
+
+    position: relative;
+    top: 12px;
+}
+
+nav h1 {
+    font-size: 18px;
+    color: #f8fafc;
+}
+
+nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f8fafc;
+
+    transition: 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #60a5fa;
+
+    text-shadow:
+        0 0 10px rgba(96, 165, 250, 0.6);
+}
+
+/* bloco principal */
+main {
+    max-width: 900px;
+
+    margin: 35px auto;
+    padding: 30px;
+
+    background: rgba(10, 20, 40, 0.55);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+/* divisões internas */
+main section {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* remove linha da última seção */
+main section:last-child {
+    border-bottom: none;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* títulos */
+main section h1 {
+    text-align: center;
+
+    margin-bottom: 24px;
+
+    color: #f8fafc;
+}
+
+/* texto */
+main section p {
+    color: #cbd5e1;
+
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* lista */
+main section ol {
+    padding-left: 22px;
+}
+
+/* itens */
+main section ol li {
+    margin-bottom: 18px;
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* títulos da lista */
+main section ol li strong {
+    color: #f8fafc;
+}
