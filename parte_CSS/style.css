@@ -237,7 +237,7 @@ main, section {
     object-fit: contain;
     
     cursor: pointer;
-
+    
     transition: 0.2s ease;
 }
 
@@ -247,8 +247,9 @@ main, section {
 
 .ia-icon {
     position: relative;
-
-    transform: translateX(40px);
+    
+    left: 40px;
+    top: 2px;
 }
 
 .ia-icon::after {
@@ -266,7 +267,7 @@ main, section {
     border-radius: 6px;
 
     font-size: 11px;
-
+    
     opacity: 0;
     pointer-events: none;
     
