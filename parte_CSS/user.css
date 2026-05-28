@@ -1,0 +1,182 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+/* fundo principal */
+body {
+    font-family: Arial, sans-serif;
+
+    background: url("../img/neural_page-0001.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #f1f5f9;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* camada escura do fundo */
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    pointer-events: none;
+}
+
+/* caixa principal */
+.container {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 35px;
+
+    background: rgba(15, 18, 30, 0.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+
+    position: relative;
+    z-index: 2;
+}
+
+/* título */
+.container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/* formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* labels */
+label {
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* inputs */
+input {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: white;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 12px rgba(96,165,250,0.25);
+}
+
+/* placeholder */
+input::placeholder {
+    color: rgba(255,255,255,0.45);
+}
+
+/* esqueceu senha */
+.esqueceu-senha {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.esqueceu-senha a {
+    text-decoration: none;
+    color: #93c5fd;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.esqueceu-senha a:hover {
+    color: #60a5fa;
+}
+
+/* botão */
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: #1d4ed8;
+
+    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+
+/* texto inferior */
+.bottom-text {
+    text-align: center;
+    margin-top: 20px;
+
+    color: #cbd5e1;
+}
+
+.bottom-text a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.bottom-text a:hover {
+    color: #93c5fd;
+}
