@@ -1,0 +1,203 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+
+    background: url("../img/neural_page-0001.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+/* overlay */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+
+    pointer-events: none;
+}
+
+/* tela rolável */
+.perfil-page{
+    width: 90%;
+    max-width: 900px;
+
+    margin: auto;
+    padding: 50px 0;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* topo */
+.perfil-header{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: rgba(15,18,30,0.75);
+    backdrop-filter: blur(12px);
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.foto-perfil{
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 55px;
+}
+
+.info-usuario h1{
+    font-size: 45px;
+}
+
+.info-usuario p{
+    color: #cbd5e1;
+}
+
+/* seção sobre */
+.sobre-box{
+    background: rgba(15,18,30,0.75);
+    backdrop-filter: blur(12px);
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.sobre-box h2{
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    resize: none;
+
+    background: rgba(255,255,255,0.05);
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+/* input comentário */
+.comentario-input{
+    margin-bottom: 30px;
+}
+
+.input-box{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.input-box input{
+    flex: 1;
+}
+
+/* inputs */
+input{
+    padding: 18px;
+
+    border-radius: 16px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.06);
+    color: white;
+}
+
+/* botão */
+button{
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+/* cards de comentários separados */
+.comentarios-container{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.comentario-card{
+    background: rgba(15,18,30,0.78);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.comentario-card h3{
+    color: #60a5fa;
+    margin-bottom: 12px;
+}
+
+.comentario-card p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* responder */
+.responder-btn{
+    margin-bottom: 15px;
+}
+
+.resposta-box input{
+    width: 100%;
+}
