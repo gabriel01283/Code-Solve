@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -5,64 +6,64 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100%;
 }
 
-/* base */
+/* BASE */
 body {
     font-family: Arial, sans-serif;
-    background: url("../img/neural_page-0001.jpg");
+
+    min-height: 100vh;
+
+    background-image: url("../img/neural_page-0001.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #f1f5f9;;
+    background-attachment: fixed;
+
+    color: #f1f5f9;
     
-    min-height: 100vh;
+    position: relative;
 }
 
+/* overlay */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-
-    background: rgba(0, 0, 0, 0.35);
-
+    background: rgba(0, 0, 0, 0.45);
     pointer-events: none;
+    z-index: -1;
 }
 
-
-
-
-/* navbar */
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     width: 75%;
     max-width: 900px;
     
     margin: 25px auto 12px auto;
-
     padding: 6px 16px;
-
+    
     position: relative;
     top: 20px;
-
+    
     background: rgba(15, 18, 30, 0.75);
     backdrop-filter: blur(12px);
-
+    
     border: 1px solid rgba(255,255,255,0.08);
-
     border-radius: 999px;
-
+    
     box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
 nav h1 {
     font-size: 20px;
-    color: #e5e7eb;
 }
+
 nav ul {
     display: flex;
     gap: 16px;
@@ -72,27 +73,26 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #cbd5e1;
-    transition: 0.2s ease;
 }
 
 nav a:hover {
     color: #60a5fa;
 }
 
-/* layout principal */
+/* MAIN */
 main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 30px 20px;
 }
 
-/* seção introdutória */
+/* HERO */
 .hero {
     max-width: 700px;
     margin: 20px auto 10px auto;
 
     text-align: center;
-
+    
     padding: 20px 18px;
 
     background: rgba(15, 18, 30, 0.45);
@@ -100,92 +100,175 @@ main {
 
     border: 1px solid rgba(255,255,255,0.08);
 
-    border-radius: 14px;
+    border-radius: 22px;
 }
 
-.hero h2 {
-    color: #ffffff;
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-    
-    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-}
-
-.hero p {
-    color: #e2e8f0;
-    font-size: 15px;
-    line-height: 1.6;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-/* grid de cards */
+/* GRID */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
     gap: 18px;
-    background: transparent;
-
+    
+    margin-top: 25px;
+    
     justify-content: center;
 
-    margin-top: 25px;
+    padding-left: 20px;
 }
 
-/* card de linguagem */
+
+
 .card {
-    display: block;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     width: 240px;
-    height: 320px;
-
+    height: 300px;
+    
     padding: 18px;
-
-    background: rgba(15, 18, 30, 0.7);
+    
+    background: rgba(15, 18, 30, 0.65);
     backdrop-filter: blur(10px);
-
+    
     border-radius: 16px;
-
     border: 1px solid rgba(255,255,255,0.08);
-
+    
     color: #e5e7eb;
-
     text-decoration: none;
-
-    transition: 0.2s ease;
+    
+    transition: 0.25s ease;
     
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    
+    cursor: pointer;
 }
 
+/* hover real de interação */
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+}
+
+.card:active {
+    transform: translateY(-3px) scale(0.99);
+}
+
+/* textos */
 .card h2 {
+    font-size: 18px;
     margin-bottom: 6px;
 }
 
 .card p {
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
-
+/* CORES DAS LINGUAGENS */
 .java {
     background: rgba(255, 120, 0, 0.12);
-    border-color: rgba(255, 120, 0, 0.25);
+    border-color: rgba(255, 120, 0, 0.35);
 }
 
 .python {
     background: rgba(56, 189, 248, 0.12);
-    border-color: rgba(56, 189, 248, 0.25);
+    border-color: rgba(56, 189, 248, 0.35);
 }
 
 .cpp {
     background: rgba(99, 102, 241, 0.12);
-    border-color: rgba(99, 102, 241, 0.25);
+    border-color: rgba(99, 102, 241, 0.35);
 }
 
+
+/* FRAMEWORKS */
+.react {
+    background: rgba(97, 218, 251, 0.12);
+    border-color: rgba(97, 218, 251, 0.35);
+}
+
+.vue {
+    background: rgba(65, 184, 131, 0.12);
+    border-color: rgba(65, 184, 131, 0.35);
+}
+
+.angular {
+    background: rgba(221, 0, 49, 0.12);
+    border-color: rgba(221, 0, 49, 0.35);
+}
+
+.spring {
+    background: rgba(121, 181, 0, 0.12);
+    border-color: rgba(121, 181, 0, 0.35);
+}
+
+.django {
+    background: rgba(44, 62, 80, 0.12);
+    border-color: rgba(44, 62, 80, 0.35);
+}
+
+/* GIT / GITHUB */
+.git {
+    background: rgba(240, 80, 50, 0.12);
+    border-color: rgba(240, 80, 50, 0.35);
+}
+
+.github {
+    background: rgba(36, 41, 46, 0.25);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* APIs */
+.api {
+    background: rgba(0, 200, 150, 0.12);
+    border-color: rgba(0, 200, 150, 0.35);
+}
+
+.rest {
+    background: rgba(0, 150, 255, 0.12);
+    border-color: rgba(0, 150, 255, 0.35);
+}
+
+.graphql {
+    background: rgba(229, 53, 171, 0.12);
+    border-color: rgba(229, 53, 171, 0.35);
+}
+
+/* BANCO DE DADOS */
+.sql {
+    background: rgba(255, 193, 7, 0.12);
+    border-color: rgba(255, 193, 7, 0.35);
+}
+
+.mongodb {
+    background: rgba(77, 179, 61, 0.12);
+    border-color: rgba(77, 179, 61, 0.35);
+}
+
+.redis {
+    background: rgba(208, 68, 68, 0.12);
+    border-color: rgba(208, 68, 68, 0.35);
+}
+
+/* MACHINE LEARNING */
+.ml {
+    background: rgba(255, 105, 180, 0.12);
+    border-color: rgba(255, 105, 180, 0.35);
+}
+
+.tensorflow {
+    background: rgba(255, 136, 0, 0.12);
+    border-color: rgba(255, 136, 0, 0.35);
+}
+
+.pytorch {
+    background: rgba(238, 76, 44, 0.12);
+    border-color: rgba(238, 76, 44, 0.35);
+}
+
+/* BOTÃO */
 .cards-more {
     text-align: center;
     margin-top: 25px;
@@ -200,81 +283,28 @@ main {
     font-size: 14px;
 
     padding: 8px 14px;
-    
+
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 999px;
 
     background: rgba(15, 18, 30, 0.5);
 
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
 
+/* hover restaurado */
 .cards-more a:hover {
-    color: #1f73d9;
-    border-color: rgba(96,165,250,0.4);
+    color: #60a5fa;
+    border-color: rgba(96, 165, 250, 0.6);
+    box-shadow: 0 0 18px rgba(96, 165, 250, 0.35);
+    transform: translateY(-2px);
 }
 
-
-
-
-main, section {
-    background: transparent;
+/* clique */
+.cards-more a:active {
+    transform: translateY(0px) scale(0.98);
 }
 
-/* parte do item da IA COM A PESQUISA*/
-
-.ia-search {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ia-icon img {
-    width: 26px;
-    height: 26px;
-    
-    object-fit: contain;
-    
-    cursor: pointer;
-    
-    transition: 0.2s ease;
-}
-
-.ia-icon img:hover {
-    transform: scale(1.15);
-}
-
-.ia-icon {
-    position: relative;
-    
-    left: 40px;
-    top: 2px;
-}
-
-.ia-icon::after {
-    content: "Pesquisa com IA";
-    
-    position: absolute;
-    bottom: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background: rgba(15, 18, 30, 0.9);
-    color: #e5e7eb;
-    
-    padding: 4px 8px;
-    border-radius: 6px;
-
-    font-size: 11px;
-    
-    opacity: 0;
-    pointer-events: none;
-    
-    transition: 0.2s ease;
-    
-    white-space: nowrap;
-}
-.ia-icon:hover::after{
-    opacity: 1;
+section {
+    margin-bottom: 60px;
 }

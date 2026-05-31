@@ -42,8 +42,9 @@ body::before{
 /* topo */
 .perfil-header{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 
     background: rgba(15,18,30,0.75);
     backdrop-filter: blur(12px);
@@ -72,12 +73,52 @@ body::before{
     font-size: 55px;
 }
 
-.info-usuario h1{
-    font-size: 45px;
+/* botão upload foto */
+.upload-foto{
+    background: #2563eb;
+
+    padding: 12px 20px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
 }
 
-.info-usuario p{
+.upload-foto:hover{
+    transform: translateY(-2px);
+}
+
+/* informações do perfil */
+.perfil-box{
+    background: rgba(15,18,30,0.75);
+    backdrop-filter: blur(12px);
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.perfil-box h2{
+    margin-bottom: 10px;
+}
+
+.perfil-box label{
     color: #cbd5e1;
+    font-weight: bold;
+}
+
+.perfil-box input{
+    width: 100%;
 }
 
 /* seção sobre */
@@ -89,7 +130,7 @@ body::before{
 
     border-radius: 25px;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     border: 1px solid rgba(255,255,255,0.08);
 }
@@ -109,27 +150,10 @@ textarea{
 
     padding: 20px;
 
-    resize: none;
+    resize: vertical;
 
     background: rgba(255,255,255,0.05);
     color: white;
-
-    margin-bottom: 20px;
-}
-
-/* input comentário */
-.comentario-input{
-    margin-bottom: 30px;
-}
-
-.input-box{
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.input-box input{
-    flex: 1;
 }
 
 /* inputs */
@@ -144,7 +168,13 @@ input{
     color: white;
 }
 
-/* botão */
+
+/* botão salvar */
+.salvar-box{
+    display: flex;
+    justify-content: center;
+}
+
 button{
     border: none;
 
@@ -158,46 +188,37 @@ button{
     cursor: pointer;
 
     transition: 0.2s ease;
+
+    font-weight: bold;
 }
 
 button:hover{
     transform: translateY(-2px);
 }
 
-/* cards de comentários separados */
-.comentarios-container{
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
+/* botão voltar */
+.voltar-home{
+    position: fixed;
+    top: 25px;
+    left: 25px;
 
-.comentario-card{
-    background: rgba(15,18,30,0.78);
+    z-index: 3;
 
+    text-decoration: none;
+    color: white;
+
+    background: rgba(15,18,30,0.75);
     backdrop-filter: blur(12px);
 
-    border-radius: 22px;
+    padding: 12px 18px;
 
-    padding: 25px;
+    border-radius: 14px;
 
     border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.25s ease;
 }
 
-.comentario-card h3{
-    color: #60a5fa;
-    margin-bottom: 12px;
-}
-
-.comentario-card p{
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* responder */
-.responder-btn{
-    margin-bottom: 15px;
-}
-
-.resposta-box input{
-    width: 100%;
+.voltar-home:hover{
+    transform: translateY(-2px);
 }
