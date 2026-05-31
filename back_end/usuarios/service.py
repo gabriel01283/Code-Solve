@@ -4,10 +4,39 @@ from back_end.usuarios.security import hash_password, verify_password
 
 # -------- REGISTER --------
 def create_user(username: str, email: str, password: str):
-    print("🔥 FUNÇÃO CREATE_USER EXECUTOU")
 
     conn = get_connection()
     cur = conn.cursor()
+
+    # Verifica username
+    cur.execute(
+        "SELECT id FROM users WHERE username = %s",
+        (username,)
+    )
+
+    if cur.fetchone():
+        cur.close()
+        conn.close()
+
+        return {
+            "success": False,
+            "error": "username already exists"
+        }
+
+    # Verifica email
+    cur.execute(
+        "SELECT id FROM users WHERE email = %s",
+        (email,)
+    )
+
+    if cur.fetchone():
+        cur.close()
+        conn.close()
+
+        return {
+            "success": False,
+            "error": "email already exists"
+        }
 
     password_hash = hash_password(password)
 
@@ -18,17 +47,19 @@ def create_user(username: str, email: str, password: str):
 
     conn.commit()
 
-    print("💾 SALVOU NO BANCO")
-
     cur.close()
     conn.close()
+
+    return {
+        "success": True
+    }
 
 
 # -------- GET USER BY EMAIL --------
 def get_user_by_email(email: str):
     conn = get_connection()
     cur = conn.cursor()
-    
+
     cur.execute("""
         SELECT id, username, email, password_hash
         FROM users
@@ -69,7 +100,7 @@ def login_user(email: str, password: str):
     if not user:
         return None
 
-    user_id, username, email, password_hash = user
+    user_id, username, email_db, password_hash = user
 
     if not verify_password(password, password_hash):
         return None
@@ -77,5 +108,5 @@ def login_user(email: str, password: str):
     return {
         "id": user_id,
         "username": username,
-        "email": email
+        "email": email_db
     }

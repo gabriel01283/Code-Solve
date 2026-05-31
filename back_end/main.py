@@ -1,27 +1,24 @@
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from back_end.database.init_db import create_tables
-from back_end.usuarios.service import (
-    create_user,
-    login_user,
-    get_user_by_id
-)
-from back_end.auth.jwt import (
-    create_access_token,
-    create_refresh_token
-)
+from back_end.usuarios.service import create_user, login_user, get_user_by_id
+from back_end.auth.jwt import create_access_token, create_refresh_token
 from back_end.auth.dependencies import get_current_user
-from jose import jwt, JWTError
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = "HS256"
 
 app = FastAPI()
+
+
+# -------- CORS --------
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # -------- STARTUP --------
@@ -39,8 +36,45 @@ class UserRegister(BaseModel):
 
 @app.post("/register")
 def register(user: UserRegister):
-    create_user(user.username, user.email, user.password)
-    return {"message": "user created"}
+
+    # Campos vazios
+    if not user.username.strip():
+        return {"error": "username is required"}
+
+    if not user.email.strip():
+        return {"error": "email is required"}
+
+    if not user.password.strip():
+        return {"error": "password is required"}
+
+    # Domínios permitidos
+    allowed_domains = [
+        "gmail.com",
+        "yahoo.com",
+        "email.com"
+    ]
+
+    email_domain = user.email.split("@")[-1].lower()
+
+    if email_domain not in allowed_domains:
+        return {
+            "error": "email domain not allowed"
+        }
+
+    result = create_user(
+        user.username,
+        user.email,
+        user.password
+    )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": "user created"
+    }
 
 
 # -------- LOGIN --------
@@ -51,23 +85,24 @@ class LoginData(BaseModel):
 
 @app.post("/login")
 def login(data: LoginData):
-    user = login_user(data.email, data.password)
+
+    user = login_user(
+        data.email,
+        data.password
+    )
 
     if not user:
-        return {"error": "invalid credentials"}
-
-    access_token = create_access_token(
-        data={
-            "user_id": user["id"],
-            "email": user["email"]
+        return {
+            "error": "invalid credentials"
         }
-    )
 
-    refresh_token = create_refresh_token(
-        data={
-            "user_id": user["id"]
-        }
-    )
+    payload = {
+        "user_id": user["id"],
+        "email": user["email"]
+    }
+
+    access_token = create_access_token(payload)
+    refresh_token = create_refresh_token(payload)
 
     return {
         "access_token": access_token,
@@ -76,55 +111,19 @@ def login(data: LoginData):
     }
 
 
-# -------- REFRESH TOKEN --------
-class RefreshData(BaseModel):
-    refresh_token: str
+# -------- PERFIL --------
+@app.get("/perfil")
+def perfil(user_id: int = Depends(get_current_user)):
 
+    user = get_user_by_id(user_id)
 
-@app.post("/refresh")
-def refresh(data: RefreshData):
-    try:
-        payload = jwt.decode(
-            data.refresh_token,
-            SECRET_KEY,
-            algorithms=[ALGORITHM]
-        )
-
-        new_token = create_access_token(
-            data={
-                "user_id": payload["user_id"]
-            }
-        )
-
+    if not user:
         return {
-            "access_token": new_token,
-            "token_type": "bearer"
+            "error": "user not found"
         }
 
-    except JWTError:
-        return {"error": "invalid refresh token"}
-
-
-# -------- LOGOUT --------
-@app.post("/logout")
-def logout():
-    return {"message": "logout realizado. apague o token no cliente."}
-
-
-# -------- PERFIL PROTEGIDO --------
-@app.get("/perfil")
-def perfil(user=Depends(get_current_user)):
-    user_id = user.get("user_id")
-
-    user_db = get_user_by_id(user_id)
-
-    if not user_db:
-        return {"error": "user not found"}
-
-    id, username, email = user_db
-
     return {
-        "id": id,
-        "username": username,
-        "email": email
+        "id": user[0],
+        "username": user[1],
+        "email": user[2]
     }
