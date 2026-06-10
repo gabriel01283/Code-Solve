@@ -168,8 +168,8 @@ main {
 
 /* CORES DAS LINGUAGENS */
 .java {
-    background: rgba(255, 120, 0, 0.12);
-    border-color: rgba(255, 120, 0, 0.35);
+    background: rgba(0, 85, 255, 0.12);
+    border-color: rgba(0, 157, 255, 0.35);
 }
 
 .python {

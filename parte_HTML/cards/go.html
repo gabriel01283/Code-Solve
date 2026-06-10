@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Java - Solve Code</title>
+    <title> Go - Solve Code</title>
     <link rel="stylesheet" href="../../parte_CSS/cards.css">
 </head>
 <body>
@@ -22,11 +22,11 @@
 
         <!-- INTRODUÇÃO -->
         <section>
-            <h1>Java</h1>
+            <h1>Go (Golang)</h1>
             <p>
-                Java é uma linguagem de programação orientada a objetos,
-                muito usada em sistemas grandes, aplicações corporativas
-                e desenvolvimento Android.
+                Go é uma linguagem de programação criada pelo Google,
+                focada em simplicidade, desempenho e concorrência,
+                sendo muito utilizada em servidores, APIs e sistemas distribuídos.
             </p>
         </section>
 
@@ -34,8 +34,8 @@
         <section>
             <h2>Nível da linguagem</h2>
             <p>
-                Java é uma linguagem de alto nível, projetada para ser portável,
-                ou seja, rodar em diferentes sistemas através da JVM (Java Virtual Machine).
+                Go é uma linguagem de alto nível, projetada para ser simples,
+                eficiente e fácil de manter, oferecendo desempenho próximo ao de linguagens como C.
             </p>
         </section>
 
@@ -43,8 +43,8 @@
         <section>
             <h2>Tipagem</h2>
             <p>
-                Java é uma linguagem estaticamente tipada e fortemente tipada.
-                Isso significa que você precisa declarar o tipo das variáveis explicitamente.
+                Go é uma linguagem estaticamente tipada e fortemente tipada.
+                Isso significa que os tipos das variáveis são definidos durante a compilação.
             </p>
         </section>
 
@@ -56,44 +56,44 @@
                 <h3>int (inteiros)</h3>
                 <p>Números inteiros.</p>
                 <pre><code>
-int idade = 20;
-System.out.println(idade);
+var idade int = 20
+fmt.Println(idade)
                 </code></pre>
             </div>
 
             <div>
-                <h3>double (decimais)</h3>
+                <h3>float64 (decimais)</h3>
                 <p>Números com casas decimais.</p>
                 <pre><code>
-double altura = 1.75;
-System.out.println(altura);
+var altura float64 = 1.75
+fmt.Println(altura)
                 </code></pre>
             </div>
 
             <div>
-                <h3>char (caractere)</h3>
-                <p>Um único caractere.</p>
+                <h3>rune (caractere)</h3>
+                <p>Representa um caractere Unicode.</p>
                 <pre><code>
-char letra = 'A';
-System.out.println(letra);
+var letra rune = 'A'
+fmt.Println(string(letra))
                 </code></pre>
             </div>
 
             <div>
-                <h3>boolean (lógico)</h3>
+                <h3>bool (lógico)</h3>
                 <p>Valores verdadeiro ou falso.</p>
                 <pre><code>
-boolean ativo = true;
-System.out.println(ativo);
+var ativo bool = true
+fmt.Println(ativo)
                 </code></pre>
             </div>
 
             <div>
-                <h3>String (texto)</h3>
+                <h3>string (texto)</h3>
                 <p>Sequência de caracteres.</p>
                 <pre><code>
-String nome = "Gabriel";
-System.out.println(nome);
+var nome string = "Gabriel"
+fmt.Println(nome)
                 </code></pre>
             </div>
 
@@ -101,55 +101,55 @@ System.out.println(nome);
 
         <!-- USOS -->
         <section>
-            <h2>Onde Java é mais usado</h2>
+            <h2>Onde Go é mais usado</h2>
 
-            <p>Java é muito usado em sistemas robustos e de grande escala:</p>
+            <p>Go é muito utilizado em aplicações modernas de alta performance:</p>
 
             <ul>
-                <li>Sistemas corporativos (bancos, empresas grandes)</li>
-                <li>Aplicações Android</li>
-                <li>Back-end web (Spring Boot)</li>
+                <li>APIs e serviços web</li>
+                <li>Microsserviços</li>
+                <li>Computação em nuvem (Cloud Computing)</li>
                 <li>Sistemas distribuídos</li>
-                <li>Aplicações de alto desempenho e estabilidade</li>
+                <li>Ferramentas DevOps e infraestrutura</li>
             </ul>
         </section>
 
         <!-- DÚVIDAS -->
         <section>
-            <h2>Dúvidas comuns sobre Java</h2>
+            <h2>Dúvidas comuns sobre Go</h2>
             
             <div>
-                <h3>Java é difícil de aprender?</h3>
+                <h3>Go é difícil de aprender?</h3>
                 <p>
-                    Ele é um pouco mais verboso que Python, mas é muito estruturado e bom para aprender lógica.
+                    Não. Go foi criado para ser simples e possui uma sintaxe enxuta, facilitando o aprendizado.
                 </p>
             </div>
 
             <div>
-                <h3>Java roda em qualquer lugar?</h3>
+                <h3>Go é rápido?</h3>
                 <p>
-                    Sim, graças à JVM, o Java é conhecido como “write once, run anywhere”.
+                    Sim, Go oferece excelente desempenho e é compilado diretamente para código de máquina.
                 </p>
             </div>
 
             <div>
-                <h3>Java ainda é usado em 2026?</h3>
+                <h3>Go ainda é usado em 2026?</h3>
                 <p>
-                    Sim, continua sendo muito usado em grandes sistemas e empresas.
+                    Sim, Go continua crescendo e é amplamente utilizado por empresas que trabalham com cloud e sistemas escaláveis.
                 </p>
             </div>
 
             <div>
-                <h3>Java serve para backend?</h3>
+                <h3>Go serve para backend?</h3>
                 <p>
-                    Sim, especialmente com frameworks como Spring Boot.
+                    Sim, Go é uma das linguagens mais utilizadas para desenvolvimento de APIs e aplicações backend modernas.
                 </p>
             </div>
 
             <div>
-                <h3>Vale a pena aprender Java?</h3>
+                <h3>Vale a pena aprender Go?</h3>
                 <p>
-                    Sim, principalmente se você quer trabalhar com sistemas grandes e mercado corporativo.
+                    Sim, principalmente para quem deseja trabalhar com desenvolvimento backend, infraestrutura, cloud computing e microsserviços.
                 </p>
             </div>
 
@@ -158,9 +158,10 @@ System.out.println(nome);
         <!-- FUTURO IA -->
         <section>
             <h2>Perguntas inteligentes (futuro com IA)</h2>
+
         </section>
 
-    </main> 
+    </main>
 
 </body>
 </html>
