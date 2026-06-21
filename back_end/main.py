@@ -3,9 +3,25 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from back_end.database.init_db import create_tables
-from back_end.usuarios.service import create_user, login_user, get_user_by_id
-from back_end.auth.jwt import create_access_token, create_refresh_token
+
+from back_end.usuarios.service import (
+    create_user,
+    login_user,
+    get_user_by_id
+)
+
+from back_end.auth.jwt import (
+    create_access_token,
+    create_refresh_token
+)
+
 from back_end.auth.dependencies import get_current_user
+
+from back_end.comments.service import (
+    create_comment,
+    list_comments,
+    remove_comment
+)
 
 
 app = FastAPI()
@@ -27,17 +43,26 @@ def startup():
     create_tables()
 
 
-# -------- REGISTER --------
+# -------- SCHEMAS --------
 class UserRegister(BaseModel):
     username: str
     email: str
     password: str
 
 
+class LoginData(BaseModel):
+    email: str
+    password: str
+
+
+class CommentCreate(BaseModel):
+    content: str
+
+
+# -------- REGISTER --------
 @app.post("/register")
 def register(user: UserRegister):
 
-    # Campos vazios
     if not user.username.strip():
         return {"error": "username is required"}
 
@@ -47,7 +72,6 @@ def register(user: UserRegister):
     if not user.password.strip():
         return {"error": "password is required"}
 
-    # Domínios permitidos
     allowed_domains = [
         "gmail.com",
         "yahoo.com",
@@ -78,11 +102,6 @@ def register(user: UserRegister):
 
 
 # -------- LOGIN --------
-class LoginData(BaseModel):
-    email: str
-    password: str
-
-
 @app.post("/login")
 def login(data: LoginData):
 
@@ -126,4 +145,60 @@ def perfil(user_id: int = Depends(get_current_user)):
         "id": user[0],
         "username": user[1],
         "email": user[2]
+    }
+
+
+# -------- CREATE COMMENT --------
+@app.post("/comments")
+def create_new_comment(
+    comment: CommentCreate,
+    user_id: int = Depends(get_current_user)
+):
+
+    result = create_comment(
+        user_id,
+        comment.content
+    )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": "comment created",
+        "comment": result["comment"]
+    }
+
+
+# -------- LIST COMMENTS --------
+@app.get("/comments")
+def get_comments():
+
+    comments = list_comments()
+
+    return {
+        "comments": comments
+    }
+
+
+# -------- DELETE COMMENT --------
+@app.delete("/comments/{comment_id}")
+def delete_existing_comment(
+    comment_id: int,
+    user_id: int = Depends(get_current_user)
+):
+
+    result = remove_comment(
+        comment_id,
+        user_id
+    )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": result["message"]
     }
