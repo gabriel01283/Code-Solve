@@ -4,7 +4,27 @@
 
 O **Solve Code** é uma aplicação web criada para auxiliar estudantes iniciantes no aprendizado de programação. O sistema apresenta conteúdos sobre linguagens de programação e permite que usuários se cadastrem, façam login, acessem seu perfil e interajam por meio de comentários.
 
-O projeto foi desenvolvido para a disciplina **Programação para Web**, utilizando front-end, API REST e banco de dados relacional.
+O projeto foi desenvolvido para a disciplina **Programação para Web**, utilizando front-end, API REST, autenticação com JWT, banco de dados PostgreSQL e deploy online.
+
+## Deploy
+
+Front-end:
+
+```text
+https://code-solve-front.onrender.com
+```
+
+Back-end/API:
+
+```text
+https://code-solve.onrender.com
+```
+
+Documentação da API:
+
+```text
+https://code-solve.onrender.com/docs
+```
 
 ## Funcionalidades
 
@@ -18,6 +38,10 @@ O projeto foi desenvolvido para a disciplina **Programação para Web**, utiliza
 * Criação de comentários
 * Listagem de comentários
 * Exclusão de comentários
+* Cadastro de linguagens
+* Listagem de linguagens
+* Busca de linguagem por ID
+* Exclusão de linguagens
 * Autenticação com JWT
 * Senhas protegidas com hash
 
@@ -43,6 +67,11 @@ O projeto foi desenvolvido para a disciplina **Programação para Web**, utiliza
 
 * PostgreSQL
 * Psycopg2
+* Supabase
+
+### Deploy
+
+* Render
 
 ### Versionamento
 
@@ -58,6 +87,7 @@ Code-Solve/
 │   ├── auth/
 │   ├── comments/
 │   ├── database/
+│   ├── languages/
 │   ├── usuarios/
 │   └── main.py
 │
@@ -76,10 +106,14 @@ Code-Solve/
 │
 ├── document/
 │
+├── index.html
+├── requirements.txt
+├── Procfile
+├── .gitignore
 └── README.md
 ```
 
-## Como executar o projeto
+## Como executar o projeto localmente
 
 ### 1. Clonar o repositório
 
@@ -103,15 +137,29 @@ No Windows:
 ### 3. Instalar dependências
 
 ```bash
-pip install fastapi uvicorn psycopg2-binary bcrypt "python-jose[cryptography]" python-dotenv
+pip install -r requirements.txt
 ```
 
 ### 4. Configurar variáveis de ambiente
 
-Crie um arquivo `.env` na raiz do projeto com a seguinte variável:
+Crie um arquivo `.env` na raiz do projeto.
+
+Exemplo usando banco local:
 
 ```env
 SECRET_KEY=sua_chave_secreta_aqui
+DB_NAME=nome_do_banco
+DB_USER=usuario_do_banco
+DB_PASSWORD=senha_do_banco
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+Exemplo usando banco online:
+
+```env
+SECRET_KEY=sua_chave_secreta_aqui
+DATABASE_URL=sua_url_do_banco_aqui
 ```
 
 O arquivo `.env` não deve ser enviado para o GitHub.
@@ -120,10 +168,10 @@ O arquivo `.env` não deve ser enviado para o GitHub.
 
 O projeto utiliza PostgreSQL.
 
-Crie um banco de dados local e configure a conexão no arquivo:
+As tabelas são criadas pelo back-end ao iniciar a aplicação, utilizando o arquivo:
 
 ```text
-back_end/database/connection.py
+back_end/database/init_db.py
 ```
 
 Cada desenvolvedor deve usar as próprias configurações de banco, como nome do banco, usuário, senha, host e porta.
@@ -134,16 +182,16 @@ Cada desenvolvedor deve usar as próprias configurações de banco, como nome do
 uvicorn back_end.main:app --reload
 ```
 
-A API ficará disponível em:
+A API local ficará disponível em:
 
 ```text
-https://code-solve.onrender.com
+http://127.0.0.1:8000
 ```
 
-A documentação automática da API pode ser acessada em:
+A documentação automática da API local pode ser acessada em:
 
 ```text
-https://code-solve.onrender.com/docs
+http://127.0.0.1:8000/docs
 ```
 
 ### 7. Executar o front-end
@@ -174,7 +222,16 @@ POST /comments
 DELETE /comments/{comment_id}
 ```
 
-As rotas de perfil, criação de comentário e exclusão de comentário exigem autenticação JWT.
+### Linguagens
+
+```http
+GET /languages
+POST /languages
+GET /languages/{language_id}
+DELETE /languages/{language_id}
+```
+
+As rotas de perfil, criação de comentário, exclusão de comentário, criação de linguagem e exclusão de linguagem exigem autenticação JWT.
 
 ## Banco de dados
 
@@ -184,6 +241,7 @@ Tabelas principais:
 
 * `users`
 * `comments`
+* `languages`
 
 A tabela `comments` possui relação com a tabela `users`.
 
@@ -192,32 +250,18 @@ A tabela `comments` possui relação com a tabela `users`.
 * As senhas dos usuários são armazenadas com hash utilizando bcrypt.
 * A autenticação é feita com JWT.
 * Informações sensíveis devem ficar em variáveis de ambiente e não devem ser enviadas para o repositório.
-
-## Deploy
-
-Status atual:
-
-```text
-Deploy ainda não realizado.
-```
-
-Quando o deploy for concluído, adicionar os links abaixo:
-
-```text
-Front-end: inserir link aqui
-Back-end/API: inserir link aqui
-```
+* O arquivo `.env` está protegido pelo `.gitignore`.
 
 ## Melhorias futuras
 
 * Implementar controle de permissões com RBAC
 * Adicionar painel administrativo
-* Integrar completamente a área de comentários ao front-end
-* Criar novas tabelas e funcionalidades
 * Melhorar o tratamento de erros da API
-* Realizar deploy completo da aplicação
+* Melhorar a interface da área de comentários
+* Adicionar edição de comentários
+* Adicionar edição de perfil do usuário
 
-## Desenvolvedor
+## Desenvolvedores
 
 Gabriel Saraiva
 
