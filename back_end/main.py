@@ -23,6 +23,13 @@ from back_end.comments.service import (
     remove_comment
 )
 
+from back_end.languages.service import (
+    create_language,
+    list_languages,
+    find_language,
+    remove_language
+)
+
 
 app = FastAPI()
 
@@ -57,6 +64,11 @@ class LoginData(BaseModel):
 
 class CommentCreate(BaseModel):
     content: str
+
+
+class LanguageCreate(BaseModel):
+    name: str
+    description: str
 
 
 # -------- REGISTER --------
@@ -193,6 +205,75 @@ def delete_existing_comment(
         comment_id,
         user_id
     )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": result["message"]
+    }
+
+
+# -------- CREATE LANGUAGE --------
+@app.post("/languages")
+def create_new_language(
+    language: LanguageCreate,
+    user_id: int = Depends(get_current_user)
+):
+
+    result = create_language(
+        language.name,
+        language.description
+    )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": "language created",
+        "language": result["language"]
+    }
+
+
+# -------- LIST LANGUAGES --------
+@app.get("/languages")
+def get_languages():
+
+    languages = list_languages()
+
+    return {
+        "languages": languages
+    }
+
+
+# -------- GET LANGUAGE BY ID --------
+@app.get("/languages/{language_id}")
+def get_language(language_id: int):
+
+    result = find_language(language_id)
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "language": result["language"]
+    }
+
+
+# -------- DELETE LANGUAGE --------
+@app.delete("/languages/{language_id}")
+def delete_existing_language(
+    language_id: int,
+    user_id: int = Depends(get_current_user)
+):
+
+    result = remove_language(language_id)
 
     if not result["success"]:
         return {

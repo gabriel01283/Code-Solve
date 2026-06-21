@@ -29,6 +29,15 @@ def create_tables():
     );
     """)
 
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS languages (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(80) UNIQUE NOT NULL,
+        description TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """)
+
     conn.commit()
     cur.close()
     conn.close()
