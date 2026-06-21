@@ -137,13 +137,13 @@ uvicorn back_end.main:app --reload
 A API ficará disponível em:
 
 ```text
-http://127.0.0.1:8000
+https://code-solve.onrender.com
 ```
 
 A documentação automática da API pode ser acessada em:
 
 ```text
-http://127.0.0.1:8000/docs
+https://code-solve.onrender.com/docs
 ```
 
 ### 7. Executar o front-end
