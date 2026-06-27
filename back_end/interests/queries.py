@@ -71,7 +71,6 @@ def delete_interest(user_id, language_id):
 
     deleted = cur.fetchone()
     conn.commit()
-
     cur.close()
     conn.close()
 
