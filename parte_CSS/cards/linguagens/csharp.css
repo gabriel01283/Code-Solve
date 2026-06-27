@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap");
+
+:root {
+    --bg: #050508;
+    --panel: #0d0d16;
+    --cyan: #68217a;
+    --yellow: #68217a;
+    --blue: #9b4f96;
+    --text: #c9d3df;
+    --muted: #7f8b99;
+
+    --font-title: "Orbitron", monospace;
+    --font-body: "Rajdhani", sans-serif;
+    --font-code: "Share Tech Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    overflow-x: hidden;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(104, 33, 122, 0.018) 2px,
+            rgba(104, 33, 122, 0.018) 4px
+        );
+    animation: scanline 24s linear infinite;
+}
+
+@keyframes scanline {
+    to {
+        background-position: 0 400px;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(104, 33, 122, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(104, 33, 122, 0.025) 1px, transparent 1px),
+        radial-gradient(circle, rgba(104, 33, 122, 0.12) 1px, transparent 2px);
+    background-size: 60px 60px, 60px 60px, 170px 170px;
+    animation: gridMove 18s ease-in-out infinite alternate;
+    z-index: -4;
+}
+
+body::after {
+    content: "CSHARP_CORE // SOLVE_CODE // DOTNET_RUNTIME // 01001100";
+    position: fixed;
+    left: -12%;
+    bottom: 9%;
+    width: 130%;
+    font-family: var(--font-code);
+    font-size: 4vw;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    color: rgba(104, 33, 122, 0.04);
+    transform: rotate(-7deg);
+    animation: ghostText 30s linear infinite;
+    z-index: -3;
+}
+
+@keyframes gridMove {
+    to {
+        background-position: 60px 60px, -60px -60px, 260px 340px;
+    }
+}
+
+@keyframes ghostText {
+    to {
+        transform: translateX(-420px) rotate(-7deg);
+    }
+}
+
+::selection {
+    background: var(--yellow);
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08080d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(104, 33, 122, 0.7);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}
+
+nav {
+    width: min(1120px, 90%);
+    margin: 34px auto 0;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 13, 22, 0.76);
+    border: 1px solid rgba(104, 33, 122, 0.22);
+    border-radius: 8px;
+    backdrop-filter: blur(18px);
+    box-shadow:
+        0 0 28px rgba(104, 33, 122, 0.12),
+        inset 0 0 22px rgba(104, 33, 122, 0.045);
+    position: relative;
+    overflow: hidden;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--yellow), var(--blue), transparent);
+    animation: navLine 4s linear infinite;
+    background-size: 200%;
+}
+
+@keyframes navLine {
+    to {
+        background-position: 200%;
+    }
+}
+
+nav h1 {
+    font-family: var(--font-title);
+    color: #fff;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 8px rgba(104, 33, 122, 0.85),
+        0 0 28px rgba(155, 79, 150, 0.45);
+}
+
+nav h1::before {
+    content: "◉ ";
+    color: var(--yellow);
+    animation: blink 1.5s steps(1) infinite;
+}
+
+nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+nav a {
+    font-family: var(--font-code);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+
+nav li:nth-child(1) a::before { content: "⌂ / "; color: var(--yellow); }
+nav li:nth-child(2) a::before { content: "◇ / "; color: var(--yellow); }
+nav li:nth-child(3) a::before { content: "✦ / "; color: var(--yellow); }
+
+nav a:hover {
+    color: #fff;
+    text-shadow:
+        0 0 10px rgba(104, 33, 122, 0.9),
+        0 0 20px rgba(155, 79, 150, 0.65);
+}
+
+main {
+    width: min(920px, 88%);
+    margin: 90px auto;
+    position: relative;
+}
+
+main::before {
+    content: "using System;\A namespace SolveCode {\A    class Program {\A        static void Main() {\A            Console.WriteLine(\"C#\");\A        }\A    }\A}\A string language = \"C#\";\A while (true) {\A    Learn();\A}";
+    white-space: pre;
+    position: fixed;
+    right: 4%;
+    top: 12%;
+    font-family: var(--font-code);
+    font-size: 0.82rem;
+    line-height: 2;
+    color: rgba(104, 33, 122, 0.10);
+    text-shadow: 0 0 12px rgba(104, 33, 122, 0.20);
+    animation: codeRain 11s linear infinite;
+    z-index: -1;
+}
+
+main::after {
+    content: "SYSTEM ONLINE / C# MODE / .NET ACTIVE";
+    position: fixed;
+    left: 4%;
+    bottom: 8%;
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    color: rgba(104, 33, 122, 0.14);
+    animation: blinkSoft 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes codeRain {
+    from {
+        transform: translateY(-60px);
+        opacity: 0.12;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+
+    to {
+        transform: translateY(180px);
+        opacity: 0.12;
+    }
+}
+
+@keyframes blinkSoft {
+    from { opacity: 0.28; }
+    to { opacity: 1; }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+section {
+    position: relative;
+    margin-bottom: 80px;
+    padding-left: 28px;
+    border-left: 1px solid rgba(104, 33, 122, 0.22);
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+section::before {
+    content: ">";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    color: var(--yellow);
+    background: var(--bg);
+    font-family: var(--font-code);
+    text-shadow: 0 0 12px rgba(104, 33, 122, 0.9);
+}
+
+section:nth-child(3n)::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: 20px;
+    width: 6px;
+    height: 6px;
+    background: var(--yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 16px rgba(104, 33, 122, 0.9);
+    animation: dotPulse 1.6s infinite alternate;
+}
+
+@keyframes dotPulse {
+    to {
+        transform: scale(1.8);
+        opacity: 0.35;
+    }
+}
+
+section:first-child {
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+    border-left: none;
+}
+
+section:first-child::before,
+section:first-child::after {
+    display: none;
+}
+
+section:first-child h1 {
+    font-family: var(--font-title);
+    font-size: clamp(4.5rem, 13vw, 9.5rem);
+    line-height: 0.9;
+    margin-bottom: 32px;
+    letter-spacing: -4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px rgba(104, 33, 122, 0.85),
+        0 0 35px rgba(104, 33, 122, 0.32),
+        0 0 70px rgba(155, 79, 150, 0.24);
+    animation: titleFlicker 5s steps(1) infinite;
+}
+
+section:first-child h1::after {
+    content: "_";
+    color: var(--yellow);
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes titleFlicker {
+    0%, 92%, 96%, 100% {
+        opacity: 1;
+    }
+
+    94% {
+        opacity: 0.72;
+        text-shadow: none;
+    }
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+h2::before {
+    content: "/* ";
+    color: var(--yellow);
+}
+
+h2::after {
+    content: " */";
+    color: var(--yellow);
+}
+
+h3 {
+    font-family: var(--font-title);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #c58bd6;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+p,
+li {
+    color: var(--text);
+    font-size: 1.08rem;
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+ul {
+    margin: 22px 0 24px 28px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li::marker {
+    color: var(--yellow);
+}
+
+strong {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(104, 33, 122, 0.55);
+}
+
+pre {
+    position: relative;
+    margin: 30px 0;
+    padding: 30px;
+    background: rgba(8, 8, 13, 0.78);
+    border: 1px solid rgba(104, 33, 122, 0.22);
+    border-left: 3px solid var(--yellow);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    overflow-x: auto;
+    box-shadow:
+        0 0 25px rgba(104, 33, 122, 0.09),
+        inset 0 0 28px rgba(104, 33, 122, 0.035);
+}
+
+pre::before {
+    content: "csharp_console";
+    position: absolute;
+    top: 9px;
+    right: 14px;
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    color: rgba(104, 33, 122, 0.62);
+}
+
+pre::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+    animation: terminalLine 3s linear infinite;
+}
+
+@keyframes terminalLine {
+    from {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+
+    to {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+}
+
+code {
+    color: #e6c4f0;
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+}
+
+section div {
+    margin-top: 30px;
+    padding-left: 22px;
+    border-left: 1px dashed rgba(104, 33, 122, 0.22);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    main {
+        width: 88%;
+        margin-top: 70px;
+    }
+
+    section {
+        padding-left: 18px;
+        margin-bottom: 66px;
+    }
+
+    section:first-child {
+        padding-left: 0;
+    }
+
+    section:first-child h1 {
+        font-size: clamp(4rem, 18vw, 6rem);
+    }
+
+    main::before,
+    main::after,
+    section:nth-child(3n)::after {
+        display: none;
+    }
+}
