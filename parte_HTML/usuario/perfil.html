@@ -6,6 +6,9 @@
     <title>Perfil do Usuário</title>
 
     <link rel="stylesheet" href="../../parte_CSS/perfil.css">
+
+    <script src="auth.js" defer></script>
+    <script src="perfil.js" defer></script>
 </head>
 
 <body>
@@ -23,11 +26,19 @@
         <h2>Informações do Perfil</h2>
 
         <label>Nome</label>
-        <input type="text" id="nome">
+        <input type="text" id="nome" readonly>
 
         <label>Email</label>
-        <input type="email" id="email">
+        <input type="email" id="email" readonly>
 
+    </section>
+
+    <section class="perfil-box">
+        <h2>Meus Interesses</h2>
+
+        <div id="interessesLista" class="interesses-lista">
+            <p>Carregando interesses...</p>
+        </div>
     </section>
 
     <section class="salvar-box">
@@ -35,21 +46,6 @@
     </section>
 
 </main>
-
-<script src="auth.js"></script>
-
-<script>
-    protectPage();
-
-    async function load() {
-        const user = await getProfile();
-
-        document.getElementById("nome").value = user.username || "";
-        document.getElementById("email").value = user.email || "";
-    }
-
-    load();
-</script>
 
 </body>
 </html>

@@ -19,15 +19,28 @@ def create_language(name: str, description: str):
             "error": "language description is required"
         }
 
-    language = insert_language(
-        name.strip(),
-        description.strip()
-    )
+    try:
+        language = insert_language(
+            name.strip(),
+            description.strip()
+        )
 
-    return {
-        "success": True,
-        "language": language
-    }
+        return {
+            "success": True,
+            "language": language
+        }
+
+    except Exception as error:
+        if "duplicate key" in str(error):
+            return {
+                "success": False,
+                "error": "language already exists"
+            }
+
+        return {
+            "success": False,
+            "error": str(error)
+        }
 
 
 def list_languages():

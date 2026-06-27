@@ -9,9 +9,14 @@ function protectPage() {
     }
 }
 
+// -------- PEGAR TOKEN --------
+function getToken() {
+    return localStorage.getItem("token");
+}
+
 // -------- PEGAR USUÁRIO --------
 async function getProfile() {
-    const token = localStorage.getItem("token");
+    const token = getToken();
     
     const response = await fetch(`${API_URL}/perfil`, {
         method: "GET",
@@ -23,14 +28,36 @@ async function getProfile() {
     return await response.json();
 }
 
+// -------- PEGAR INTERESSES DO USUÁRIO --------
+async function getProfileInterests() {
+    const token = getToken();
+
+    const response = await fetch(`${API_URL}/perfil/interests`, {
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    return await response.json();
+}
+
+// -------- REMOVER INTERESSE --------
+async function removeInterest(languageId) {
+    const token = getToken();
+
+    const response = await fetch(`${API_URL}/interests/${languageId}`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    return await response.json();
+}
+
 // -------- LOGOUT --------
 function logout() {
     localStorage.removeItem("token");
     window.location.href = "login.html";
 }
-
-// -------- Exclusão de conta --------
-// function excludeAccount(){
-//     localStorage.removeItem("token")
-
-// }
