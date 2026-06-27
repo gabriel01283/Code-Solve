@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kotlin - Solve Code</title>
-    <link rel="stylesheet" href="../../parte_CSS/cards.css">
+    <link rel="stylesheet" href="/parte_CSS/cards/linguagens/kotlin.css">
 </head>
 <body>
 
@@ -12,8 +12,8 @@
         <h1>Solve Code</h1>
 
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cards_geral.html">Cards</a></li>
+            <li><a href="/parte_HTML/index.html">Home</a></li>
+            <li><a href="/parte_HTML/cards_geral.html">Cards</a></li>
             <li><a href="/parte_HTML/criadores/criadores.html">Desenvolvedores</a></li>
         </ul>
     </nav>
@@ -23,40 +23,205 @@
         <!-- INTRODUÇÃO -->
         <section>
             <h1>Kotlin</h1>
+
             <p>
-                Kotlin é uma linguagem de programação moderna criada pela JetBrains.
-                Ela foi desenvolvida para ser concisa, segura e interoperável com Java,
-                sendo amplamente utilizada no desenvolvimento Android e aplicações backend.
+                Kotlin é uma linguagem de programação moderna, criada para ser segura,
+                produtiva e mais simples de escrever do que linguagens mais verbosas.
+                Ela é muito conhecida por seu uso no desenvolvimento de aplicativos Android,
+                mas também pode ser usada no backend, em aplicações desktop, multiplataforma
+                e até em projetos web.
+            </p>
+
+            <p>
+                Uma das principais características do Kotlin é sua integração com Java.
+                Isso significa que projetos Kotlin podem usar bibliotecas Java e também
+                podem conviver com código Java dentro de uma mesma aplicação.
+            </p>
+
+            <p>
+                Kotlin foi projetada para reduzir erros comuns, principalmente problemas
+                relacionados a valores nulos, além de oferecer uma sintaxe mais curta,
+                moderna e expressiva.
             </p>
         </section>
 
-        <!-- NÍVEL -->
+        <!-- O QUE É KOTLIN -->
+        <section>
+            <h2>O que é Kotlin?</h2>
+
+            <p>
+                Kotlin é uma linguagem de programação de alto nível, estaticamente tipada,
+                multiparadigma e moderna. Ela pode ser usada para criar aplicações Android,
+                sistemas backend, aplicações multiplataforma e outros tipos de software.
+            </p>
+
+            <p>
+                Kotlin roda principalmente sobre a JVM, a mesma máquina virtual usada pelo Java.
+                Por isso, ela consegue aproveitar grande parte do ecossistema Java, como
+                bibliotecas, frameworks e ferramentas já existentes.
+            </p>
+
+            <p>
+                Além da JVM, Kotlin também possui outras formas de uso, como Kotlin/JS,
+                Kotlin/Native e Kotlin Multiplatform.
+            </p>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section>
+            <h2>Para que serve Kotlin?</h2>
+
+            <p>
+                Kotlin serve para desenvolver aplicações modernas com menos código repetitivo
+                e mais segurança. Seu uso mais conhecido é no desenvolvimento Android, mas
+                a linguagem também aparece em outras áreas.
+            </p>
+
+            <ul>
+                <li>Aplicativos Android</li>
+                <li>Backend com Spring Boot</li>
+                <li>Backend com Ktor</li>
+                <li>Aplicações multiplataforma</li>
+                <li>Aplicações desktop</li>
+                <li>Projetos que usam JVM</li>
+                <li>APIs REST</li>
+                <li>Sistemas corporativos</li>
+                <li>Compartilhamento de código entre Android e iOS</li>
+            </ul>
+        </section>
+
+        <!-- NÍVEL DA LINGUAGEM -->
         <section>
             <h2>Nível da linguagem</h2>
+
             <p>
-                Kotlin é uma linguagem de alto nível projetada para aumentar a produtividade
-                dos desenvolvedores, reduzindo a quantidade de código necessário e tornando
-                os programas mais fáceis de manter.
+                Kotlin é considerada uma linguagem de alto nível. Isso significa que ela possui
+                uma sintaxe mais próxima da forma humana de pensar e oferece recursos que
+                facilitam a criação de sistemas.
+            </p>
+
+            <p>
+                Ela evita muitos detalhes complexos que aparecem em linguagens mais próximas
+                do hardware, permitindo que o desenvolvedor foque mais na lógica da aplicação.
+            </p>
+
+            <p>
+                Mesmo sendo de alto nível, Kotlin pode ser usada em sistemas profissionais,
+                aplicações grandes e projetos que exigem organização, segurança e manutenção.
+            </p>
+        </section>
+
+        <!-- COMPILAÇÃO -->
+        <section>
+            <h2>Kotlin é compilada ou interpretada?</h2>
+
+            <p>
+                Kotlin é uma linguagem compilada. Na maioria dos casos, o código Kotlin é
+                compilado para bytecode da JVM, que depois é executado pela máquina virtual Java.
+            </p>
+
+            <p>
+                Isso permite que Kotlin funcione bem com projetos Java e aproveite bibliotecas
+                do ecossistema JVM.
+            </p>
+
+            <pre><code>
+fun main() {
+    println("Olá, mundo!")
+}
+            </code></pre>
+
+            <p>
+                A função <strong>main</strong> é o ponto inicial de execução de um programa Kotlin.
+                A função <strong>println</strong> imprime uma mensagem na tela.
             </p>
         </section>
 
         <!-- TIPAGEM -->
         <section>
             <h2>Tipagem</h2>
+
             <p>
                 Kotlin é uma linguagem estaticamente tipada e fortemente tipada.
-                Ela também possui inferência de tipos, permitindo que o compilador
-                identifique automaticamente o tipo de muitas variáveis.
+            </p>
+
+            <p>
+                Ser estaticamente tipada significa que os tipos são verificados antes da execução
+                do programa. Isso ajuda a encontrar erros ainda durante a compilação.
+            </p>
+
+            <p>
+                Ser fortemente tipada significa que Kotlin evita misturar tipos incompatíveis
+                de forma perigosa.
+            </p>
+
+            <p>
+                Kotlin também possui inferência de tipos. Em muitos casos, o compilador consegue
+                descobrir o tipo automaticamente.
+            </p>
+
+            <pre><code>
+val nome = "Gabriel"
+val idade = 20
+val altura = 1.75
+val ativo = true
+            </code></pre>
+        </section>
+
+        <!-- VAL E VAR -->
+        <section>
+            <h2>val e var</h2>
+
+            <p>
+                Em Kotlin, usamos <strong>val</strong> para valores que não podem ser alterados
+                e <strong>var</strong> para valores que podem mudar.
+            </p>
+
+            <div>
+                <h3>val</h3>
+
+                <p>
+                    O <strong>val</strong> cria uma variável somente leitura. Depois que recebe
+                    um valor, ela não pode ser reatribuída.
+                </p>
+
+                <pre><code>
+val nome = "Gabriel"
+println(nome)
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>var</h3>
+
+                <p>
+                    O <strong>var</strong> cria uma variável que pode ser modificada.
+                </p>
+
+                <pre><code>
+var idade = 20
+idade = 21
+
+println(idade)
+                </code></pre>
+            </div>
+
+            <p>
+                Uma boa prática em Kotlin é usar <strong>val</strong> sempre que possível
+                e usar <strong>var</strong> apenas quando o valor realmente precisar mudar.
             </p>
         </section>
 
         <!-- TIPOS PRIMITIVOS -->
         <section>
-            <h2>Tipos primitivos</h2>
+            <h2>Tipos básicos</h2>
 
             <div>
-                <h3>Int (inteiros)</h3>
-                <p>Números inteiros de 32 bits.</p>
+                <h3>Int</h3>
+                <p>
+                    Representa números inteiros.
+                </p>
+
                 <pre><code>
 val idade: Int = 20
 println(idade)
@@ -64,8 +229,11 @@ println(idade)
             </div>
 
             <div>
-                <h3>Double (decimais)</h3>
-                <p>Números com casas decimais e maior precisão.</p>
+                <h3>Double</h3>
+                <p>
+                    Representa números com casas decimais e maior precisão.
+                </p>
+
                 <pre><code>
 val altura: Double = 1.75
 println(altura)
@@ -73,17 +241,23 @@ println(altura)
             </div>
 
             <div>
-                <h3>Char (caractere)</h3>
-                <p>Um único caractere.</p>
+                <h3>Float</h3>
+                <p>
+                    Também representa números decimais, mas com menor precisão que Double.
+                </p>
+
                 <pre><code>
-val letra: Char = 'A'
-println(letra)
+val preco: Float = 19.99f
+println(preco)
                 </code></pre>
             </div>
 
             <div>
-                <h3>Boolean (lógico)</h3>
-                <p>Valores verdadeiro ou falso.</p>
+                <h3>Boolean</h3>
+                <p>
+                    Representa valores verdadeiro ou falso.
+                </p>
+
                 <pre><code>
 val ativo: Boolean = true
 println(ativo)
@@ -91,81 +265,862 @@ println(ativo)
             </div>
 
             <div>
-                <h3>String (texto)</h3>
-                <p>Sequência de caracteres.</p>
+                <h3>Char</h3>
+                <p>
+                    Representa um único caractere.
+                </p>
+
                 <pre><code>
-val nome: String = "Gabriel"
-println(nome)
+val letra: Char = 'A'
+println(letra)
                 </code></pre>
             </div>
 
+            <div>
+                <h3>String</h3>
+                <p>
+                    Representa textos.
+                </p>
+
+                <pre><code>
+val linguagem: String = "Kotlin"
+println(linguagem)
+                </code></pre>
+            </div>
         </section>
 
-        <!-- USOS -->
+        <!-- STRINGS -->
         <section>
-            <h2>Onde Kotlin é mais usado</h2>
+            <h2>Strings em Kotlin</h2>
 
-            <p>Kotlin é muito utilizado no desenvolvimento de aplicações modernas:</p>
+            <p>
+                Strings são usadas para armazenar textos. Kotlin permite juntar textos
+                e também inserir variáveis dentro de uma string.
+            </p>
+
+            <pre><code>
+val nome = "Gabriel"
+val linguagem = "Kotlin"
+
+println(nome + " está estudando " + linguagem)
+            </code></pre>
+
+            <p>
+                A forma mais comum e elegante é usar interpolação de strings.
+            </p>
+
+            <pre><code>
+val nome = "Gabriel"
+val idade = 20
+
+println("Meu nome é $nome e tenho $idade anos.")
+            </code></pre>
+
+            <p>
+                Para expressões maiores, usamos chaves.
+            </p>
+
+            <pre><code>
+val a = 5
+val b = 3
+
+println("A soma é ${a + b}")
+            </code></pre>
+        </section>
+
+        <!-- NULL SAFETY -->
+        <section>
+            <h2>Null Safety</h2>
+
+            <p>
+                Um dos recursos mais importantes do Kotlin é o Null Safety. Ele ajuda a evitar
+                erros causados por valores nulos.
+            </p>
+
+            <p>
+                Por padrão, uma variável Kotlin não pode receber <strong>null</strong>.
+            </p>
+
+            <pre><code>
+val nome: String = "Gabriel"
+            </code></pre>
+
+            <p>
+                Para permitir que uma variável receba null, usamos o símbolo <strong>?</strong>.
+            </p>
+
+            <pre><code>
+var email: String? = null
+            </code></pre>
+
+            <p>
+                Isso deixa claro no código que aquele valor pode existir ou não.
+            </p>
+        </section>
+
+        <!-- SAFE CALL -->
+        <section>
+            <h2>Safe call</h2>
+
+            <p>
+                O operador <strong>?.</strong> permite acessar um valor apenas se ele não for null.
+                Isso evita erros durante a execução.
+            </p>
+
+            <pre><code>
+var nome: String? = "Gabriel"
+
+println(nome?.length)
+            </code></pre>
+
+            <p>
+                Se <strong>nome</strong> for null, o programa não quebra. Ele apenas retorna null
+                para aquela operação.
+            </p>
+        </section>
+
+        <!-- ELVIS -->
+        <section>
+            <h2>Operador Elvis</h2>
+
+            <p>
+                O operador Elvis <strong>?:</strong> permite definir um valor padrão quando
+                uma variável for null.
+            </p>
+
+            <pre><code>
+var nome: String? = null
+
+val nomeFinal = nome ?: "Nome não informado"
+
+println(nomeFinal)
+            </code></pre>
+
+            <p>
+                Nesse exemplo, como <strong>nome</strong> está null, a variável
+                <strong>nomeFinal</strong> recebe o texto "Nome não informado".
+            </p>
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section>
+            <h2>Funções</h2>
+
+            <p>
+                Funções são blocos de código reutilizáveis. Em Kotlin, elas são criadas usando
+                a palavra-chave <strong>fun</strong>.
+            </p>
+
+            <pre><code>
+fun somar(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val resultado = somar(5, 3)
+    println(resultado)
+}
+            </code></pre>
+
+            <p>
+                A função acima recebe dois números inteiros e retorna a soma.
+            </p>
+        </section>
+
+        <!-- FUNÇÃO DE UMA LINHA -->
+        <section>
+            <h2>Função de uma linha</h2>
+
+            <p>
+                Kotlin permite criar funções mais curtas quando a lógica é simples.
+            </p>
+
+            <pre><code>
+fun somar(a: Int, b: Int): Int = a + b
+            </code></pre>
+
+            <p>
+                Esse recurso ajuda a deixar o código mais direto e legível.
+            </p>
+        </section>
+
+        <!-- CONDICIONAIS -->
+        <section>
+            <h2>Condicionais</h2>
+
+            <p>
+                Kotlin usa <strong>if</strong> e <strong>else</strong> para executar código
+                dependendo de uma condição.
+            </p>
+
+            <pre><code>
+val idade = 18
+
+if (idade >= 18) {
+    println("Maior de idade")
+} else {
+    println("Menor de idade")
+}
+            </code></pre>
+
+            <p>
+                Em Kotlin, o <strong>if</strong> também pode retornar valor.
+            </p>
+
+            <pre><code>
+val resultado = if (idade >= 18) {
+    "Maior de idade"
+} else {
+    "Menor de idade"
+}
+
+println(resultado)
+            </code></pre>
+        </section>
+
+        <!-- WHEN -->
+        <section>
+            <h2>when</h2>
+
+            <p>
+                O <strong>when</strong> é parecido com o switch de outras linguagens,
+                mas mais poderoso e expressivo.
+            </p>
+
+            <pre><code>
+val linguagem = "Kotlin"
+
+when (linguagem) {
+    "Kotlin" -> println("Linguagem moderna para Android")
+    "Java" -> println("Linguagem muito usada na JVM")
+    "Python" -> println("Linguagem simples e versátil")
+    else -> println("Outra linguagem")
+}
+            </code></pre>
+
+            <p>
+                O <strong>when</strong> é muito usado para tratar múltiplas possibilidades
+                de forma organizada.
+            </p>
+        </section>
+
+        <!-- LOOPS -->
+        <section>
+            <h2>Laços de repetição</h2>
+
+            <p>
+                Laços de repetição permitem executar um bloco de código várias vezes.
+            </p>
+
+            <div>
+                <h3>for</h3>
+
+                <pre><code>
+for (numero in 1..5) {
+    println(numero)
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>while</h3>
+
+                <pre><code>
+var contador = 0
+
+while (contador < 5) {
+    println(contador)
+    contador++
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>do while</h3>
+
+                <pre><code>
+var numero = 0
+
+do {
+    println(numero)
+    numero++
+} while (numero < 5)
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- LISTAS -->
+        <section>
+            <h2>Listas</h2>
+
+            <p>
+                Listas armazenam vários valores em uma única estrutura. Kotlin possui listas
+                imutáveis e mutáveis.
+            </p>
+
+            <div>
+                <h3>Lista imutável</h3>
+
+                <pre><code>
+val linguagens = listOf("Kotlin", "Java", "Python")
+
+println(linguagens[0])
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Lista mutável</h3>
+
+                <pre><code>
+val linguagens = mutableListOf("Kotlin", "Java")
+
+linguagens.add("Python")
+
+println(linguagens)
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- MAPS -->
+        <section>
+            <h2>Maps</h2>
+
+            <p>
+                Maps armazenam dados no formato chave e valor. Eles são úteis para representar
+                informações associadas.
+            </p>
+
+            <pre><code>
+val usuario = mapOf(
+    "nome" to "Gabriel",
+    "email" to "gabriel@email.com"
+)
+
+println(usuario["nome"])
+            </code></pre>
+
+            <p>
+                Nesse exemplo, a chave <strong>nome</strong> está associada ao valor
+                <strong>Gabriel</strong>.
+            </p>
+        </section>
+
+        <!-- CLASSES -->
+        <section>
+            <h2>Classes</h2>
+
+            <p>
+                Kotlin suporta programação orientada a objetos. Classes são modelos usados
+                para criar objetos.
+            </p>
+
+            <pre><code>
+class Usuario(val nome: String, val idade: Int)
+
+fun main() {
+    val usuario = Usuario("Gabriel", 20)
+
+    println(usuario.nome)
+    println(usuario.idade)
+}
+            </code></pre>
+
+            <p>
+                Kotlin permite criar classes com menos código quando comparado a linguagens
+                mais verbosas.
+            </p>
+        </section>
+
+        <!-- DATA CLASS -->
+        <section>
+            <h2>Data class</h2>
+
+            <p>
+                Data classes são usadas para representar dados. Elas geram automaticamente
+                recursos úteis, como <strong>toString</strong>, comparação e cópia de objetos.
+            </p>
+
+            <pre><code>
+data class Usuario(
+    val nome: String,
+    val idade: Int
+)
+
+fun main() {
+    val usuario = Usuario("Gabriel", 20)
+
+    println(usuario)
+}
+            </code></pre>
+
+            <p>
+                Data classes são muito comuns em aplicações Kotlin, principalmente para representar
+                respostas de APIs, modelos e informações do sistema.
+            </p>
+        </section>
+
+        <!-- OBJETOS -->
+        <section>
+            <h2>object</h2>
+
+            <p>
+                A palavra-chave <strong>object</strong> permite criar um objeto único.
+                Esse recurso é parecido com a ideia de Singleton.
+            </p>
+
+            <pre><code>
+object Configuracao {
+    val apiUrl = "https://exemplo.com"
+}
+
+fun main() {
+    println(Configuracao.apiUrl)
+}
+            </code></pre>
+
+            <p>
+                Isso é útil para configurações, utilitários e objetos que devem existir apenas
+                uma vez na aplicação.
+            </p>
+        </section>
+
+        <!-- COMPANION OBJECT -->
+        <section>
+            <h2>Companion object</h2>
+
+            <p>
+                Companion object permite criar membros associados à classe, sem precisar criar
+                um objeto da classe para acessá-los.
+            </p>
+
+            <pre><code>
+class Usuario {
+    companion object {
+        fun criarVisitante(): String {
+            return "Visitante"
+        }
+    }
+}
+
+fun main() {
+    println(Usuario.criarVisitante())
+}
+            </code></pre>
+        </section>
+
+        <!-- INTERFACES -->
+        <section>
+            <h2>Interfaces</h2>
+
+            <p>
+                Interfaces definem comportamentos que uma classe deve implementar.
+                Elas ajudam a organizar contratos dentro do código.
+            </p>
+
+            <pre><code>
+interface Apresentavel {
+    fun apresentar()
+}
+
+class Aluno(val nome: String) : Apresentavel {
+    override fun apresentar() {
+        println("Meu nome é $nome")
+    }
+}
+            </code></pre>
+        </section>
+
+        <!-- EXTENSION FUNCTIONS -->
+        <section>
+            <h2>Extension functions</h2>
+
+            <p>
+                Extension functions permitem adicionar funções a tipos já existentes sem modificar
+                diretamente a classe original.
+            </p>
+
+            <pre><code>
+fun String.saudacao(): String {
+    return "Olá, $this"
+}
+
+fun main() {
+    val nome = "Gabriel"
+
+    println(nome.saudacao())
+}
+            </code></pre>
+
+            <p>
+                Esse recurso deixa o código mais expressivo e é muito usado no ecossistema Kotlin.
+            </p>
+        </section>
+
+        <!-- COROUTINES -->
+        <section>
+            <h2>Coroutines</h2>
+
+            <p>
+                Coroutines são um recurso do Kotlin usado para programação assíncrona.
+                Elas ajudam a executar tarefas demoradas sem travar a aplicação.
+            </p>
+
+            <p>
+                Em aplicativos Android, por exemplo, coroutines podem ser usadas para buscar dados
+                de uma API, acessar banco de dados ou executar tarefas em segundo plano.
+            </p>
+
+            <pre><code>
+suspend fun buscarDados() {
+    println("Buscando dados...")
+}
+            </code></pre>
+
+            <p>
+                A palavra-chave <strong>suspend</strong> indica que a função pode ser pausada
+                e retomada depois.
+            </p>
+        </section>
+
+        <!-- KOTLIN NO ANDROID -->
+        <section>
+            <h2>Kotlin no Android</h2>
+
+            <p>
+                Kotlin é muito usado no desenvolvimento Android. Ele permite criar aplicativos
+                modernos com uma sintaxe mais limpa e segura.
+            </p>
+
+            <p>
+                No Android, Kotlin pode ser usado com XML para interfaces tradicionais ou com
+                Jetpack Compose, uma ferramenta moderna para construir telas de forma declarativa.
+            </p>
+
+            <p>
+                Muitas aplicações Android atuais usam Kotlin por causa da produtividade,
+                segurança contra null e boa integração com as ferramentas do Android Studio.
+            </p>
+        </section>
+
+        <!-- JETPACK COMPOSE -->
+        <section>
+            <h2>Jetpack Compose</h2>
+
+            <p>
+                Jetpack Compose é uma ferramenta moderna para criar interfaces Android usando Kotlin.
+                Com ele, o desenvolvedor descreve a interface usando código Kotlin.
+            </p>
+
+            <pre><code>
+@Composable
+fun Saudacao() {
+    Text("Olá, Kotlin!")
+}
+            </code></pre>
+
+            <p>
+                Esse modelo facilita a criação de interfaces reativas e modernas.
+            </p>
+        </section>
+
+        <!-- KOTLIN NO BACKEND -->
+        <section>
+            <h2>Kotlin no backend</h2>
+
+            <p>
+                Kotlin também pode ser usado no backend, principalmente com frameworks como
+                Spring Boot e Ktor.
+            </p>
+
+            <p>
+                Como Kotlin roda na JVM, ele consegue aproveitar o ecossistema Java, que é muito
+                usado em sistemas corporativos, APIs e aplicações de grande porte.
+            </p>
+
+            <pre><code>
+fun main() {
+    println("Backend com Kotlin")
+}
+            </code></pre>
+        </section>
+
+        <!-- KOTLIN MULTIPLATFORM -->
+        <section>
+            <h2>Kotlin Multiplatform</h2>
+
+            <p>
+                Kotlin Multiplatform permite compartilhar partes do código entre diferentes
+                plataformas, como Android, iOS, web e desktop.
+            </p>
+
+            <p>
+                A ideia não é necessariamente criar uma única interface para todos os sistemas,
+                mas sim compartilhar regras de negócio, modelos, validações e lógica comum.
+            </p>
+
+            <p>
+                Isso pode reduzir repetição de código e facilitar a manutenção de projetos
+                que precisam funcionar em várias plataformas.
+            </p>
+        </section>
+
+        <!-- KOTLIN E JAVA -->
+        <section>
+            <h2>Kotlin e Java</h2>
+
+            <p>
+                Kotlin possui forte interoperabilidade com Java. Isso significa que código Kotlin
+                pode usar classes Java, e código Java pode usar classes Kotlin.
+            </p>
+
+            <p>
+                Essa compatibilidade é uma das razões pelas quais Kotlin se tornou tão popular,
+                principalmente em projetos Android e sistemas que já usavam Java.
+            </p>
+
+            <ul>
+                <li>Kotlin roda na JVM</li>
+                <li>Kotlin pode usar bibliotecas Java</li>
+                <li>Projetos podem misturar Kotlin e Java</li>
+                <li>Kotlin reduz bastante código repetitivo comum em Java</li>
+            </ul>
+        </section>
+
+        <!-- ONDE É USADO -->
+        <section>
+            <h2>Onde Kotlin é usado?</h2>
+
+            <p>
+                Kotlin é usado principalmente em desenvolvimento Android, mas também aparece
+                em backend, sistemas corporativos e aplicações multiplataforma.
+            </p>
 
             <ul>
                 <li>Aplicativos Android</li>
-                <li>Back-end com Spring Boot</li>
-                <li>Desenvolvimento Web</li>
+                <li>APIs backend</li>
+                <li>Sistemas com Spring Boot</li>
+                <li>Projetos com Ktor</li>
                 <li>Aplicações multiplataforma</li>
-                <li>Sistemas corporativos</li>
+                <li>Projetos que usam JVM</li>
+                <li>Aplicações com Jetpack Compose</li>
+                <li>Compartilhamento de lógica entre plataformas</li>
             </ul>
+        </section>
+
+        <!-- VANTAGENS -->
+        <section>
+            <h2>Vantagens do Kotlin</h2>
+
+            <ul>
+                <li>Sintaxe moderna e menos verbosa</li>
+                <li>Boa integração com Java</li>
+                <li>Ótima escolha para Android</li>
+                <li>Null Safety ajuda a evitar erros comuns</li>
+                <li>Suporte a programação orientada a objetos e funcional</li>
+                <li>Possui coroutines para programação assíncrona</li>
+                <li>Permite desenvolvimento backend</li>
+                <li>Suporte a projetos multiplataforma</li>
+            </ul>
+        </section>
+
+        <!-- DESVANTAGENS -->
+        <section>
+            <h2>Desvantagens do Kotlin</h2>
+
+            <ul>
+                <li>Pode ser mais difícil para iniciantes absolutos do que Python</li>
+                <li>Alguns conceitos modernos exigem prática</li>
+                <li>Compilação pode ser mais lenta em alguns projetos</li>
+                <li>Ecossistema fora do Android é menor do que Java em algumas áreas</li>
+                <li>Para Android, exige conhecimento das ferramentas do ecossistema Google</li>
+            </ul>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>Boas práticas em Kotlin</h2>
+
+            <p>
+                Escrever Kotlin de forma organizada ajuda a manter o código limpo, seguro
+                e fácil de evoluir.
+            </p>
+
+            <ul>
+                <li>Usar val sempre que o valor não precisar mudar</li>
+                <li>Usar var apenas quando for necessário alterar o valor</li>
+                <li>Evitar usar !! sem necessidade</li>
+                <li>Usar safe call e operador Elvis para lidar com null</li>
+                <li>Dar nomes claros para variáveis, funções e classes</li>
+                <li>Usar data class para representar dados</li>
+                <li>Separar responsabilidades em arquivos e classes diferentes</li>
+                <li>Evitar funções muito grandes</li>
+                <li>Usar coroutines corretamente em tarefas assíncronas</li>
+            </ul>
+        </section>
+
+        <!-- ERROS COMUNS -->
+        <section>
+            <h2>Erros comuns de iniciantes</h2>
+
+            <div>
+                <h3>Confundir val e var</h3>
+                <p>
+                    Muitos iniciantes usam <strong>var</strong> para tudo, mas o ideal é usar
+                    <strong>val</strong> quando o valor não precisa mudar.
+                </p>
+            </div>
+
+            <div>
+                <h3>Usar !! sem cuidado</h3>
+                <p>
+                    O operador <strong>!!</strong> força o acesso a um valor que pode ser null.
+                    Se o valor for null, o programa pode quebrar.
+                </p>
+            </div>
+
+            <div>
+                <h3>Não entender Null Safety</h3>
+                <p>
+                    Null Safety é um dos pontos mais importantes do Kotlin. Ignorar esse conceito
+                    pode gerar confusão e erros.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir listOf com mutableListOf</h3>
+                <p>
+                    <strong>listOf</strong> cria uma lista imutável. <strong>mutableListOf</strong>
+                    cria uma lista que pode ser alterada.
+                </p>
+            </div>
+
+            <div>
+                <h3>Trazer hábitos ruins do Java</h3>
+                <p>
+                    Kotlin permite escrever código mais curto e expressivo. Copiar exatamente
+                    o estilo Java pode deixar o código mais verboso do que necessário.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXEMPLO COMPLETO -->
+        <section>
+            <h2>Exemplo simples em Kotlin</h2>
+
+            <p>
+                O exemplo abaixo mostra data class, função, lista, condicional e null safety.
+            </p>
+
+            <pre><code>
+data class Usuario(
+    val nome: String,
+    val idade: Int,
+    val email: String?
+)
+
+fun verificarIdade(idade: Int): String {
+    return if (idade >= 18) {
+        "Maior de idade"
+    } else {
+        "Menor de idade"
+    }
+}
+
+fun main() {
+    val usuario = Usuario(
+        nome = "Gabriel",
+        idade = 20,
+        email = "gabriel@email.com"
+    )
+
+    val linguagens = listOf("Kotlin", "Java", "Python")
+
+    println("Nome: ${usuario.nome}")
+    println("Idade: ${usuario.idade}")
+    println("Email: ${usuario.email ?: "Email não informado"}")
+    println(verificarIdade(usuario.idade))
+
+    println("Linguagens:")
+
+    for (linguagem in linguagens) {
+        println(linguagem)
+    }
+}
+            </code></pre>
         </section>
 
         <!-- DÚVIDAS -->
         <section>
             <h2>Dúvidas comuns sobre Kotlin</h2>
-            
+
             <div>
-                <h3>Kotlin é difícil de aprender?</h3>
+                <h3>Kotlin é bom para iniciantes?</h3>
                 <p>
-                    Não. Kotlin possui uma sintaxe simples e moderna, sendo considerada
-                    mais fácil de aprender e escrever do que Java.
+                    Kotlin pode ser aprendido por iniciantes, mas costuma ser mais fácil para quem
+                    já entende lógica de programação ou já teve contato com Java, JavaScript
+                    ou outra linguagem parecida.
                 </p>
             </div>
 
             <div>
                 <h3>Kotlin substitui Java?</h3>
                 <p>
-                    Não necessariamente. As duas linguagens convivem muito bem e podem
-                    ser utilizadas juntas no mesmo projeto.
+                    Em alguns projetos, principalmente Android, Kotlin pode substituir Java.
+                    Porém, Java ainda é muito usado em sistemas corporativos, backend e projetos
+                    antigos.
                 </p>
             </div>
 
             <div>
-                <h3>Kotlin ainda é usado em 2026?</h3>
+                <h3>Kotlin serve só para Android?</h3>
                 <p>
-                    Sim, Kotlin continua sendo uma das principais linguagens para
-                    desenvolvimento Android e aplicações backend modernas.
+                    Não. Kotlin é muito conhecido pelo Android, mas também pode ser usado em
+                    backend, aplicações desktop, projetos multiplataforma e sistemas que usam JVM.
                 </p>
             </div>
 
             <div>
-                <h3>Kotlin serve para backend?</h3>
+                <h3>Kotlin roda no navegador?</h3>
                 <p>
-                    Sim, especialmente com frameworks como Spring Boot e Ktor.
+                    Kotlin pode ser usado em projetos web através de Kotlin/JS, mas JavaScript
+                    continua sendo a principal linguagem executada diretamente no navegador.
+                </p>
+            </div>
+
+            <div>
+                <h3>Kotlin é melhor que Java?</h3>
+                <p>
+                    Depende do projeto. Kotlin costuma ser mais moderno, menos verboso e mais seguro
+                    contra null. Java possui um ecossistema enorme, muita história e ainda é muito
+                    usado no mercado.
                 </p>
             </div>
 
             <div>
                 <h3>Vale a pena aprender Kotlin?</h3>
                 <p>
-                    Sim, principalmente para quem deseja trabalhar com Android,
-                    desenvolvimento backend ou aplicações multiplataforma.
+                    Sim, principalmente para quem deseja trabalhar com desenvolvimento Android,
+                    backend na JVM ou aplicações multiplataforma.
                 </p>
             </div>
-
         </section>
 
-        <!-- FUTURO IA -->
+        <!-- RESUMO -->
         <section>
-            <h2>Perguntas inteligentes (futuro com IA)</h2>
+            <h2>Resumo</h2>
 
+            <p>
+                Kotlin é uma linguagem moderna, segura e expressiva, muito usada no desenvolvimento
+                Android e também presente no backend, em sistemas JVM e em projetos multiplataforma.
+            </p>
 
+            <p>
+                Seus principais conceitos incluem val, var, tipos básicos, null safety, funções,
+                condicionais, when, listas, classes, data classes, interfaces, extension functions
+                e coroutines. Por sua integração com Java e sua sintaxe moderna, Kotlin é uma
+                linguagem importante para quem deseja trabalhar com aplicações Android e sistemas
+                modernos.
+            </p>
         </section>
 
     </main>

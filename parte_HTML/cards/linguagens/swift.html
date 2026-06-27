@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swift - Solve Code</title>
-    <link rel="stylesheet" href="../../parte_CSS/cards.css">
+    <link rel="stylesheet" href="/parte_CSS/cards/linguagens/swift.css">
 </head>
 <body>
-
+    
     <nav>
         <h1>Solve Code</h1>
 
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cards_geral.html">Cards</a></li>
+            <li><a href="/parte_HTML/index.html">Home</a></li>
+            <li><a href="/parte_HTML/cards_geral.html">Cards</a></li>
             <li><a href="/parte_HTML/criadores/criadores.html">Desenvolvedores</a></li>
         </ul>
     </nav>
@@ -23,31 +23,198 @@
         <!-- INTRODUÇÃO -->
         <section>
             <h1>Swift</h1>
+
             <p>
-                Swift é uma linguagem de programação moderna criada pela Apple.
-                Ela foi desenvolvida para ser rápida, segura e fácil de aprender,
-                sendo amplamente utilizada no desenvolvimento de aplicativos para apple como 
-                iPhone, iPad, Mac, Apple Watch e Apple TV.
+                Swift é uma linguagem de programação moderna criada pela Apple para desenvolver
+                aplicativos seguros, rápidos e fáceis de manter. Ela é muito usada no desenvolvimento
+                de aplicativos para iPhone, iPad, Mac, Apple Watch, Apple TV e outros produtos do
+                ecossistema Apple.
+            </p>
+
+            <p>
+                A linguagem foi projetada para ser mais simples e segura do que Objective-C,
+                que era muito usada anteriormente no desenvolvimento para plataformas Apple.
+                Swift possui uma sintaxe mais moderna, recursos de segurança contra erros comuns
+                e bom desempenho.
+            </p>
+
+            <p>
+                Mesmo sendo muito associada ao desenvolvimento mobile, Swift também pode ser usada
+                em outras áreas, como backend, scripts, ferramentas de linha de comando e aplicações
+                multiplataforma.
             </p>
         </section>
 
-        <!-- NÍVEL -->
+        <!-- O QUE É SWIFT -->
+        <section>
+            <h2>O que é Swift?</h2>
+
+            <p>
+                Swift é uma linguagem de programação compilada, de alto nível, fortemente tipada
+                e multiparadigma. Ela combina recursos de linguagens modernas com desempenho próximo
+                de linguagens mais tradicionais.
+            </p>
+
+            <p>
+                O principal objetivo de Swift é permitir que desenvolvedores criem aplicações
+                eficientes com uma sintaxe clara e segura. A linguagem tenta evitar erros comuns
+                de programação, como uso incorreto de valores nulos, conversões perigosas de tipos
+                e acesso inseguro à memória.
+            </p>
+
+            <p>
+                Swift é muito utilizada junto com ferramentas como Xcode, SwiftUI e UIKit para criar
+                interfaces e aplicativos completos dentro do ecossistema Apple.
+            </p>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section>
+            <h2>Para que serve Swift?</h2>
+
+            <p>
+                Swift serve principalmente para desenvolver aplicativos para plataformas Apple.
+                Ela é a linguagem mais usada atualmente para criar apps modernos para iOS, macOS,
+                watchOS, tvOS e visionOS.
+            </p>
+
+            <ul>
+                <li>Aplicativos para iPhone</li>
+                <li>Aplicativos para iPad</li>
+                <li>Aplicativos para Mac</li>
+                <li>Aplicativos para Apple Watch</li>
+                <li>Aplicativos para Apple TV</li>
+                <li>Aplicações com SwiftUI</li>
+                <li>Aplicações com UIKit</li>
+                <li>Ferramentas de linha de comando</li>
+                <li>Backend com frameworks como Vapor</li>
+            </ul>
+        </section>
+
+        <!-- NÍVEL DA LINGUAGEM -->
         <section>
             <h2>Nível da linguagem</h2>
+
             <p>
-                Swift é uma linguagem de alto nível projetada para oferecer
-                alto desempenho e uma sintaxe simples, permitindo criar
-                aplicações modernas de forma eficiente.
+                Swift é considerada uma linguagem de alto nível, porque possui uma sintaxe
+                próxima da forma humana de pensar e oferece recursos que facilitam a criação
+                de programas complexos.
+            </p>
+
+            <p>
+                Mesmo sendo de alto nível, Swift também é uma linguagem performática. Ela é
+                compilada e foi criada para entregar boa velocidade em aplicações reais.
+            </p>
+
+            <p>
+                Essa combinação torna Swift uma linguagem adequada para aplicativos modernos,
+                com interface gráfica, acesso a banco de dados, comunicação com APIs, animações,
+                sensores, notificações e outras funcionalidades comuns em apps.
+            </p>
+        </section>
+
+        <!-- COMPILAÇÃO -->
+        <section>
+            <h2>Swift é compilada ou interpretada?</h2>
+
+            <p>
+                Swift é uma linguagem compilada. Isso significa que o código escrito pelo
+                desenvolvedor é transformado em instruções executáveis antes de rodar no dispositivo.
+            </p>
+
+            <p>
+                A compilação ajuda a melhorar o desempenho e também permite que muitos erros sejam
+                encontrados antes da execução do programa.
+            </p>
+
+            <pre><code>
+print("Olá, mundo!")
+            </code></pre>
+
+            <p>
+                Esse é um exemplo simples de código Swift. A função <strong>print</strong> exibe
+                uma mensagem na saída do programa.
             </p>
         </section>
 
         <!-- TIPAGEM -->
         <section>
             <h2>Tipagem</h2>
+
             <p>
                 Swift é uma linguagem estaticamente tipada e fortemente tipada.
-                Ela também possui inferência de tipos, permitindo que o compilador
-                identifique automaticamente o tipo de muitas variáveis.
+            </p>
+
+            <p>
+                Ser estaticamente tipada significa que os tipos das variáveis são verificados antes
+                da execução do programa, durante a compilação.
+            </p>
+
+            <p>
+                Ser fortemente tipada significa que Swift evita misturar tipos de forma perigosa.
+                Por exemplo, ela não trata automaticamente um texto como número sem que o programador
+                faça uma conversão explícita.
+            </p>
+
+            <p>
+                Swift também possui inferência de tipos. Isso significa que, em muitos casos,
+                o compilador consegue descobrir o tipo de uma variável automaticamente.
+            </p>
+
+            <pre><code>
+let nome = "Gabriel"
+let idade = 20
+let ativo = true
+            </code></pre>
+
+            <p>
+                Nesse exemplo, Swift consegue entender que <strong>nome</strong> é uma String,
+                <strong>idade</strong> é um número inteiro e <strong>ativo</strong> é um valor
+                booleano.
+            </p>
+        </section>
+
+        <!-- LET E VAR -->
+        <section>
+            <h2>let e var</h2>
+
+            <p>
+                Em Swift, usamos <strong>let</strong> para criar constantes e <strong>var</strong>
+                para criar variáveis.
+            </p>
+
+            <div>
+                <h3>let</h3>
+
+                <p>
+                    O <strong>let</strong> cria um valor que não pode ser alterado depois de definido.
+                    É usado quando sabemos que aquele dado não precisa mudar.
+                </p>
+
+                <pre><code>
+let nome = "Gabriel"
+print(nome)
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>var</h3>
+
+                <p>
+                    O <strong>var</strong> cria um valor que pode ser alterado depois.
+                </p>
+
+                <pre><code>
+var idade = 20
+idade = 21
+
+print(idade)
+                </code></pre>
+            </div>
+
+            <p>
+                Uma boa prática em Swift é usar <strong>let</strong> sempre que possível e usar
+                <strong>var</strong> apenas quando o valor realmente precisar mudar.
             </p>
         </section>
 
@@ -56,8 +223,11 @@
             <h2>Tipos primitivos</h2>
 
             <div>
-                <h3>Int (inteiros)</h3>
-                <p>Números inteiros.</p>
+                <h3>Int</h3>
+                <p>
+                    Representa números inteiros, ou seja, números sem casas decimais.
+                </p>
+
                 <pre><code>
 let idade: Int = 20
 print(idade)
@@ -65,8 +235,11 @@ print(idade)
             </div>
 
             <div>
-                <h3>Double (decimais)</h3>
-                <p>Números com casas decimais e maior precisão.</p>
+                <h3>Double</h3>
+                <p>
+                    Representa números com casas decimais e maior precisão.
+                </p>
+
                 <pre><code>
 let altura: Double = 1.75
 print(altura)
@@ -74,8 +247,35 @@ print(altura)
             </div>
 
             <div>
-                <h3>Character (caractere)</h3>
-                <p>Um único caractere.</p>
+                <h3>Float</h3>
+                <p>
+                    Também representa números decimais, mas com menor precisão do que Double.
+                </p>
+
+                <pre><code>
+let preco: Float = 19.99
+print(preco)
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Bool</h3>
+                <p>
+                    Representa valores lógicos: verdadeiro ou falso.
+                </p>
+
+                <pre><code>
+let usuarioAtivo: Bool = true
+print(usuarioAtivo)
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Character</h3>
+                <p>
+                    Representa um único caractere.
+                </p>
+
                 <pre><code>
 let letra: Character = "A"
 print(letra)
@@ -83,91 +283,834 @@ print(letra)
             </div>
 
             <div>
-                <h3>Bool (lógico)</h3>
-                <p>Valores verdadeiro ou falso.</p>
+                <h3>String</h3>
+                <p>
+                    Representa textos, ou seja, sequências de caracteres.
+                </p>
+
                 <pre><code>
-let ativo: Bool = true
-print(ativo)
+let linguagem: String = "Swift"
+print(linguagem)
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- STRINGS -->
+        <section>
+            <h2>Strings em Swift</h2>
+
+            <p>
+                Strings são usadas para armazenar textos. Em Swift, uma String pode conter letras,
+                números, espaços, símbolos e caracteres especiais.
+            </p>
+
+            <pre><code>
+let nome = "Gabriel"
+let sobrenome = "Saraiva"
+
+let nomeCompleto = nome + " " + sobrenome
+
+print(nomeCompleto)
+            </code></pre>
+
+            <p>
+                Swift também permite interpolação de strings, que é uma forma prática de colocar
+                valores dentro de um texto.
+            </p>
+
+            <pre><code>
+let nome = "Gabriel"
+let idade = 20
+
+print("Meu nome é \(nome) e tenho \(idade) anos.")
+            </code></pre>
+        </section>
+
+        <!-- ARRAYS -->
+        <section>
+            <h2>Arrays</h2>
+
+            <p>
+                Arrays são estruturas usadas para armazenar vários valores em uma única variável.
+                Em Swift, os valores de um array normalmente possuem o mesmo tipo.
+            </p>
+
+            <pre><code>
+var linguagens = ["Swift", "Python", "JavaScript"]
+
+print(linguagens[0])
+            </code></pre>
+
+            <p>
+                Também é possível adicionar novos elementos ao array.
+            </p>
+
+            <pre><code>
+linguagens.append("Java")
+
+print(linguagens)
+            </code></pre>
+        </section>
+
+        <!-- DICTIONARIES -->
+        <section>
+            <h2>Dictionaries</h2>
+
+            <p>
+                Dictionaries armazenam dados no formato chave e valor. Eles são úteis quando queremos
+                associar uma informação a uma chave específica.
+            </p>
+
+            <pre><code>
+let usuario = [
+    "nome": "Gabriel",
+    "email": "gabriel@email.com"
+]
+
+print(usuario["nome"]!)
+            </code></pre>
+
+            <p>
+                Nesse exemplo, a chave <strong>nome</strong> está associada ao valor
+                <strong>Gabriel</strong>.
+            </p>
+        </section>
+
+        <!-- OPTIONALS -->
+        <section>
+            <h2>Optionals</h2>
+
+            <p>
+                Optionals são um dos conceitos mais importantes de Swift. Eles representam valores
+                que podem existir ou não.
+            </p>
+
+            <p>
+                Em muitas linguagens, o uso incorreto de valores nulos pode causar erros durante
+                a execução. Swift tenta reduzir esse problema usando Optionals.
+            </p>
+
+            <pre><code>
+var nome: String? = "Gabriel"
+print(nome)
+            </code></pre>
+
+            <p>
+                O símbolo <strong>?</strong> indica que a variável pode conter uma String ou pode
+                não conter valor nenhum.
+            </p>
+        </section>
+
+        <!-- OPTIONAL BINDING -->
+        <section>
+            <h2>Optional Binding</h2>
+
+            <p>
+                Para usar com segurança um valor Optional, é comum utilizar <strong>if let</strong>.
+                Isso verifica se o valor existe antes de usá-lo.
+            </p>
+
+            <pre><code>
+var nome: String? = "Gabriel"
+
+if let nomeSeguro = nome {
+    print("Nome: \(nomeSeguro)")
+} else {
+    print("Nome não informado")
+}
+            </code></pre>
+
+            <p>
+                Esse recurso ajuda a evitar erros causados por tentar acessar um valor inexistente.
+            </p>
+        </section>
+
+        <!-- FORCE UNWRAP -->
+        <section>
+            <h2>Force unwrap</h2>
+
+            <p>
+                O force unwrap usa o símbolo <strong>!</strong> para acessar diretamente o valor
+                dentro de um Optional.
+            </p>
+
+            <pre><code>
+var nome: String? = "Gabriel"
+
+print(nome!)
+            </code></pre>
+
+            <p>
+                Esse recurso deve ser usado com cuidado. Se o Optional não tiver valor, o programa
+                pode quebrar durante a execução.
+            </p>
+
+            <p>
+                Por isso, em muitos casos, é melhor usar <strong>if let</strong> ou
+                <strong>guard let</strong>.
+            </p>
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section>
+            <h2>Funções</h2>
+
+            <p>
+                Funções são blocos de código reutilizáveis. Elas podem receber dados, executar
+                uma tarefa e retornar um resultado.
+            </p>
+
+            <pre><code>
+func somar(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+let resultado = somar(a: 5, b: 3)
+
+print(resultado)
+            </code></pre>
+
+            <p>
+                Nesse exemplo, a função recebe dois números inteiros e retorna a soma deles.
+            </p>
+        </section>
+
+        <!-- CONDICIONAIS -->
+        <section>
+            <h2>Condicionais</h2>
+
+            <p>
+                Condicionais permitem executar partes diferentes do código dependendo de uma condição.
+            </p>
+
+            <pre><code>
+let idade = 18
+
+if idade >= 18 {
+    print("Maior de idade")
+} else {
+    print("Menor de idade")
+}
+            </code></pre>
+
+            <p>
+                Em Swift, a condição precisa resultar em um valor booleano.
+            </p>
+        </section>
+
+        <!-- SWITCH -->
+        <section>
+            <h2>Switch</h2>
+
+            <p>
+                O <strong>switch</strong> é usado para comparar um valor com vários casos possíveis.
+                Em Swift, ele é muito poderoso e pode ser usado com números, strings, enums e outros tipos.
+            </p>
+
+            <pre><code>
+let linguagem = "Swift"
+
+switch linguagem {
+case "Swift":
+    print("Linguagem da Apple")
+case "Python":
+    print("Linguagem muito usada em dados")
+default:
+    print("Outra linguagem")
+}
+            </code></pre>
+        </section>
+
+        <!-- LOOPS -->
+        <section>
+            <h2>Laços de repetição</h2>
+
+            <p>
+                Laços de repetição permitem executar um bloco de código várias vezes.
+            </p>
+
+            <div>
+                <h3>for</h3>
+
+                <pre><code>
+for numero in 1...5 {
+    print(numero)
+}
                 </code></pre>
             </div>
 
             <div>
-                <h3>String (texto)</h3>
-                <p>Sequência de caracteres.</p>
+                <h3>while</h3>
+
                 <pre><code>
-let nome: String = "Gabriel"
-print(nome)
+var contador = 0
+
+while contador < 5 {
+    print(contador)
+    contador += 1
+}
                 </code></pre>
             </div>
 
+            <div>
+                <h3>repeat while</h3>
+
+                <pre><code>
+var numero = 0
+
+repeat {
+    print(numero)
+    numero += 1
+} while numero < 5
+                </code></pre>
+            </div>
         </section>
 
-        <!-- USOS -->
+        <!-- STRUCTS -->
         <section>
-            <h2>Onde Swift é mais usado</h2>
+            <h2>Structs</h2>
 
-            <p>Swift é muito utilizado no ecossistema da Apple:</p>
+            <p>
+                Structs são usadas para criar tipos personalizados. Elas agrupam propriedades
+                e comportamentos relacionados.
+            </p>
+
+            <pre><code>
+struct Usuario {
+    let nome: String
+    let idade: Int
+}
+
+let usuario = Usuario(nome: "Gabriel", idade: 20)
+
+print(usuario.nome)
+            </code></pre>
+
+            <p>
+                Structs são muito usadas em Swift, principalmente porque são simples, seguras
+                e eficientes para representar dados.
+            </p>
+        </section>
+
+        <!-- CLASSES -->
+        <section>
+            <h2>Classes</h2>
+
+            <p>
+                Classes também permitem criar tipos personalizados, mas funcionam de forma diferente
+                das structs. Classes trabalham com referência, enquanto structs trabalham com valor.
+            </p>
+
+            <pre><code>
+class Pessoa {
+    var nome: String
+
+    init(nome: String) {
+        self.nome = nome
+    }
+}
+
+let pessoa = Pessoa(nome: "Gabriel")
+
+print(pessoa.nome)
+            </code></pre>
+        </section>
+
+        <!-- STRUCT VS CLASS -->
+        <section>
+            <h2>Structs e classes: qual a diferença?</h2>
+
+            <p>
+                Uma diferença importante é que structs são tipos por valor e classes são tipos
+                por referência.
+            </p>
+
+            <p>
+                Quando uma struct é atribuída a outra variável, geralmente ocorre uma cópia do valor.
+                Quando uma classe é atribuída a outra variável, as duas podem apontar para o mesmo objeto.
+            </p>
 
             <ul>
-                <li>Aplicativos para iPhone (iOS)</li>
-                <li>Aplicativos para iPad (iPadOS)</li>
-                <li>Aplicativos para Mac (macOS)</li>
-                <li>Aplicativos para Apple Watch (watchOS)</li>
-                <li>Aplicativos para Apple TV (tvOS)</li>
+                <li><strong>Struct</strong>: tipo por valor</li>
+                <li><strong>Class</strong>: tipo por referência</li>
+                <li><strong>Struct</strong>: muito usada para modelos simples de dados</li>
+                <li><strong>Class</strong>: útil quando é necessário compartilhar estado</li>
             </ul>
+        </section>
+
+        <!-- ENUMS -->
+        <section>
+            <h2>Enums</h2>
+
+            <p>
+                Enums permitem representar um conjunto fixo de opções. Eles são muito úteis
+                para estados, categorias e escolhas limitadas.
+            </p>
+
+            <pre><code>
+enum StatusUsuario {
+    case ativo
+    case inativo
+    case bloqueado
+}
+
+let status = StatusUsuario.ativo
+            </code></pre>
+        </section>
+
+        <!-- PROTOCOLS -->
+        <section>
+            <h2>Protocols</h2>
+
+            <p>
+                Protocols definem um conjunto de regras que um tipo deve seguir. Eles são parecidos
+                com interfaces em outras linguagens.
+            </p>
+
+            <pre><code>
+protocol Apresentavel {
+    func apresentar()
+}
+
+struct Aluno: Apresentavel {
+    let nome: String
+
+    func apresentar() {
+        print("Meu nome é \(nome)")
+    }
+}
+            </code></pre>
+
+            <p>
+                Protocols são muito importantes no desenvolvimento Swift e aparecem bastante em
+                projetos com SwiftUI e UIKit.
+            </p>
+        </section>
+
+        <!-- EXTENSIONS -->
+        <section>
+            <h2>Extensions</h2>
+
+            <p>
+                Extensions permitem adicionar funcionalidades a tipos já existentes sem modificar
+                diretamente sua definição original.
+            </p>
+
+            <pre><code>
+extension String {
+    func saudacao() -> String {
+        return "Olá, \(self)"
+    }
+}
+
+let nome = "Gabriel"
+
+print(nome.saudacao())
+            </code></pre>
+        </section>
+
+        <!-- CLOSURES -->
+        <section>
+            <h2>Closures</h2>
+
+            <p>
+                Closures são blocos de código que podem ser armazenados em variáveis, passados como
+                argumento para funções ou executados depois.
+            </p>
+
+            <pre><code>
+let saudacao = {
+    print("Olá, mundo!")
+}
+
+saudacao()
+            </code></pre>
+
+            <p>
+                Closures são muito usadas em Swift, principalmente em eventos, animações, callbacks
+                e programação assíncrona.
+            </p>
+        </section>
+
+        <!-- TRATAMENTO DE ERROS -->
+        <section>
+            <h2>Tratamento de erros</h2>
+
+            <p>
+                Swift possui uma forma própria de lidar com erros usando <strong>throw</strong>,
+                <strong>do</strong>, <strong>try</strong> e <strong>catch</strong>.
+            </p>
+
+            <pre><code>
+enum ErroLogin: Error {
+    case senhaIncorreta
+}
+
+func login(senha: String) throws {
+    if senha != "123456" {
+        throw ErroLogin.senhaIncorreta
+    }
+}
+
+do {
+    try login(senha: "000000")
+} catch {
+    print("Erro ao fazer login")
+}
+            </code></pre>
+        </section>
+
+        <!-- ASYNC AWAIT -->
+        <section>
+            <h2>Programação assíncrona</h2>
+
+            <p>
+                Swift possui suporte a programação assíncrona com <strong>async</strong> e
+                <strong>await</strong>. Isso é muito útil para tarefas que demoram algum tempo,
+                como chamadas de API, carregamento de arquivos ou acesso à internet.
+            </p>
+
+            <pre><code>
+func buscarDados() async {
+    print("Buscando dados...")
+}
+
+Task {
+    await buscarDados()
+}
+            </code></pre>
+
+            <p>
+                Esse modelo ajuda a escrever código assíncrono de forma mais clara e organizada.
+            </p>
+        </section>
+
+        <!-- SWIFTUI -->
+        <section>
+            <h2>SwiftUI</h2>
+
+            <p>
+                SwiftUI é um framework moderno da Apple para criar interfaces de usuário usando Swift.
+                Ele permite criar telas de forma declarativa, ou seja, descrevendo como a interface
+                deve ser.
+            </p>
+
+            <pre><code>
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        Text("Olá, SwiftUI!")
+            .padding()
+    }
+}
+            </code></pre>
+
+            <p>
+                SwiftUI é muito usado em projetos novos para iOS, macOS, watchOS, tvOS e visionOS.
+            </p>
+        </section>
+
+        <!-- UIKIT -->
+        <section>
+            <h2>UIKit</h2>
+
+            <p>
+                UIKit é um framework tradicional da Apple para criar interfaces em aplicativos iOS.
+                Antes do SwiftUI, UIKit era a principal forma de criar telas para iPhone e iPad.
+            </p>
+
+            <p>
+                Muitos projetos profissionais ainda usam UIKit, principalmente sistemas mais antigos
+                ou aplicações que precisam de controle mais detalhado sobre a interface.
+            </p>
+        </section>
+
+        <!-- XCODE -->
+        <section>
+            <h2>Xcode</h2>
+
+            <p>
+                Xcode é o ambiente de desenvolvimento oficial da Apple. Ele é usado para criar,
+                testar, depurar e publicar aplicativos para plataformas Apple.
+            </p>
+
+            <p>
+                Com Xcode, o desenvolvedor pode escrever código Swift, criar interfaces,
+                usar simuladores de iPhone e iPad, acompanhar erros e preparar o aplicativo
+                para publicação.
+            </p>
+        </section>
+
+        <!-- SWIFT PACKAGE MANAGER -->
+        <section>
+            <h2>Swift Package Manager</h2>
+
+            <p>
+                Swift Package Manager é a ferramenta oficial para gerenciar dependências,
+                bibliotecas e pacotes em projetos Swift.
+            </p>
+
+            <p>
+                Ele permite adicionar bibliotecas externas, organizar módulos e facilitar
+                a estruturação de projetos maiores.
+            </p>
+        </section>
+
+        <!-- SWIFT PARA BACKEND -->
+        <section>
+            <h2>Swift no backend</h2>
+
+            <p>
+                Embora Swift seja mais conhecida pelo desenvolvimento de aplicativos Apple,
+                ela também pode ser usada no backend.
+            </p>
+
+            <p>
+                Frameworks como Vapor permitem criar APIs, servidores web e aplicações backend
+                usando Swift.
+            </p>
+
+            <p>
+                Mesmo assim, Swift no backend é menos comum do que tecnologias como Node.js,
+                Python, Java, C# e Go.
+            </p>
+        </section>
+
+        <!-- ONDE É USADO -->
+        <section>
+            <h2>Onde Swift é usado?</h2>
+
+            <p>
+                Swift é muito usada no desenvolvimento de software dentro do ecossistema Apple.
+                Ela aparece em aplicativos móveis, aplicativos desktop, interfaces modernas,
+                ferramentas e alguns sistemas de backend.
+            </p>
+
+            <ul>
+                <li>Apps iOS</li>
+                <li>Apps iPadOS</li>
+                <li>Apps macOS</li>
+                <li>Apps watchOS</li>
+                <li>Apps tvOS</li>
+                <li>Apps visionOS</li>
+                <li>Aplicações com SwiftUI</li>
+                <li>Aplicações com UIKit</li>
+                <li>Backend com Vapor</li>
+                <li>Ferramentas de linha de comando</li>
+            </ul>
+        </section>
+
+        <!-- VANTAGENS -->
+        <section>
+            <h2>Vantagens do Swift</h2>
+
+            <ul>
+                <li>Sintaxe moderna e legível</li>
+                <li>Boa performance</li>
+                <li>Integração forte com o ecossistema Apple</li>
+                <li>Segurança com Optionals</li>
+                <li>Suporte a programação orientada a objetos e funcional</li>
+                <li>Boa integração com SwiftUI e UIKit</li>
+                <li>Boa escolha para desenvolvimento mobile Apple</li>
+            </ul>
+        </section>
+
+        <!-- DESVANTAGENS -->
+        <section>
+            <h2>Desvantagens do Swift</h2>
+
+            <ul>
+                <li>Uso muito concentrado no ecossistema Apple</li>
+                <li>Menos comum em backend do que outras linguagens</li>
+                <li>Desenvolvimento completo para iOS normalmente exige macOS e Xcode</li>
+                <li>Alguns conceitos, como Optionals e Protocols, podem confundir iniciantes</li>
+                <li>Menor presença em áreas como ciência de dados e automação quando comparada a Python</li>
+            </ul>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>Boas práticas em Swift</h2>
+
+            <p>
+                Escrever Swift de forma organizada ajuda a manter o projeto mais limpo,
+                seguro e fácil de evoluir.
+            </p>
+
+            <ul>
+                <li>Usar let sempre que o valor não precisar mudar</li>
+                <li>Usar var apenas quando houver necessidade de alteração</li>
+                <li>Evitar force unwrap desnecessário</li>
+                <li>Usar if let ou guard let para lidar com Optionals</li>
+                <li>Dar nomes claros para variáveis, funções e tipos</li>
+                <li>Separar responsabilidades em structs, classes e arquivos diferentes</li>
+                <li>Organizar o código em camadas quando o projeto crescer</li>
+                <li>Evitar funções muito grandes</li>
+                <li>Tratar erros corretamente</li>
+            </ul>
+        </section>
+
+        <!-- ERROS COMUNS -->
+        <section>
+            <h2>Erros comuns de iniciantes</h2>
+
+            <div>
+                <h3>Confundir let e var</h3>
+                <p>
+                    Muitos iniciantes usam <strong>var</strong> para tudo, mas o ideal é usar
+                    <strong>let</strong> quando o valor não precisa ser alterado.
+                </p>
+            </div>
+
+            <div>
+                <h3>Usar force unwrap sem segurança</h3>
+                <p>
+                    Usar <strong>!</strong> em um Optional sem garantir que ele possui valor
+                    pode causar erro em tempo de execução.
+                </p>
+            </div>
+
+            <div>
+                <h3>Não entender Optionals</h3>
+                <p>
+                    Optionals são fundamentais em Swift. Ignorar esse conceito dificulta muito
+                    o desenvolvimento na linguagem.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir struct com class</h3>
+                <p>
+                    Structs e classes podem parecer parecidas, mas têm diferenças importantes
+                    relacionadas a valor e referência.
+                </p>
+            </div>
+
+            <div>
+                <h3>Não organizar o projeto</h3>
+                <p>
+                    Em projetos maiores, deixar todo o código em um único arquivo dificulta
+                    manutenção, leitura e evolução do sistema.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXEMPLO COMPLETO -->
+        <section>
+            <h2>Exemplo simples em Swift</h2>
+
+            <p>
+                O exemplo abaixo mostra variáveis, função, struct, Optional e condicional.
+            </p>
+
+            <pre><code>
+struct Usuario {
+    let nome: String
+    let idade: Int
+    let email: String?
+}
+
+func apresentar(usuario: Usuario) {
+    print("Nome: \(usuario.nome)")
+    print("Idade: \(usuario.idade)")
+
+    if let email = usuario.email {
+        print("Email: \(email)")
+    } else {
+        print("Email não informado")
+    }
+
+    if usuario.idade >= 18 {
+        print("Usuário maior de idade")
+    } else {
+        print("Usuário menor de idade")
+    }
+}
+
+let usuario = Usuario(
+    nome: "Gabriel",
+    idade: 20,
+    email: "gabriel@email.com"
+)
+
+apresentar(usuario: usuario)
+            </code></pre>
         </section>
 
         <!-- DÚVIDAS -->
         <section>
             <h2>Dúvidas comuns sobre Swift</h2>
-            
+
             <div>
                 <h3>Swift é difícil de aprender?</h3>
                 <p>
-                    Não. Swift possui uma sintaxe moderna e intuitiva,
-                    sendo considerada uma das linguagens mais amigáveis para iniciantes.
+                    Swift é considerada uma linguagem amigável, principalmente para quem quer
+                    desenvolver aplicativos Apple. Porém, alguns conceitos como Optionals,
+                    Protocols e closures podem exigir mais prática.
                 </p>
             </div>
 
             <div>
                 <h3>Swift substituiu Objective-C?</h3>
                 <p>
-                    Em grande parte, sim. Atualmente Swift é a principal linguagem
-                    utilizada para o desenvolvimento de aplicativos Apple.
+                    Swift se tornou a principal linguagem moderna para desenvolvimento Apple,
+                    mas Objective-C ainda existe em sistemas antigos e projetos legados.
                 </p>
             </div>
 
             <div>
-                <h3>Swift ainda é usado em 2026?</h3>
+                <h3>Swift serve apenas para iPhone?</h3>
                 <p>
-                    Sim, Swift continua sendo a linguagem oficial da Apple
-                    para o desenvolvimento de aplicativos em suas plataformas.
+                    Não. Swift é muito usada para iPhone, mas também serve para iPad, Mac,
+                    Apple Watch, Apple TV, visionOS, backend e ferramentas.
                 </p>
             </div>
 
             <div>
-                <h3>Swift serve para backend?</h3>
+                <h3>Preciso ter Mac para programar em Swift?</h3>
                 <p>
-                    Sim, embora seja mais conhecido pelo desenvolvimento mobile,
-                    também pode ser utilizado em servidores através de frameworks como Vapor.
+                    Para desenvolver e publicar aplicativos iOS de forma completa, normalmente
+                    é necessário usar macOS e Xcode. Porém, a linguagem Swift também pode ser
+                    estudada em outros ambientes.
+                </p>
+            </div>
+
+            <div>
+                <h3>Swift é boa para backend?</h3>
+                <p>
+                    Swift pode ser usada no backend, mas não é tão comum nessa área quanto
+                    linguagens como Python, JavaScript, Java, Go e C#.
                 </p>
             </div>
 
             <div>
                 <h3>Vale a pena aprender Swift?</h3>
                 <p>
-                    Sim, principalmente para quem deseja desenvolver aplicativos
-                    para o ecossistema Apple ou trabalhar com desenvolvimento mobile.
+                    Sim, principalmente para quem deseja trabalhar com desenvolvimento mobile
+                    no ecossistema Apple ou criar aplicativos para iOS, macOS e outras plataformas
+                    da Apple.
                 </p>
             </div>
-
         </section>
 
-        <!-- FUTURO IA -->
+        <!-- RESUMO -->
         <section>
-            <h2>Perguntas inteligentes (futuro com IA)</h2>
+            <h2>Resumo</h2>
 
+            <p>
+                Swift é uma linguagem moderna, segura e performática, criada pela Apple para
+                o desenvolvimento de aplicativos em suas plataformas. Ela possui sintaxe clara,
+                recursos fortes de segurança e integração profunda com ferramentas como Xcode,
+                SwiftUI e UIKit.
+            </p>
 
+            <p>
+                Seus principais conceitos incluem let, var, Optionals, structs, classes,
+                protocols, functions, closures e tratamento de erros. Para quem deseja trabalhar
+                com desenvolvimento mobile Apple, Swift é uma das linguagens mais importantes
+                para aprender.
+            </p>
         </section>
 
     </main>

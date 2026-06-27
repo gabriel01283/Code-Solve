@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Solve Code</title>
-    <link rel="stylesheet" href="../../parte_CSS/cards.css">
+    <link rel="stylesheet" href="/parte_CSS/cards/linguagens/javascript.css">
 </head>
 <body>
 
@@ -12,8 +12,8 @@
         <h1>Solve Code</h1>
 
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cards_geral.html">Cards</a></li>
+            <li><a href="/parte_HTML/index.html">Home</a></li>
+            <li><a href="/parte_HTML/cards_geral.html">Cards</a></li>
             <li><a href="/parte_HTML/criadores/criadores.html">Desenvolvedores</a></li>
         </ul>
     </nav>
@@ -23,102 +23,658 @@
         <!-- INTRODUÇÃO -->
         <section>
             <h1>JavaScript</h1>
+
             <p>
-                JavaScript é uma linguagem de programação usada principalmente
-                para desenvolvimento web, tornando páginas interativas e dinâmicas.
+                JavaScript é uma linguagem de programação essencial para o desenvolvimento web.
+                Ela é usada principalmente para adicionar interatividade, lógica e comportamento
+                às páginas da internet.
+            </p>
+
+            <p>
+                Enquanto HTML estrutura o conteúdo e CSS define o visual, JavaScript permite criar
+                ações dinâmicas, como cliques em botões, validação de formulários, menus interativos,
+                consumo de APIs, animações e atualização de conteúdo sem recarregar a página.
+            </p>
+
+            <p>
+                Além do navegador, JavaScript também pode ser usado no backend com Node.js,
+                tornando a linguagem uma das mais versáteis do desenvolvimento moderno.
             </p>
         </section>
 
-        <!-- NÍVEL -->
+        <!-- O QUE É -->
         <section>
-            <h2>Nível da linguagem</h2>
+            <h2>O que é JavaScript?</h2>
+
             <p>
-                JavaScript é uma linguagem de alto nível, interpretada e muito flexível,
-                executada principalmente no navegador e também no backend com Node.js.
+                JavaScript é uma linguagem de programação de alto nível, interpretada,
+                dinamicamente tipada e multiparadigma.
             </p>
+
+            <p>
+                Ela foi criada para rodar nos navegadores, mas hoje também é usada em servidores,
+                aplicações desktop, aplicações mobile, automações e ferramentas de desenvolvimento.
+            </p>
+
+            <pre><code>
+console.log("Olá, mundo!");
+            </code></pre>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section>
+            <h2>Para que serve JavaScript?</h2>
+
+            <ul>
+                <li>Adicionar interatividade em páginas web</li>
+                <li>Manipular elementos HTML</li>
+                <li>Validar formulários</li>
+                <li>Consumir APIs</li>
+                <li>Criar aplicações front-end</li>
+                <li>Criar back-end com Node.js</li>
+                <li>Desenvolver aplicações em tempo real</li>
+                <li>Criar interfaces dinâmicas</li>
+                <li>Trabalhar com eventos do usuário</li>
+            </ul>
         </section>
 
         <!-- TIPAGEM -->
         <section>
             <h2>Tipagem</h2>
+
             <p>
-                JavaScript é dinamicamente tipado e de tipagem fraca.
-                Isso significa que variáveis podem mudar de tipo durante a execução.
+                JavaScript é dinamicamente tipado. Isso significa que o tipo de uma variável
+                é definido durante a execução, de acordo com o valor armazenado.
+            </p>
+
+            <pre><code>
+let nome = "Gabriel";
+let idade = 20;
+let ativo = true;
+            </code></pre>
+
+            <p>
+                A mesma variável pode receber valores de tipos diferentes, embora isso deva ser
+                usado com cuidado para evitar confusão no código.
             </p>
         </section>
 
-        <!-- TIPOS BÁSICOS -->
+        <!-- VARIÁVEIS -->
         <section>
-            <h2>Tipos de dados</h2>
+            <h2>Variáveis</h2>
+
+            <p>
+                Em JavaScript, usamos principalmente <strong>let</strong> e <strong>const</strong>
+                para declarar variáveis.
+            </p>
 
             <div>
-                <h3>Number</h3>
-                <p>Representa números inteiros e decimais.</p>
+                <h3>let</h3>
+                <p>Usado quando o valor pode mudar.</p>
+
                 <pre><code>
 let idade = 20;
-let altura = 1.75;
+idade = 21;
 
 console.log(idade);
-console.log(altura);
                 </code></pre>
             </div>
 
             <div>
-                <h3>String</h3>
-                <p>Texto.</p>
+                <h3>const</h3>
+                <p>Usado quando o valor não deve ser reatribuído.</p>
+
                 <pre><code>
-let nome = "Gabriel";
+const nome = "Gabriel";
+
 console.log(nome);
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- TIPOS -->
+        <section>
+            <h2>Tipos principais</h2>
+
+            <div>
+                <h3>String</h3>
+                <p>Representa textos.</p>
+
+                <pre><code>
+const nome = "Gabriel";
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Number</h3>
+                <p>Representa números inteiros e decimais.</p>
+
+                <pre><code>
+const idade = 20;
+const altura = 1.75;
                 </code></pre>
             </div>
 
             <div>
                 <h3>Boolean</h3>
-                <p>Verdadeiro ou falso.</p>
+                <p>Representa verdadeiro ou falso.</p>
+
                 <pre><code>
-let ativo = true;
-console.log(ativo);
+const ativo = true;
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Null</h3>
+                <p>Representa ausência intencional de valor.</p>
+
+                <pre><code>
+const usuario = null;
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Undefined</h3>
+                <p>Representa uma variável sem valor definido.</p>
+
+                <pre><code>
+let resultado;
+
+console.log(resultado);
                 </code></pre>
             </div>
 
             <div>
                 <h3>Object</h3>
-                <p>Estrutura de dados com chave e valor.</p>
+                <p>Representa uma estrutura com propriedades e valores.</p>
+
                 <pre><code>
-let pessoa = {
+const usuario = {
     nome: "Gabriel",
     idade: 20
 };
+                </code></pre>
+            </div>
+        </section>
 
-console.log(pessoa);
+        <!-- ARRAYS -->
+        <section>
+            <h2>Arrays</h2>
+
+            <p>
+                Arrays armazenam vários valores em uma única variável.
+            </p>
+
+            <pre><code>
+const linguagens = ["JavaScript", "Python", "Java"];
+
+console.log(linguagens[0]);
+            </code></pre>
+
+            <p>
+                O primeiro item de um array fica na posição zero.
+            </p>
+
+            <pre><code>
+linguagens.push("C++");
+
+console.log(linguagens);
+            </code></pre>
+        </section>
+
+        <!-- OBJETOS -->
+        <section>
+            <h2>Objetos</h2>
+
+            <p>
+                Objetos são usados para representar entidades com propriedades.
+            </p>
+
+            <pre><code>
+const usuario = {
+    nome: "Gabriel",
+    idade: 20,
+    email: "gabriel@email.com"
+};
+
+console.log(usuario.nome);
+            </code></pre>
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section>
+            <h2>Funções</h2>
+
+            <p>
+                Funções são blocos de código reutilizáveis.
+            </p>
+
+            <pre><code>
+function somar(a, b) {
+    return a + b;
+}
+
+const resultado = somar(5, 3);
+
+console.log(resultado);
+            </code></pre>
+        </section>
+
+        <!-- ARROW FUNCTIONS -->
+        <section>
+            <h2>Arrow functions</h2>
+
+            <p>
+                Arrow functions são uma forma mais curta de escrever funções.
+            </p>
+
+            <pre><code>
+const somar = (a, b) => {
+    return a + b;
+};
+
+console.log(somar(5, 3));
+            </code></pre>
+
+            <p>
+                Quando a função tem apenas uma expressão, pode ser ainda mais curta.
+            </p>
+
+            <pre><code>
+const multiplicar = (a, b) => a * b;
+            </code></pre>
+        </section>
+
+        <!-- CONDICIONAIS -->
+        <section>
+            <h2>Condicionais</h2>
+
+            <p>
+                Condicionais permitem executar código dependendo de uma condição.
+            </p>
+
+            <pre><code>
+const idade = 18;
+
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
+            </code></pre>
+        </section>
+
+        <!-- SWITCH -->
+        <section>
+            <h2>Switch</h2>
+
+            <p>
+                O switch é usado para comparar um valor com vários casos possíveis.
+            </p>
+
+            <pre><code>
+const linguagem = "JavaScript";
+
+switch (linguagem) {
+    case "JavaScript":
+        console.log("Linguagem da web");
+        break;
+
+    case "Python":
+        console.log("Linguagem muito usada em dados");
+        break;
+
+    default:
+        console.log("Outra linguagem");
+}
+            </code></pre>
+        </section>
+
+        <!-- LOOPS -->
+        <section>
+            <h2>Laços de repetição</h2>
+
+            <div>
+                <h3>for</h3>
+
+                <pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
                 </code></pre>
             </div>
 
             <div>
-                <h3>Undefined / Null</h3>
-                <p>Valores vazios ou não definidos.</p>
-                <pre><code>
-let x;
-let y = null;
+                <h3>while</h3>
 
-console.log(x);
-console.log(y);
+                <pre><code>
+let contador = 0;
+
+while (contador < 5) {
+    console.log(contador);
+    contador++;
+}
                 </code></pre>
             </div>
 
+            <div>
+                <h3>forEach</h3>
+
+                <pre><code>
+const linguagens = ["JS", "Python", "Java"];
+
+linguagens.forEach((linguagem) => {
+    console.log(linguagem);
+});
+                </code></pre>
+            </div>
         </section>
 
-        <!-- USOS -->
+        <!-- DOM -->
         <section>
-            <h2>Onde JavaScript é mais usado</h2>
+            <h2>DOM</h2>
+
+            <p>
+                DOM significa Document Object Model. Ele representa a estrutura HTML da página
+                como objetos que podem ser acessados e modificados pelo JavaScript.
+            </p>
+
+            <pre><code>
+const titulo = document.querySelector("h1");
+
+titulo.textContent = "Novo título";
+            </code></pre>
+
+            <p>
+                Com o DOM, é possível alterar textos, estilos, classes, atributos e criar novos
+                elementos na página.
+            </p>
+        </section>
+
+        <!-- EVENTOS -->
+        <section>
+            <h2>Eventos</h2>
+
+            <p>
+                Eventos são ações que acontecem na página, como cliques, digitação, envio de
+                formulário ou carregamento da tela.
+            </p>
+
+            <pre><code>
+const botao = document.querySelector("button");
+
+botao.addEventListener("click", () => {
+    console.log("Botão clicado");
+});
+            </code></pre>
+        </section>
+
+        <!-- FETCH -->
+        <section>
+            <h2>Fetch e APIs</h2>
+
+            <p>
+                O fetch é usado para fazer requisições HTTP e consumir APIs.
+            </p>
+
+            <pre><code>
+fetch("https://api.exemplo.com/users")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    });
+            </code></pre>
+
+            <p>
+                Com fetch, o front-end consegue buscar dados do back-end, enviar formulários,
+                fazer login, carregar comentários e muito mais.
+            </p>
+        </section>
+
+        <!-- ASYNC AWAIT -->
+        <section>
+            <h2>Async e await</h2>
+
+            <p>
+                Async e await deixam o código assíncrono mais fácil de ler.
+            </p>
+
+            <pre><code>
+async function carregarUsuarios() {
+    const resposta = await fetch("https://api.exemplo.com/users");
+    const dados = await resposta.json();
+
+    console.log(dados);
+}
+
+carregarUsuarios();
+            </code></pre>
+        </section>
+
+        <!-- PROMISES -->
+        <section>
+            <h2>Promises</h2>
+
+            <p>
+                Promises representam operações que podem terminar no futuro, como uma requisição
+                para uma API.
+            </p>
+
+            <pre><code>
+const promessa = new Promise((resolve) => {
+    resolve("Operação concluída");
+});
+
+promessa.then((resultado) => {
+    console.log(resultado);
+});
+            </code></pre>
+        </section>
+
+        <!-- JSON -->
+        <section>
+            <h2>JSON</h2>
+
+            <p>
+                JSON é um formato muito usado para troca de dados entre front-end e back-end.
+            </p>
+
+            <pre><code>
+const usuario = {
+    nome: "Gabriel",
+    idade: 20
+};
+
+const json = JSON.stringify(usuario);
+
+console.log(json);
+            </code></pre>
+
+            <p>
+                Para transformar JSON em objeto JavaScript, usamos <strong>JSON.parse</strong>.
+            </p>
+        </section>
+
+        <!-- LOCAL STORAGE -->
+        <section>
+            <h2>LocalStorage</h2>
+
+            <p>
+                LocalStorage permite salvar dados no navegador.
+            </p>
+
+            <pre><code>
+localStorage.setItem("token", "abc123");
+
+const token = localStorage.getItem("token");
+
+console.log(token);
+            </code></pre>
+
+            <p>
+                Ele é muito usado para guardar informações simples, como tokens de autenticação.
+            </p>
+        </section>
+
+        <!-- JS NO FRONT -->
+        <section>
+            <h2>JavaScript no front-end</h2>
+
+            <p>
+                No front-end, JavaScript é usado para manipular páginas, responder a ações do
+                usuário e se comunicar com APIs.
+            </p>
 
             <ul>
-                <li>Desenvolvimento web (frontend)</li>
-                <li>Aplicações interativas em sites</li>
-                <li>Backend com Node.js</li>
-                <li>APIs e servidores</li>
-                <li>Aplicações mobile (React Native)</li>
+                <li>Menus interativos</li>
+                <li>Formulários dinâmicos</li>
+                <li>Login e cadastro</li>
+                <li>Validações</li>
+                <li>Comentários</li>
+                <li>Consumo de APIs</li>
+                <li>Alteração de conteúdo sem recarregar a página</li>
             </ul>
+        </section>
+
+        <!-- JS NO BACKEND -->
+        <section>
+            <h2>JavaScript no backend</h2>
+
+            <p>
+                Com Node.js, JavaScript também pode ser usado no backend para criar APIs,
+                servidores e sistemas.
+            </p>
+
+            <pre><code>
+console.log("Servidor usando JavaScript");
+            </code></pre>
+
+            <p>
+                Frameworks como Express.js facilitam a criação de rotas, middlewares e APIs REST.
+            </p>
+        </section>
+
+        <!-- FRAMEWORKS -->
+        <section>
+            <h2>Bibliotecas e frameworks</h2>
+
+            <ul>
+                <li><strong>React</strong>: criação de interfaces</li>
+                <li><strong>Vue</strong>: criação de interfaces progressivas</li>
+                <li><strong>Angular</strong>: framework front-end completo</li>
+                <li><strong>Next.js</strong>: framework baseado em React</li>
+                <li><strong>Express</strong>: framework backend com Node.js</li>
+                <li><strong>NestJS</strong>: framework backend estruturado</li>
+            </ul>
+        </section>
+
+        <!-- VANTAGENS -->
+        <section>
+            <h2>Vantagens do JavaScript</h2>
+
+            <ul>
+                <li>Roda diretamente no navegador</li>
+                <li>Essencial para desenvolvimento web</li>
+                <li>Permite criar páginas interativas</li>
+                <li>Pode ser usado no front-end e no backend</li>
+                <li>Possui grande comunidade</li>
+                <li>Tem muitos frameworks e bibliotecas</li>
+                <li>Integra facilmente com APIs</li>
+            </ul>
+        </section>
+
+        <!-- DESVANTAGENS -->
+        <section>
+            <h2>Desvantagens do JavaScript</h2>
+
+            <ul>
+                <li>Tipagem dinâmica pode gerar erros difíceis de perceber</li>
+                <li>Algumas partes da linguagem podem confundir iniciantes</li>
+                <li>Código pode virar bagunça se não for bem organizado</li>
+                <li>Dependência excessiva de bibliotecas pode complicar projetos</li>
+                <li>Comportamentos assíncronos exigem prática</li>
+            </ul>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>Boas práticas em JavaScript</h2>
+
+            <ul>
+                <li>Usar const sempre que o valor não precisar mudar</li>
+                <li>Usar let quando o valor puder mudar</li>
+                <li>Evitar var em códigos modernos</li>
+                <li>Dar nomes claros para variáveis e funções</li>
+                <li>Separar JavaScript em arquivos próprios</li>
+                <li>Evitar código repetido</li>
+                <li>Tratar erros em requisições</li>
+                <li>Usar async e await com cuidado</li>
+                <li>Organizar o código em funções pequenas</li>
+            </ul>
+        </section>
+
+        <!-- ERROS COMUNS -->
+        <section>
+            <h2>Erros comuns de iniciantes</h2>
+
+            <div>
+                <h3>Esquecer o defer no script</h3>
+                <p>
+                    Se o JavaScript tentar acessar elementos antes do HTML carregar, pode dar erro.
+                    Usar <strong>defer</strong> ajuda a evitar isso.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir = com == ou ===</h3>
+                <p>
+                    O sinal <strong>=</strong> atribui valor. <strong>==</strong> compara com
+                    conversão. <strong>===</strong> compara valor e tipo.
+                </p>
+            </div>
+
+            <div>
+                <h3>Não tratar erro no fetch</h3>
+                <p>
+                    Requisições podem falhar. Por isso, é importante usar try/catch ou tratar erros.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir array com objeto</h3>
+                <p>
+                    Arrays armazenam listas. Objetos armazenam propriedades com chave e valor.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXEMPLO COMPLETO -->
+        <section>
+            <h2>Exemplo simples em JavaScript</h2>
+
+            <pre><code>
+const usuario = {
+    nome: "Gabriel",
+    idade: 20,
+    linguagens: ["JavaScript", "Python", "Java"]
+};
+
+function verificarIdade(idade) {
+    if (idade >= 18) {
+        return "Maior de idade";
+    }
+
+    return "Menor de idade";
+}
+
+console.log(`Nome: ${usuario.nome}`);
+console.log(`Idade: ${usuario.idade}`);
+console.log(verificarIdade(usuario.idade));
+
+usuario.linguagens.forEach((linguagem) => {
+    console.log(linguagem);
+});
+            </code></pre>
         </section>
 
         <!-- DÚVIDAS -->
@@ -128,45 +684,50 @@ console.log(y);
             <div>
                 <h3>JavaScript é a mesma coisa que Java?</h3>
                 <p>
-                    Não. Apesar do nome parecido, são linguagens completamente diferentes.
+                    Não. JavaScript e Java são linguagens diferentes, com usos, sintaxes e
+                    ecossistemas diferentes.
                 </p>
             </div>
 
             <div>
-                <h3>JavaScript roda só no navegador?</h3>
+                <h3>JavaScript é obrigatório para web?</h3>
                 <p>
-                    Não. Com Node.js, ele também roda no backend.
+                    Para páginas interativas, sim. HTML e CSS criam estrutura e visual, mas
+                    JavaScript adiciona comportamento.
                 </p>
             </div>
 
             <div>
-                <h3>JavaScript é difícil?</h3>
+                <h3>JavaScript serve para backend?</h3>
                 <p>
-                    Ele é simples no começo, mas pode ficar complexo conforme avança.
+                    Sim. Com Node.js, JavaScript pode ser usado para criar APIs e servidores.
                 </p>
             </div>
 
             <div>
-                <h3>JavaScript é obrigatório pra web?</h3>
+                <h3>JavaScript é bom para iniciantes?</h3>
                 <p>
-                    Sim, para interatividade em sites modernos.
+                    Sim, principalmente para quem quer aprender desenvolvimento web. Mas alguns
+                    conceitos, como assíncrono e DOM, exigem prática.
                 </p>
             </div>
-
-            <div>
-                <h3>Vale a pena aprender JavaScript?</h3>
-                <p>
-                    Sim, é uma das linguagens mais importantes da web.
-                </p>
-            </div>
-
         </section>
 
-        <!-- FUTURO IA -->
+        <!-- RESUMO -->
         <section>
-            <h2>Perguntas inteligentes (futuro com IA)</h2>
+            <h2>Resumo</h2>
 
+            <p>
+                JavaScript é a principal linguagem de programação da web. Ela permite criar páginas
+                interativas, consumir APIs, manipular HTML, validar formulários e desenvolver
+                aplicações completas.
+            </p>
 
+            <p>
+                Seus principais conceitos incluem variáveis, tipos, arrays, objetos, funções,
+                eventos, DOM, fetch, async/await, JSON e LocalStorage. Para quem deseja trabalhar
+                com desenvolvimento web, JavaScript é indispensável.
+            </p>
         </section>
 
     </main>

@@ -74,16 +74,16 @@ class LanguageCreate(BaseModel):
 # -------- REGISTER --------
 @app.post("/register")
 def register(user: UserRegister):
-
+    
     if not user.username.strip():
         return {"error": "username is required"}
 
     if not user.email.strip():
         return {"error": "email is required"}
-
+    
     if not user.password.strip():
         return {"error": "password is required"}
-
+    
     allowed_domains = [
         "gmail.com",
         "yahoo.com",
@@ -145,14 +145,14 @@ def login(data: LoginData):
 # -------- PERFIL --------
 @app.get("/perfil")
 def perfil(user_id: int = Depends(get_current_user)):
-
+    
     user = get_user_by_id(user_id)
-
+    
     if not user:
         return {
             "error": "user not found"
         }
-
+    
     return {
         "id": user[0],
         "username": user[1],
@@ -205,7 +205,7 @@ def delete_existing_comment(
         comment_id,
         user_id
     )
-
+    
     if not result["success"]:
         return {
             "error": result["error"]
@@ -222,17 +222,17 @@ def create_new_language(
     language: LanguageCreate,
     user_id: int = Depends(get_current_user)
 ):
-
+    
     result = create_language(
         language.name,
         language.description
     )
-
+    
     if not result["success"]:
         return {
             "error": result["error"]
         }
-
+    
     return {
         "message": "language created",
         "language": result["language"]
@@ -244,7 +244,7 @@ def create_new_language(
 def get_languages():
 
     languages = list_languages()
-
+    
     return {
         "languages": languages
     }
@@ -253,14 +253,14 @@ def get_languages():
 # -------- GET LANGUAGE BY ID --------
 @app.get("/languages/{language_id}")
 def get_language(language_id: int):
-
+    
     result = find_language(language_id)
-
+    
     if not result["success"]:
         return {
             "error": result["error"]
         }
-
+    
     return {
         "language": result["language"]
     }

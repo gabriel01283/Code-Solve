@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C++ - Solve Code</title>
-
-    <link rel="stylesheet" href="../../parte_CSS/cards.css">
+    <link rel="stylesheet" href="/parte_CSS/cards/linguagens/cpp.css">
 </head>
 <body>
 
@@ -13,103 +12,833 @@
         <h1>Solve Code</h1>
 
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cards_geral.html">Cards</a></li>
+            <li><a href="/parte_HTML/index.html">Home</a></li>
+            <li><a href="/parte_HTML/cards_geral.html">Cards</a></li>
             <li><a href="/parte_HTML/criadores/criadores.html">Desenvolvedores</a></li>
         </ul>
     </nav>
-    
+
     <main>
 
         <!-- INTRODUÇÃO -->
         <section>
             <h1>C++</h1>
+
             <p>
-                C++ é uma linguagem de programação poderosa, de médio/baixo nível,
-                muito usada em sistemas de alto desempenho, jogos e aplicações críticas.
+                C++ é uma linguagem de programação poderosa, criada a partir da linguagem C.
+                Ela é muito usada em sistemas que precisam de alto desempenho, controle de memória
+                e eficiência.
             </p>
+
+            <p>
+                C++ aparece em áreas como jogos, sistemas operacionais, aplicações desktop,
+                motores gráficos, softwares embarcados, computação de alto desempenho,
+                simuladores e sistemas financeiros.
+            </p>
+
+            <p>
+                Apesar de ser mais complexa para iniciantes, C++ ensina conceitos importantes
+                sobre memória, tipos, ponteiros, desempenho e estrutura interna dos programas.
+            </p>
+        </section>
+
+        <!-- O QUE É C++ -->
+        <section>
+            <h2>O que é C++?</h2>
+
+            <p>
+                C++ é uma linguagem compilada, estaticamente tipada, fortemente tipada,
+                multiparadigma e de alto desempenho.
+            </p>
+
+            <p>
+                Ela permite programar usando diferentes estilos, como programação procedural,
+                programação orientada a objetos e programação genérica.
+            </p>
+
+            <pre><code>
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Olá, mundo!" &lt;&lt; std::endl;
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section>
+            <h2>Para que serve C++?</h2>
+
+            <ul>
+                <li>Desenvolvimento de jogos</li>
+                <li>Motores gráficos</li>
+                <li>Sistemas operacionais</li>
+                <li>Softwares embarcados</li>
+                <li>Aplicações desktop</li>
+                <li>Simuladores</li>
+                <li>Robótica</li>
+                <li>Computação de alto desempenho</li>
+                <li>Sistemas que exigem controle de memória</li>
+            </ul>
         </section>
 
         <!-- NÍVEL -->
         <section>
             <h2>Nível da linguagem</h2>
-            <p>         
-                C++ é considerada uma linguagem de médio nível,
-                pois permite tanto programação de alto nível quanto acesso mais direto à memória.
+
+            <p>
+                C++ é considerada uma linguagem de médio nível, porque combina recursos de alto nível
+                com acesso a detalhes mais próximos do hardware.
+            </p>
+
+            <p>
+                Isso significa que o programador pode criar abstrações modernas, mas também pode
+                controlar memória, ponteiros e desempenho de forma detalhada.
+            </p>
+        </section>
+
+        <!-- COMPILAÇÃO -->
+        <section>
+            <h2>C++ é compilada ou interpretada?</h2>
+
+            <p>
+                C++ é uma linguagem compilada. O código precisa ser transformado em um programa
+                executável antes de ser rodado.
+            </p>
+
+            <pre><code>
+g++ main.cpp -o programa
+./programa
+            </code></pre>
+
+            <p>
+                O compilador analisa o código, encontra erros e gera um executável.
             </p>
         </section>
 
         <!-- TIPAGEM -->
         <section>
             <h2>Tipagem</h2>
+
             <p>
-                C++ é uma linguagem estaticamente tipada e fortemente tipada.
-                O tipo das variáveis precisa ser declarado explicitamente.
+                C++ é estaticamente tipada e fortemente tipada. Isso significa que os tipos
+                das variáveis são verificados durante a compilação.
             </p>
+
+            <pre><code>
+std::string nome = "Gabriel";
+int idade = 20;
+double altura = 1.75;
+bool ativo = true;
+            </code></pre>
         </section>
 
-        <!-- TIPOS PRIMITIVOS -->
+        <!-- VARIÁVEIS -->
         <section>
-            <h2>Tipos primitivos</h2>
+            <h2>Variáveis</h2>
+
+            <p>
+                Variáveis armazenam valores na memória. Em C++, precisamos declarar o tipo antes
+                do nome da variável.
+            </p>
+
+            <pre><code>
+int idade = 20;
+double nota = 9.5;
+char letra = 'A';
+bool aprovado = true;
+            </code></pre>
+        </section>
+
+        <!-- TIPOS -->
+        <section>
+            <h2>Tipos básicos</h2>
 
             <div>
                 <h3>int</h3>
-                <p>Números inteiros.</p>
+                <p>Representa números inteiros.</p>
+
                 <pre><code>
 int idade = 20;
-std::cout << idade;
-                </code></pre>
-            </div>
-
-            <div>
-                <h3>float</h3>
-                <p>Números decimais de menor precisão.</p>
-                <pre><code>
-float altura = 1.75;
-std::cout << altura;
+std::cout &lt;&lt; idade;
                 </code></pre>
             </div>
 
             <div>
                 <h3>double</h3>
-                <p>Números decimais de maior precisão.</p>
+                <p>Representa números decimais com maior precisão.</p>
+
                 <pre><code>
-double pi = 3.14159;
-std::cout << pi;
+double altura = 1.75;
+std::cout &lt;&lt; altura;
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>float</h3>
+                <p>Representa números decimais com menor precisão que double.</p>
+
+                <pre><code>
+float preco = 19.99f;
+std::cout &lt;&lt; preco;
                 </code></pre>
             </div>
 
             <div>
                 <h3>char</h3>
-                <p>Um único caractere.</p>
+                <p>Representa um único caractere.</p>
+
                 <pre><code>
 char letra = 'A';
-std::cout << letra;
+std::cout &lt;&lt; letra;
                 </code></pre>
             </div>
 
             <div>
                 <h3>bool</h3>
-                <p>Valores verdadeiro ou falso.</p>
+                <p>Representa verdadeiro ou falso.</p>
+
                 <pre><code>
 bool ativo = true;
-std::cout << ativo;
+std::cout &lt;&lt; ativo;
                 </code></pre>
             </div>
 
+            <div>
+                <h3>string</h3>
+                <p>Representa textos.</p>
+
+                <pre><code>
+#include &lt;string&gt;
+
+std::string nome = "Gabriel";
+std::cout &lt;&lt; nome;
+                </code></pre>
+            </div>
         </section>
 
-        <!-- USOS -->
+        <!-- ENTRADA E SAÍDA -->
         <section>
-            <h2>Onde C++ é mais usado</h2>
+            <h2>Entrada e saída</h2>
+
+            <p>
+                Em C++, usamos <strong>std::cout</strong> para exibir informações e
+                <strong>std::cin</strong> para receber dados do usuário.
+            </p>
+
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string nome;
+
+    std::cout &lt;&lt; "Digite seu nome: ";
+    std::cin &gt;&gt; nome;
+
+    std::cout &lt;&lt; "Olá, " &lt;&lt; nome;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- CONDICIONAIS -->
+        <section>
+            <h2>Condicionais</h2>
+
+            <p>
+                Condicionais permitem executar blocos diferentes dependendo de uma condição.
+            </p>
+
+            <pre><code>
+int idade = 18;
+
+if (idade >= 18) {
+    std::cout &lt;&lt; "Maior de idade";
+} else {
+    std::cout &lt;&lt; "Menor de idade";
+}
+            </code></pre>
+        </section>
+
+        <!-- SWITCH -->
+        <section>
+            <h2>Switch</h2>
+
+            <p>
+                O switch compara um valor com várias opções possíveis.
+            </p>
+
+            <pre><code>
+int opcao = 1;
+
+switch (opcao) {
+    case 1:
+        std::cout &lt;&lt; "Cadastrar";
+        break;
+
+    case 2:
+        std::cout &lt;&lt; "Listar";
+        break;
+
+    default:
+        std::cout &lt;&lt; "Opção inválida";
+}
+            </code></pre>
+        </section>
+
+        <!-- LOOPS -->
+        <section>
+            <h2>Laços de repetição</h2>
+
+            <div>
+                <h3>for</h3>
+
+                <pre><code>
+for (int i = 0; i &lt; 5; i++) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>while</h3>
+
+                <pre><code>
+int contador = 0;
+
+while (contador &lt; 5) {
+    std::cout &lt;&lt; contador &lt;&lt; std::endl;
+    contador++;
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>do while</h3>
+
+                <pre><code>
+int numero = 0;
+
+do {
+    std::cout &lt;&lt; numero &lt;&lt; std::endl;
+    numero++;
+} while (numero &lt; 5);
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- ARRAYS -->
+        <section>
+            <h2>Arrays</h2>
+
+            <p>
+                Arrays armazenam vários valores do mesmo tipo em uma estrutura de tamanho fixo.
+            </p>
+
+            <pre><code>
+int numeros[3] = {10, 20, 30};
+
+std::cout &lt;&lt; numeros[0];
+            </code></pre>
+        </section>
+
+        <!-- VECTOR -->
+        <section>
+            <h2>Vector</h2>
+
+            <p>
+                Vector é uma estrutura mais flexível que arrays tradicionais. Ele permite adicionar
+                e remover elementos com mais facilidade.
+            </p>
+
+            <pre><code>
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; linguagens;
+
+    linguagens.push_back("C++");
+    linguagens.push_back("Python");
+
+    std::cout &lt;&lt; linguagens[0];
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section>
+            <h2>Funções</h2>
+
+            <p>
+                Funções são blocos de código reutilizáveis.
+            </p>
+
+            <pre><code>
+int somar(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultado = somar(5, 3);
+
+    std::cout &lt;&lt; resultado;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- SOBRECARGA -->
+        <section>
+            <h2>Sobrecarga de funções</h2>
+
+            <p>
+                C++ permite criar funções com o mesmo nome, desde que tenham parâmetros diferentes.
+            </p>
+
+            <pre><code>
+int somar(int a, int b) {
+    return a + b;
+}
+
+double somar(double a, double b) {
+    return a + b;
+}
+            </code></pre>
+        </section>
+
+        <!-- PONTEIROS -->
+        <section>
+            <h2>Ponteiros</h2>
+
+            <p>
+                Ponteiros são variáveis que armazenam endereços de memória.
+            </p>
+
+            <pre><code>
+int idade = 20;
+int* ponteiro = &idade;
+
+std::cout &lt;&lt; ponteiro &lt;&lt; std::endl;
+std::cout &lt;&lt; *ponteiro &lt;&lt; std::endl;
+            </code></pre>
+
+            <p>
+                O símbolo <strong>&</strong> pega o endereço da variável.
+                O símbolo <strong>*</strong> acessa o valor apontado.
+            </p>
+        </section>
+
+        <!-- REFERÊNCIAS -->
+        <section>
+            <h2>Referências</h2>
+
+            <p>
+                Referências permitem criar outro nome para uma variável existente.
+            </p>
+
+            <pre><code>
+int idade = 20;
+int& referencia = idade;
+
+referencia = 21;
+
+std::cout &lt;&lt; idade;
+            </code></pre>
+        </section>
+
+        <!-- MEMÓRIA -->
+        <section>
+            <h2>Gerenciamento de memória</h2>
+
+            <p>
+                C++ permite alocar e liberar memória manualmente. Isso dá muito controle,
+                mas também exige cuidado.
+            </p>
+
+            <pre><code>
+int* numero = new int(10);
+
+std::cout &lt;&lt; *numero;
+
+delete numero;
+            </code></pre>
+
+            <p>
+                Se a memória alocada não for liberada, pode ocorrer vazamento de memória.
+            </p>
+        </section>
+
+        <!-- SMART POINTERS -->
+        <section>
+            <h2>Smart pointers</h2>
+
+            <p>
+                Smart pointers ajudam a gerenciar memória automaticamente, reduzindo o risco
+                de vazamentos.
+            </p>
+
+            <pre><code>
+#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::unique_ptr&lt;int&gt; numero = std::make_unique&lt;int&gt;(10);
+
+    std::cout &lt;&lt; *numero;
+
+    return 0;
+}
+            </code></pre>
+
+            <p>
+                Eles são preferidos em C++ moderno quando é necessário trabalhar com memória dinâmica.
+            </p>
+        </section>
+
+        <!-- CLASSES -->
+        <section>
+            <h2>Classes e objetos</h2>
+
+            <p>
+                C++ suporta programação orientada a objetos. Classes são modelos usados para criar objetos.
+            </p>
+
+            <pre><code>
+class Usuario {
+public:
+    std::string nome;
+    int idade;
+};
+
+int main() {
+    Usuario usuario;
+
+    usuario.nome = "Gabriel";
+    usuario.idade = 20;
+
+    std::cout &lt;&lt; usuario.nome;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- CONSTRUTOR -->
+        <section>
+            <h2>Construtores</h2>
+
+            <p>
+                Construtores são métodos especiais executados quando um objeto é criado.
+            </p>
+
+            <pre><code>
+class Usuario {
+public:
+    std::string nome;
+    int idade;
+
+    Usuario(std::string nome, int idade) {
+        this-&gt;nome = nome;
+        this-&gt;idade = idade;
+    }
+};
+            </code></pre>
+        </section>
+
+        <!-- ENCAPSULAMENTO -->
+        <section>
+            <h2>Encapsulamento</h2>
+
+            <p>
+                Encapsulamento protege os dados internos de uma classe.
+            </p>
+
+            <pre><code>
+class Conta {
+private:
+    double saldo;
+
+public:
+    void depositar(double valor) {
+        saldo += valor;
+    }
+
+    double getSaldo() {
+        return saldo;
+    }
+};
+            </code></pre>
+        </section>
+
+        <!-- HERANÇA -->
+        <section>
+            <h2>Herança</h2>
+
+            <p>
+                Herança permite que uma classe reutilize atributos e métodos de outra classe.
+            </p>
+
+            <pre><code>
+class Pessoa {
+public:
+    std::string nome;
+};
+
+class Aluno : public Pessoa {
+public:
+    std::string turma;
+};
+            </code></pre>
+        </section>
+
+        <!-- POLIMORFISMO -->
+        <section>
+            <h2>Polimorfismo</h2>
+
+            <p>
+                Polimorfismo permite que métodos tenham comportamentos diferentes dependendo
+                da classe derivada.
+            </p>
+
+            <pre><code>
+class Animal {
+public:
+    virtual void emitirSom() {
+        std::cout &lt;&lt; "Som genérico";
+    }
+};
+
+class Cachorro : public Animal {
+public:
+    void emitirSom() override {
+        std::cout &lt;&lt; "Latido";
+    }
+};
+            </code></pre>
+        </section>
+
+        <!-- STRUCT -->
+        <section>
+            <h2>Structs</h2>
+
+            <p>
+                Structs em C++ são parecidas com classes, mas seus membros são públicos por padrão.
+            </p>
+
+            <pre><code>
+struct Produto {
+    std::string nome;
+    double preco;
+};
+            </code></pre>
+        </section>
+
+        <!-- TEMPLATES -->
+        <section>
+            <h2>Templates</h2>
+
+            <p>
+                Templates permitem escrever código genérico que funciona com diferentes tipos.
+            </p>
+
+            <pre><code>
+template &lt;typename T&gt;
+T maior(T a, T b) {
+    return a &gt; b ? a : b;
+}
+            </code></pre>
+        </section>
+
+        <!-- STL -->
+        <section>
+            <h2>STL</h2>
+
+            <p>
+                STL significa Standard Template Library. Ela oferece estruturas e algoritmos prontos
+                para usar em C++.
+            </p>
 
             <ul>
-                <li>Desenvolvimento de jogos (Unity/Unreal Engine)</li>
-                <li>Sistemas operacionais</li>
-                <li>Software de alta performance</li>
-                <li>Sistemas embarcados</li>
-                <li>Aplicações que exigem controle de memória</li>
+                <li>vector</li>
+                <li>map</li>
+                <li>set</li>
+                <li>queue</li>
+                <li>stack</li>
+                <li>sort</li>
+                <li>find</li>
             </ul>
+        </section>
+
+        <!-- EXCEPTIONS -->
+        <section>
+            <h2>Tratamento de exceções</h2>
+
+            <p>
+                C++ permite tratar erros usando try, catch e throw.
+            </p>
+
+            <pre><code>
+try {
+    throw std::runtime_error("Erro no programa");
+} catch (const std::exception& erro) {
+    std::cout &lt;&lt; erro.what();
+}
+            </code></pre>
+        </section>
+
+        <!-- ONDE É USADO -->
+        <section>
+            <h2>Onde C++ é usado?</h2>
+
+            <ul>
+                <li>Jogos</li>
+                <li>Engines gráficas</li>
+                <li>Sistemas operacionais</li>
+                <li>Softwares embarcados</li>
+                <li>Aplicações desktop</li>
+                <li>Simuladores</li>
+                <li>Robótica</li>
+                <li>Sistemas financeiros</li>
+                <li>Aplicações de alto desempenho</li>
+            </ul>
+        </section>
+
+        <!-- VANTAGENS -->
+        <section>
+            <h2>Vantagens do C++</h2>
+
+            <ul>
+                <li>Alto desempenho</li>
+                <li>Controle detalhado de memória</li>
+                <li>Muito usado em jogos e sistemas</li>
+                <li>Permite programação orientada a objetos</li>
+                <li>Possui STL com estruturas e algoritmos prontos</li>
+                <li>Boa escolha para softwares críticos</li>
+                <li>Ajuda a entender funcionamento interno da computação</li>
+            </ul>
+        </section>
+
+        <!-- DESVANTAGENS -->
+        <section>
+            <h2>Desvantagens do C++</h2>
+
+            <ul>
+                <li>Curva de aprendizado alta</li>
+                <li>Gerenciamento de memória exige cuidado</li>
+                <li>Ponteiros podem confundir iniciantes</li>
+                <li>Erros podem ser difíceis de depurar</li>
+                <li>Código pode ficar complexo sem boa organização</li>
+            </ul>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>Boas práticas em C++</h2>
+
+            <ul>
+                <li>Usar nomes claros para variáveis, funções e classes</li>
+                <li>Evitar ponteiros crus quando smart pointers forem melhores</li>
+                <li>Inicializar variáveis antes de usar</li>
+                <li>Evitar vazamento de memória</li>
+                <li>Separar código em arquivos .h e .cpp em projetos maiores</li>
+                <li>Usar STL quando fizer sentido</li>
+                <li>Evitar funções muito grandes</li>
+                <li>Tratar erros corretamente</li>
+            </ul>
+        </section>
+
+        <!-- ERROS COMUNS -->
+        <section>
+            <h2>Erros comuns de iniciantes</h2>
+
+            <div>
+                <h3>Esquecer ponto e vírgula</h3>
+                <p>
+                    Em C++, muitas instruções precisam terminar com ponto e vírgula.
+                </p>
+            </div>
+
+            <div>
+                <h3>Usar variável não inicializada</h3>
+                <p>
+                    Variáveis sem valor inicial podem gerar comportamentos inesperados.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir ponteiro com valor</h3>
+                <p>
+                    Ponteiro guarda endereço. O valor apontado é acessado com o operador
+                    <strong>*</strong>.
+                </p>
+            </div>
+
+            <div>
+                <h3>Esquecer delete</h3>
+                <p>
+                    Quando se usa new, é necessário liberar memória com delete, ou usar smart pointers.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXEMPLO COMPLETO -->
+        <section>
+            <h2>Exemplo simples em C++</h2>
+
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+class Usuario {
+private:
+    std::string nome;
+    int idade;
+
+public:
+    Usuario(std::string nome, int idade) {
+        this-&gt;nome = nome;
+        this-&gt;idade = idade;
+    }
+
+    std::string verificarIdade() {
+        if (idade &gt;= 18) {
+            return "Maior de idade";
+        }
+
+        return "Menor de idade";
+    }
+
+    void apresentar() {
+        std::cout &lt;&lt; "Nome: " &lt;&lt; nome &lt;&lt; std::endl;
+        std::cout &lt;&lt; "Idade: " &lt;&lt; idade &lt;&lt; std::endl;
+        std::cout &lt;&lt; verificarIdade() &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Usuario usuario("Gabriel", 20);
+
+    std::vector&lt;std::string&gt; linguagens = {"C++", "Java", "Python"};
+
+    usuario.apresentar();
+
+    std::cout &lt;&lt; "Linguagens:" &lt;&lt; std::endl;
+
+    for (std::string linguagem : linguagens) {
+        std::cout &lt;&lt; linguagem &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+            </code></pre>
         </section>
 
         <!-- DÚVIDAS -->
@@ -117,47 +846,62 @@ std::cout << ativo;
             <h2>Dúvidas comuns sobre C++</h2>
 
             <div>
-                <h3>C++ é difícil?</h3>
+                <h3>C++ é bom para iniciantes?</h3>
                 <p>
-                    Sim, comparado com linguagens como Python, ele exige mais conhecimento de lógica e memória.
+                    Pode ser aprendido por iniciantes, mas costuma ser mais difícil que Python
+                    ou JavaScript por causa de ponteiros, memória e detalhes da linguagem.
                 </p>
             </div>
 
             <div>
-                <h3>C++ é usado em jogos?</h3>
+                <h3>C++ é igual a C?</h3>
                 <p>
-                    Sim, é uma das principais linguagens da indústria de games.
+                    Não. C++ foi criado a partir de C, mas adiciona recursos como classes,
+                    objetos, templates e outras ferramentas modernas.
                 </p>
             </div>
 
             <div>
-                <h3>C++ ainda é usado em 2026?</h3>
+                <h3>C++ ainda é usado?</h3>
                 <p>
-                    Sim, principalmente em sistemas de alto desempenho.
+                    Sim. C++ continua muito usado em jogos, sistemas, motores gráficos,
+                    softwares embarcados e aplicações de alto desempenho.
                 </p>
             </div>
 
             <div>
-                <h3>C++ é mais rápido que Python?</h3>
+                <h3>C++ serve para backend?</h3>
                 <p>
-                    Sim, geralmente é muito mais rápido por ser compilado.
+                    Pode ser usado, mas não é tão comum para backend web quanto Java, C#,
+                    Go, Python ou JavaScript.
                 </p>
             </div>
 
             <div>
                 <h3>Vale a pena aprender C++?</h3>
                 <p>
-                    Sim, especialmente para quem quer entender como o computador funciona por baixo dos panos.
+                    Sim, principalmente para quem quer entender desempenho, memória,
+                    jogos, sistemas, computação gráfica ou programação de baixo nível.
                 </p>
             </div>
-
         </section>
 
-        <!-- FUTURO IA -->
+        <!-- RESUMO -->
         <section>
-            <h2>Perguntas inteligentes (futuro com IA)</h2>
+            <h2>Resumo</h2>
 
+            <p>
+                C++ é uma linguagem poderosa, rápida e muito usada em sistemas que exigem
+                desempenho e controle. Ela permite trabalhar com memória, ponteiros,
+                orientação a objetos, templates e estruturas eficientes.
+            </p>
 
+            <p>
+                Seus principais conceitos incluem variáveis, tipos, entrada e saída,
+                condicionais, loops, arrays, vectors, funções, ponteiros, referências,
+                classes, construtores, encapsulamento, herança, polimorfismo, templates,
+                STL e gerenciamento de memória.
+            </p>
         </section>
 
     </main>

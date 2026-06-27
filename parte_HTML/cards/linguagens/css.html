@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Solve Code</title>
+    <link rel="stylesheet" href="/parte_CSS/cards/linguagens/css.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Solve Code</h1>
+
+        <ul>
+            <li><a href="/parte_HTML/index.html">Home</a></li>
+            <li><a href="/parte_HTML/cards_geral.html">Cards</a></li>
+            <li><a href="/parte_HTML/criadores/criadores.html">Desenvolvedores</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+        <section>
+            <h1>CSS</h1>
+
+            <p>
+                CSS é a linguagem usada para estilizar páginas web. Enquanto o HTML cria a
+                estrutura do conteúdo, o CSS define a aparência visual da página, como cores,
+                tamanhos, fontes, espaçamentos, alinhamentos, bordas, animações e layouts.
+            </p>
+
+            <p>
+                Sem CSS, uma página HTML até funciona, mas fica visualmente simples e sem identidade.
+                Com CSS, é possível transformar a estrutura da página em uma interface bonita,
+                organizada, responsiva e agradável para o usuário.
+            </p>
+        </section>
+
+        <!-- O QUE É CSS -->
+        <section>
+            <h2>O que é CSS?</h2>
+
+            <p>
+                CSS significa <strong>Cascading Style Sheets</strong>, ou Folhas de Estilo em Cascata.
+                Ele é usado para aplicar estilos aos elementos HTML.
+            </p>
+
+            <p>
+                O termo “cascata” significa que as regras de estilo seguem uma ordem de prioridade.
+                Dependendo de onde e como uma regra é escrita, ela pode sobrescrever outra.
+            </p>
+
+            <pre><code>
+p {
+    color: blue;
+    font-size: 18px;
+}
+            </code></pre>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section>
+            <h2>Para que serve CSS?</h2>
+
+            <ul>
+                <li>Definir cores</li>
+                <li>Alterar fontes</li>
+                <li>Controlar tamanhos</li>
+                <li>Organizar layouts</li>
+                <li>Criar espaçamentos</li>
+                <li>Estilizar botões</li>
+                <li>Criar cards</li>
+                <li>Fazer páginas responsivas</li>
+                <li>Criar animações</li>
+                <li>Melhorar a experiência visual do usuário</li>
+            </ul>
+        </section>
+
+        <!-- COMO CONECTAR -->
+        <section>
+            <h2>Como conectar CSS ao HTML</h2>
+
+            <p>
+                A forma mais comum de usar CSS é criar um arquivo separado e conectá-lo ao HTML
+                usando a tag <strong>&lt;link&gt;</strong> dentro do <strong>&lt;head&gt;</strong>.
+            </p>
+
+            <pre><code>
+&lt;link rel="stylesheet" href="style.css"&gt;
+            </code></pre>
+
+            <p>
+                Isso mantém a estrutura da página separada do estilo, deixando o projeto mais
+                organizado.
+            </p>
+        </section>
+
+        <!-- SELETORES -->
+        <section>
+            <h2>Seletores</h2>
+
+            <p>
+                Seletores indicam quais elementos HTML receberão determinado estilo.
+            </p>
+
+            <div>
+                <h3>Seletor por tag</h3>
+
+                <pre><code>
+p {
+    color: white;
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Seletor por classe</h3>
+
+                <pre><code>
+.card {
+    background-color: #111827;
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Seletor por id</h3>
+
+                <pre><code>
+#titulo {
+    font-size: 32px;
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- CLASSES E IDS -->
+        <section>
+            <h2>Classes e IDs</h2>
+
+            <p>
+                Classes são usadas quando queremos aplicar o mesmo estilo em vários elementos.
+                IDs são usados para identificar um elemento único na página.
+            </p>
+
+            <pre><code>
+&lt;h1 id="titulo-principal"&gt;Meu site&lt;/h1&gt;
+
+&lt;div class="card"&gt;Conteúdo&lt;/div&gt;
+&lt;div class="card"&gt;Outro conteúdo&lt;/div&gt;
+            </code></pre>
+
+            <pre><code>
+#titulo-principal {
+    color: cyan;
+}
+
+.card {
+    border-radius: 12px;
+}
+            </code></pre>
+        </section>
+
+        <!-- CORES -->
+        <section>
+            <h2>Cores</h2>
+
+            <p>
+                CSS permite definir cores de várias formas: por nome, hexadecimal, RGB, RGBA,
+                HSL e HSLA.
+            </p>
+
+            <pre><code>
+h1 {
+    color: cyan;
+}
+
+p {
+    color: #ffffff;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+            </code></pre>
+        </section>
+
+        <!-- FONTES -->
+        <section>
+            <h2>Fontes e textos</h2>
+
+            <p>
+                CSS permite controlar a aparência dos textos da página.
+            </p>
+
+            <pre><code>
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+}
+            </code></pre>
+
+            <ul>
+                <li><strong>font-family</strong>: define a fonte</li>
+                <li><strong>font-size</strong>: define o tamanho do texto</li>
+                <li><strong>font-weight</strong>: define o peso da fonte</li>
+                <li><strong>line-height</strong>: define a altura da linha</li>
+                <li><strong>text-align</strong>: define o alinhamento</li>
+            </ul>
+        </section>
+
+        <!-- BOX MODEL -->
+        <section>
+            <h2>Box Model</h2>
+
+            <p>
+                Todo elemento HTML pode ser visto como uma caixa. Essa caixa possui conteúdo,
+                preenchimento interno, borda e margem externa.
+            </p>
+
+            <ul>
+                <li><strong>content</strong>: conteúdo do elemento</li>
+                <li><strong>padding</strong>: espaço interno</li>
+                <li><strong>border</strong>: borda do elemento</li>
+                <li><strong>margin</strong>: espaço externo</li>
+            </ul>
+
+            <pre><code>
+.card {
+    padding: 20px;
+    border: 1px solid #ffffff;
+    margin: 16px;
+}
+            </code></pre>
+        </section>
+
+        <!-- BOX SIZING -->
+        <section>
+            <h2>Box-sizing</h2>
+
+            <p>
+                Uma prática comum em CSS é usar <strong>box-sizing: border-box</strong>. Isso faz
+                com que padding e border sejam considerados dentro do tamanho total do elemento.
+            </p>
+
+            <pre><code>
+* {
+    box-sizing: border-box;
+}
+            </code></pre>
+        </section>
+
+        <!-- DISPLAY -->
+        <section>
+            <h2>Display</h2>
+
+            <p>
+                A propriedade <strong>display</strong> define como um elemento se comporta no layout.
+            </p>
+
+            <pre><code>
+div {
+    display: block;
+}
+
+span {
+    display: inline;
+}
+
+.container {
+    display: flex;
+}
+            </code></pre>
+
+            <ul>
+                <li><strong>block</strong>: ocupa uma linha inteira</li>
+                <li><strong>inline</strong>: ocupa apenas o espaço do conteúdo</li>
+                <li><strong>flex</strong>: cria layout flexível</li>
+                <li><strong>grid</strong>: cria layout em grade</li>
+                <li><strong>none</strong>: esconde o elemento</li>
+            </ul>
+        </section>
+
+        <!-- FLEXBOX -->
+        <section>
+            <h2>Flexbox</h2>
+
+            <p>
+                Flexbox é uma ferramenta poderosa para organizar elementos em linha ou coluna.
+                Ele facilita alinhamentos e distribuições de espaço.
+            </p>
+
+            <pre><code>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+            </code></pre>
+
+            <ul>
+                <li><strong>justify-content</strong>: alinha no eixo principal</li>
+                <li><strong>align-items</strong>: alinha no eixo transversal</li>
+                <li><strong>gap</strong>: define espaço entre elementos</li>
+                <li><strong>flex-direction</strong>: define linha ou coluna</li>
+            </ul>
+        </section>
+
+        <!-- GRID -->
+        <section>
+            <h2>CSS Grid</h2>
+
+            <p>
+                CSS Grid é usado para criar layouts em linhas e colunas. É muito útil para cards,
+                galerias, áreas principais e estruturas mais complexas.
+            </p>
+
+            <pre><code>
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+            </code></pre>
+        </section>
+
+        <!-- POSITION -->
+        <section>
+            <h2>Position</h2>
+
+            <p>
+                A propriedade <strong>position</strong> controla como um elemento é posicionado
+                na página.
+            </p>
+
+            <ul>
+                <li><strong>static</strong>: posição padrão</li>
+                <li><strong>relative</strong>: permite deslocar o elemento em relação à posição original</li>
+                <li><strong>absolute</strong>: posiciona em relação a um ancestral posicionado</li>
+                <li><strong>fixed</strong>: fixa na tela</li>
+                <li><strong>sticky</strong>: fixa em determinado ponto durante a rolagem</li>
+            </ul>
+
+            <pre><code>
+nav {
+    position: sticky;
+    top: 0;
+}
+            </code></pre>
+        </section>
+
+        <!-- RESPONSIVIDADE -->
+        <section>
+            <h2>Responsividade</h2>
+
+            <p>
+                Responsividade é a capacidade da página se adaptar a diferentes tamanhos de tela,
+                como computador, tablet e celular.
+            </p>
+
+            <p>
+                Para isso, usamos medidas flexíveis, layouts adaptáveis e media queries.
+            </p>
+
+            <pre><code>
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+            </code></pre>
+        </section>
+
+        <!-- UNIDADES -->
+        <section>
+            <h2>Unidades de medida</h2>
+
+            <p>
+                CSS possui várias unidades para definir tamanhos.
+            </p>
+
+            <ul>
+                <li><strong>px</strong>: pixels, medida fixa</li>
+                <li><strong>%</strong>: porcentagem em relação ao elemento pai</li>
+                <li><strong>em</strong>: relativa ao tamanho da fonte do elemento</li>
+                <li><strong>rem</strong>: relativa ao tamanho da fonte raiz</li>
+                <li><strong>vw</strong>: porcentagem da largura da tela</li>
+                <li><strong>vh</strong>: porcentagem da altura da tela</li>
+            </ul>
+
+            <pre><code>
+main {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 100vh;
+}
+            </code></pre>
+        </section>
+
+        <!-- TRANSITIONS -->
+        <section>
+            <h2>Transições</h2>
+
+            <p>
+                Transições suavizam mudanças de estilo, como cor, tamanho, sombra ou posição.
+            </p>
+
+            <pre><code>
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+            </code></pre>
+        </section>
+
+        <!-- HOVER -->
+        <section>
+            <h2>Hover</h2>
+
+            <p>
+                O <strong>:hover</strong> aplica estilos quando o usuário passa o mouse sobre
+                um elemento.
+            </p>
+
+            <pre><code>
+.card:hover {
+    transform: scale(1.03);
+    border-color: cyan;
+}
+            </code></pre>
+        </section>
+
+        <!-- ANIMAÇÕES -->
+        <section>
+            <h2>Animações</h2>
+
+            <p>
+                CSS permite criar animações usando <strong>@keyframes</strong>.
+            </p>
+
+            <pre><code>
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: aparecer 0.5s ease;
+}
+            </code></pre>
+        </section>
+
+        <!-- PSEUDOCLASSES -->
+        <section>
+            <h2>Pseudoclasses</h2>
+
+            <p>
+                Pseudoclasses aplicam estilos em estados específicos dos elementos.
+            </p>
+
+            <pre><code>
+a:hover {
+    color: cyan;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+            </code></pre>
+        </section>
+
+        <!-- PSEUDOELEMENTOS -->
+        <section>
+            <h2>Pseudoelementos</h2>
+
+            <p>
+                Pseudoelementos permitem estilizar partes específicas de um elemento.
+            </p>
+
+            <pre><code>
+p::first-letter {
+    font-size: 32px;
+}
+
+.card::before {
+    content: "";
+    display: block;
+}
+            </code></pre>
+        </section>
+
+        <!-- VARIÁVEIS CSS -->
+        <section>
+            <h2>Variáveis CSS</h2>
+
+            <p>
+                Variáveis CSS permitem armazenar valores reutilizáveis, como cores e tamanhos.
+            </p>
+
+            <pre><code>
+:root {
+    --cor-principal: #00eaff;
+    --fundo-card: #111827;
+}
+
+.card {
+    background-color: var(--fundo-card);
+    color: var(--cor-principal);
+}
+            </code></pre>
+        </section>
+
+        <!-- Z-INDEX -->
+        <section>
+            <h2>z-index</h2>
+
+            <p>
+                O <strong>z-index</strong> controla a ordem de sobreposição dos elementos.
+                Ele funciona em elementos posicionados.
+            </p>
+
+            <pre><code>
+nav {
+    position: fixed;
+    z-index: 10;
+}
+            </code></pre>
+        </section>
+
+        <!-- BACKDROP FILTER -->
+        <section>
+            <h2>Blur e backdrop-filter</h2>
+
+            <p>
+                O <strong>backdrop-filter</strong> permite criar efeitos visuais modernos,
+                como blur em fundos transparentes.
+            </p>
+
+            <pre><code>
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+}
+            </code></pre>
+
+            <p>
+                Esse efeito é muito usado em interfaces modernas, futuristas e minimalistas.
+            </p>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>Boas práticas em CSS</h2>
+
+            <ul>
+                <li>Separar CSS em arquivos próprios</li>
+                <li>Usar nomes de classes claros</li>
+                <li>Evitar repetir estilos sem necessidade</li>
+                <li>Organizar o código por seções</li>
+                <li>Usar comentários simples para dividir áreas</li>
+                <li>Usar responsividade desde o começo</li>
+                <li>Evitar excesso de IDs para estilização</li>
+                <li>Manter consistência de cores, fontes e espaçamentos</li>
+            </ul>
+        </section>
+
+        <!-- ERROS COMUNS -->
+        <section>
+            <h2>Erros comuns de iniciantes</h2>
+
+            <div>
+                <h3>Errar o caminho do CSS</h3>
+                <p>
+                    Se o caminho no link estiver errado, o CSS não será carregado.
+                </p>
+            </div>
+
+            <div>
+                <h3>Confundir class com id</h3>
+                <p>
+                    Classes usam ponto no CSS. IDs usam hashtag.
+                </p>
+
+                <pre><code>
+.card {
+    color: white;
+}
+
+#titulo {
+    color: cyan;
+}
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>Esquecer unidades</h3>
+                <p>
+                    Em propriedades como width, margin e padding, normalmente é necessário usar
+                    unidades como px, %, rem ou vh.
+                </p>
+            </div>
+
+            <div>
+                <h3>Não pensar em responsividade</h3>
+                <p>
+                    Uma página pode ficar bonita no computador e quebrada no celular se não houver
+                    cuidado com responsividade.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXEMPLO COMPLETO -->
+        <section>
+            <h2>Exemplo simples de CSS</h2>
+
+            <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050816;
+    color: #ffffff;
+}
+
+.card {
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #00eaff;
+}
+            </code></pre>
+        </section>
+
+        <!-- DÚVIDAS -->
+        <section>
+            <h2>Dúvidas comuns sobre CSS</h2>
+
+            <div>
+                <h3>CSS é linguagem de programação?</h3>
+                <p>
+                    Não no sentido tradicional. CSS é uma linguagem de estilo usada para definir
+                    a aparência de páginas HTML.
+                </p>
+            </div>
+
+            <div>
+                <h3>Preciso aprender HTML antes de CSS?</h3>
+                <p>
+                    Sim. CSS estiliza elementos HTML, então entender HTML ajuda muito.
+                </p>
+            </div>
+
+            <div>
+                <h3>CSS serve para criar lógica?</h3>
+                <p>
+                    CSS não é usado para lógica de aplicação. Para comportamento e interatividade,
+                    usamos JavaScript.
+                </p>
+            </div>
+
+            <div>
+                <h3>Flexbox ou Grid?</h3>
+                <p>
+                    Flexbox é ótimo para alinhamentos em uma direção. Grid é melhor para layouts
+                    em linhas e colunas.
+                </p>
+            </div>
+
+            <div>
+                <h3>CSS ainda é usado com frameworks?</h3>
+                <p>
+                    Sim. Mesmo usando React, Vue, Angular ou Next.js, o estilo visual ainda depende
+                    de CSS ou ferramentas baseadas nele.
+                </p>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section>
+            <h2>Resumo</h2>
+
+            <p>
+                CSS é a tecnologia responsável pelo visual das páginas web. Ele controla cores,
+                fontes, tamanhos, espaçamentos, layouts, responsividade, animações e efeitos visuais.
+            </p>
+
+            <p>
+                Seus principais conceitos incluem seletores, classes, IDs, box model, flexbox,
+                grid, position, responsividade, media queries, transições, animações e boas práticas
+                de organização.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
