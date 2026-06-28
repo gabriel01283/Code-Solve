@@ -27,7 +27,8 @@ from back_end.languages.service import (
     create_language,
     list_languages,
     find_language,
-    remove_language
+    remove_language,
+    populate_languages
 )
 
 from back_end.interests.service import (
@@ -81,6 +82,7 @@ class CommentCreate(BaseModel):
 class LanguageCreate(BaseModel):
     name: str
     description: str
+    category: str
 
 
 class ReplyCreate(BaseModel):
@@ -241,7 +243,8 @@ def create_new_language(
 
     result = create_language(
         language.name,
-        language.description
+        language.description,
+        language.category
     )
 
     if not result["success"]:
@@ -263,6 +266,21 @@ def get_languages():
 
     return {
         "languages": languages
+    }
+
+
+# -------- SEED LANGUAGES --------
+@app.post("/languages/seed")
+def seed_default_languages(
+    user_id: int = Depends(get_current_user)
+):
+
+    result = populate_languages()
+
+    return {
+        "message": "languages seeded",
+        "created_count": result["created_count"],
+        "created_items": result["created_items"]
     }
 
 
@@ -389,7 +407,7 @@ def create_new_reply(
 def get_comment_replies(comment_id: int):
 
     replies = list_replies(comment_id)
-    
+
     return {
         "replies": replies
     }
@@ -401,7 +419,7 @@ def delete_existing_reply(
     reply_id: int,
     user_id: int = Depends(get_current_user)
 ):
-    
+
     result = remove_reply(
         reply_id,
         user_id

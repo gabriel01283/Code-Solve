@@ -4,7 +4,7 @@ from back_end.database.connection import get_connection
 def create_tables():
     conn = get_connection()
     cur = conn.cursor()
-    
+
     cur.execute("""
     CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
@@ -34,30 +34,14 @@ def create_tables():
         id SERIAL PRIMARY KEY,
         name VARCHAR(80) UNIQUE NOT NULL,
         description TEXT NOT NULL,
+        category VARCHAR(80) NOT NULL DEFAULT 'Linguagem',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     """)
 
     cur.execute("""
-    CREATE TABLE IF NOT EXISTS read_comments (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER NOT NULL,
-        comment_id INTEGER NOT NULL,
-        read_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-        CONSTRAINT fk_read_user
-            FOREIGN KEY (user_id)
-            REFERENCES users(id)
-            ON DELETE CASCADE,
-
-        CONSTRAINT fk_read_comment
-            FOREIGN KEY (comment_id)
-            REFERENCES comments(id)
-            ON DELETE CASCADE,
-
-        CONSTRAINT unique_read_comment
-            UNIQUE (user_id, comment_id)
-    );
+    ALTER TABLE languages
+    ADD COLUMN IF NOT EXISTS category VARCHAR(80) NOT NULL DEFAULT 'Linguagem';
     """)
 
     cur.execute("""

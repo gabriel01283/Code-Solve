@@ -15,9 +15,9 @@ function getToken() {
 
 function usuarioEstaLogado() {
     const token = getToken();
-
+    
     return token !== null && token !== "";
-}
+} 
 
 // Permissão
 function controlarPermissaoComentario() {

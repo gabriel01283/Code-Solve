@@ -4,166 +4,313 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards - Solve Code</title>
+
     <link rel="stylesheet" href="/parte_CSS/cards/cardsGerais.css">
+    <script src="/parte_HTML/interesses.js" defer></script>
 </head>
+
 <body>
     
-    <nav>
-        <h1>Solve Code</h1>
-        
-        <ul>
-            <li><a href="/parte_HTML/index.html">Home</a></li>
-        </ul>
-    </nav>
+<nav>
+    <h1>Solve Code</h1>
+    
+    <ul>
+        <li><a href="/parte_HTML/index.html">Home</a></li>
+    </ul>
+</nav>
 
-    <main>
-        
-        <!-- LINGUAGENS -->
-        <section>
-            <h1>Linguagens de Programação</h1>
-            <p>Principais linguagens para começar no desenvolvimento.</p>
+<main>
+    
+    <!-- LINGUAGENS -->
+    <section>
+        <h1>Linguagens de Programação</h1>
+        <p>Principais linguagens para começar no desenvolvimento.</p>
 
-            <div class="cards-container">
-                <a href="/parte_HTML/cards/linguagens/python.html" class="card python">
-                    Python
-                </a>
+        <div class="cards-container">
 
-                <a href="/parte_HTML/cards/linguagens/java.html" class="card java">
-                    Java
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/javascript.html" class="card">
-                    JavaScript
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/html.html" class="card html">
-                    HTML 
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/css.html" class = "card css">
-                    CSS
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/cpp.html" class="card cpp">
-                    C++
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/csharp.html" class="card csharp">
-                    C#
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/go.html" class="card go">
-                    Go
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/rust.html" class="card rust">
-                    Rust
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/kotlin.html" class="card kotlin">
-                    Kotlin
-                </a>
-
-                <a href="/parte_HTML/cards/linguagens/swift.html" class="card swift">
-                    Swift
-                </a>
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/python.html" class="card python">Python</a>
+                <button type="button" onclick="adicionarInteressePorNome('Python')">Adicionar aos interesses</button>
             </div>
-        </section>
 
-        <!-- FRAMEWORKS -->
-        <section>
-            <h1>Frameworks</h1>
-            <p>Ferramentas para acelerar o desenvolvimento.</p>
-
-            <div class="cards-container">
-                <a href="/parte_HTML/cards/frameworks/react.html"class="card">
-                    React
-                </a>
-                <a href="/parte_HTML/cards/frameworks/vue.html" class="card">
-                    Vue
-                </a>
-                <a href="/parte_HTML/cards/frameworks/angular.html" class="card">
-                    Angular
-                </a>
-                <a href="/parte_HTML/cards/frameworks/svelte.html" class="card">
-                    Svelte
-                </a>
-                <a href="/parte_HTML/cards/frameworks/next.html"class="card">
-                    Next.js
-                </a>
-                <a href="/parte_HTML/cards/frameworks/nuxt.html"class="card">
-                    Nuxt
-                </a>
-                <a href="/parte_HTML/cards/frameworks/spring.html" class="card">
-                    Spring Boot
-                </a>
-                <a href="/parte_HTML/cards/frameworks/django.html" class="card">
-                    Django
-                </a>
-                <a href="/parte_HTML/cards/frameworks/flask.html" class="card">
-                    Flask
-                </a>
-                <a href="/parte_HTML/cards/frameworks/express.html" class="card">
-                    Express
-                </a>
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/java.html" class="card java">Java</a>
+                <button type="button" onclick="adicionarInteressePorNome('Java')">Adicionar aos interesses</button>
             </div>
-        </section>
-        
-        <!-- GIT E GITHUB -->
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/javascript.html" class="card">JavaScript</a>
+                <button type="button" onclick="adicionarInteressePorNome('JavaScript')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/html.html" class="card html">HTML</a>
+                <button type="button" onclick="adicionarInteressePorNome('HTML')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/css.html" class="card css">CSS</a>
+                <button type="button" onclick="adicionarInteressePorNome('CSS')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/cpp.html" class="card cpp">C++</a>
+                <button type="button" onclick="adicionarInteressePorNome('C++')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/csharp.html" class="card csharp">C#</a>
+                <button type="button" onclick="adicionarInteressePorNome('C#')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/go.html" class="card go">Go</a>
+                <button type="button" onclick="adicionarInteressePorNome('Go')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/rust.html" class="card rust">Rust</a>
+                <button type="button" onclick="adicionarInteressePorNome('Rust')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/kotlin.html" class="card kotlin">Kotlin</a>
+                <button type="button" onclick="adicionarInteressePorNome('Kotlin')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/linguagens/swift.html" class="card swift">Swift</a>
+                <button type="button" onclick="adicionarInteressePorNome('Swift')">Adicionar aos interesses</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FRAMEWORKS -->
+    <section>
+        <h1>Frameworks</h1>
+        <p>Ferramentas para acelerar o desenvolvimento.</p>
+
+        <div class="cards-container">
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/react.html" class="card">React</a>
+                <button type="button" onclick="adicionarInteressePorNome('React')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/vue.html" class="card">Vue</a>
+                <button type="button" onclick="adicionarInteressePorNome('Vue')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/angular.html" class="card">Angular</a>
+                <button type="button" onclick="adicionarInteressePorNome('Angular')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/svelte.html" class="card">Svelte</a>
+                <button type="button" onclick="adicionarInteressePorNome('Svelte')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/next.html" class="card">Next.js</a>
+                <button type="button" onclick="adicionarInteressePorNome('Next.js')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/nuxt.html" class="card">Nuxt</a>
+                <button type="button" onclick="adicionarInteressePorNome('Nuxt')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/spring.html" class="card">Spring Boot</a>
+                <button type="button" onclick="adicionarInteressePorNome('Spring Boot')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/django.html" class="card">Django</a>
+                <button type="button" onclick="adicionarInteressePorNome('Django')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/flask.html" class="card">Flask</a>
+                <button type="button" onclick="adicionarInteressePorNome('Flask')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/frameworks/express.html" class="card">Express</a>
+                <button type="button" onclick="adicionarInteressePorNome('Express')">Adicionar aos interesses</button>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- GIT E GITHUB -->
     <section>
         <h1>Git & GitHub</h1>
         <p>Controle de versão, colaboração e organização de projetos.</p>
         
         <div class="cards-container">
-            <a href="/parte_HTML/cards/git_e_github/controle_de_versao.html" class = "card">Controle de Versão</a>
-            <a class="card">Repositórios</a>
-            <a class="card">Fluxo de Desenvolvimento</a>
-            <a class="card">Revisão de Código</a>
-            <a class="card">Organização de Tarefas</a>
-            <a class="card">Automação</a>
-            <a class="card">Boas Práticas</a>
+
+            <div class="card-wrapper">
+                <a href="/parte_HTML/cards/git_e_github/controle_de_versao.html" class="card">Controle de Versão</a>
+                <button type="button" onclick="adicionarInteressePorNome('Controle de Versão')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Repositórios</a>
+                <button type="button" onclick="adicionarInteressePorNome('Repositórios')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Fluxo de Desenvolvimento</a>
+                <button type="button" onclick="adicionarInteressePorNome('Fluxo de Desenvolvimento')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Revisão de Código</a>
+                <button type="button" onclick="adicionarInteressePorNome('Revisão de Código')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Organização de Tarefas</a>
+                <button type="button" onclick="adicionarInteressePorNome('Organização de Tarefas')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Automação</a>
+                <button type="button" onclick="adicionarInteressePorNome('Automação')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Boas Práticas</a>
+                <button type="button" onclick="adicionarInteressePorNome('Boas Práticas')">Adicionar aos interesses</button>
+            </div>
+
         </div>
     </section>
 
-        <!-- APIs -->
-        <section>
-            <h1>APIs</h1>
-            <p>Comunicação entre sistemas e serviços.</p>
+    <!-- APIs -->
+    <section>
+        <h1>APIs</h1>
+        <p>Comunicação entre sistemas e serviços.</p>
 
-            <div class="cards-container">
+        <div class="cards-container">
+
+            <div class="card-wrapper">
                 <a class="card">REST</a>
-                <a class="card">JSON</a>
-                <a class="card">HTTP Methods</a>
-                <a class="card">Authentication</a>
-                <a class="card">Rate Limits</a>
-                <a class="card">GraphQL</a>
-                <a class="card">Webhooks</a>
-                <a class="card">Endpoints</a>
-                <a class="card">CRUD</a>
-                <a class="card">Swagger</a>
+                <button type="button" onclick="adicionarInteressePorNome('REST')">Adicionar aos interesses</button>
             </div>
-        </section>
 
-        <!-- BANCO DE DADOS -->
-        <section>
-            <h1>Banco de Dados</h1>
-            
-            <div class="cards-container">
-                <a class="card">SQL</a>
-                <a class="card">PostgreSQL</a>
-                <a class="card">MySQL</a>
-                <a class="card">SQLite</a>
-                <a class="card">MongoDB</a>
-                <a class="card">NoSQL</a>
-                <a class="card">Redis</a>
-                <a class="card">Indexes</a>
-                <a class="card">Joins</a>
-                <a class="card">ORM</a>
+            <div class="card-wrapper">
+                <a class="card">JSON</a>
+                <button type="button" onclick="adicionarInteressePorNome('JSON')">Adicionar aos interesses</button>
             </div>
-        </section>
-    
-    
-    </main>
+
+            <div class="card-wrapper">
+                <a class="card">HTTP Methods</a>
+                <button type="button" onclick="adicionarInteressePorNome('HTTP Methods')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Authentication</a>
+                <button type="button" onclick="adicionarInteressePorNome('Authentication')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Rate Limits</a>
+                <button type="button" onclick="adicionarInteressePorNome('Rate Limits')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">GraphQL</a>
+                <button type="button" onclick="adicionarInteressePorNome('GraphQL')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Webhooks</a>
+                <button type="button" onclick="adicionarInteressePorNome('Webhooks')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Endpoints</a>
+                <button type="button" onclick="adicionarInteressePorNome('Endpoints')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">CRUD</a>
+                <button type="button" onclick="adicionarInteressePorNome('CRUD')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Swagger</a>
+                <button type="button" onclick="adicionarInteressePorNome('Swagger')">Adicionar aos interesses</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BANCO DE DADOS -->
+    <section>
+        <h1>Banco de Dados</h1>
+        
+        <div class="cards-container">
+
+            <div class="card-wrapper">
+                <a class="card">SQL</a>
+                <button type="button" onclick="adicionarInteressePorNome('SQL')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">PostgreSQL</a>
+                <button type="button" onclick="adicionarInteressePorNome('PostgreSQL')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">MySQL</a>
+                <button type="button" onclick="adicionarInteressePorNome('MySQL')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">SQLite</a>
+                <button type="button" onclick="adicionarInteressePorNome('SQLite')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">MongoDB</a>
+                <button type="button" onclick="adicionarInteressePorNome('MongoDB')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">NoSQL</a>
+                <button type="button" onclick="adicionarInteressePorNome('NoSQL')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Redis</a>
+                <button type="button" onclick="adicionarInteressePorNome('Redis')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Indexes</a>
+                <button type="button" onclick="adicionarInteressePorNome('Indexes')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">Joins</a>
+                <button type="button" onclick="adicionarInteressePorNome('Joins')">Adicionar aos interesses</button>
+            </div>
+
+            <div class="card-wrapper">
+                <a class="card">ORM</a>
+                <button type="button" onclick="adicionarInteressePorNome('ORM')">Adicionar aos interesses</button>
+            </div>
+
+        </div>
+    </section>
+
+</main>
 
 </body>
 </html>

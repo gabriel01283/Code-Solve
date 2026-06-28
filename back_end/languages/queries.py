@@ -1,15 +1,15 @@
 from back_end.database.connection import get_connection
 
 
-def insert_language(name: str, description: str):
+def insert_language(name: str, description: str, category: str):
     conn = get_connection()
     cur = conn.cursor()
 
     cur.execute("""
-        INSERT INTO languages (name, description)
-        VALUES (%s, %s)
-        RETURNING id, name, description, created_at
-    """, (name, description))
+        INSERT INTO languages (name, description, category)
+        VALUES (%s, %s, %s)
+        RETURNING id, name, description, category, created_at
+    """, (name, description, category))
 
     language = cur.fetchone()
 
@@ -21,7 +21,8 @@ def insert_language(name: str, description: str):
         "id": language[0],
         "name": language[1],
         "description": language[2],
-        "created_at": language[3]
+        "category": language[3],
+        "created_at": language[4]
     }
 
 
@@ -30,9 +31,9 @@ def get_all_languages():
     cur = conn.cursor()
 
     cur.execute("""
-        SELECT id, name, description, created_at
+        SELECT id, name, description, category, created_at
         FROM languages
-        ORDER BY name ASC
+        ORDER BY category ASC, name ASC
     """)
 
     languages = cur.fetchall()
@@ -45,7 +46,8 @@ def get_all_languages():
             "id": language[0],
             "name": language[1],
             "description": language[2],
-            "created_at": language[3]
+            "category": language[3],
+            "created_at": language[4]
         }
         for language in languages
     ]
@@ -56,7 +58,7 @@ def get_language_by_id(language_id: int):
     cur = conn.cursor()
 
     cur.execute("""
-        SELECT id, name, description, created_at
+        SELECT id, name, description, category, created_at
         FROM languages
         WHERE id = %s
     """, (language_id,))
@@ -73,7 +75,8 @@ def get_language_by_id(language_id: int):
         "id": language[0],
         "name": language[1],
         "description": language[2],
-        "created_at": language[3]
+        "category": language[3],
+        "created_at": language[4]
     }
 
 
@@ -94,3 +97,38 @@ def delete_language(language_id: int):
     conn.close()
 
     return deleted is not None
+
+def seed_languages(items):
+    conn = get_connection()
+    cur = conn.cursor()
+
+    created_items = []
+
+    for item in items:
+        cur.execute("""
+            INSERT INTO languages (name, description, category)
+            VALUES (%s, %s, %s)
+            ON CONFLICT (name) DO NOTHING
+            RETURNING id, name, description, category, created_at
+        """, (
+            item["name"],
+            item["description"],
+            item["category"]
+        ))
+
+        created = cur.fetchone()
+
+        if created:
+            created_items.append({
+                "id": created[0],
+                "name": created[1],
+                "description": created[2],
+                "category": created[3],
+                "created_at": created[4]
+            })
+
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    return created_items
