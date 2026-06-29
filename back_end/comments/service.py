@@ -1,7 +1,8 @@
 from back_end.comments.queries import (
     insert_comment,
     get_all_comments,
-    delete_comment
+    delete_comment,
+    count_comments_by_user
 )
 
 
@@ -22,6 +23,10 @@ def create_comment(user_id: int, content: str):
 
 def list_comments():
     return get_all_comments()
+
+
+def get_user_comments_count(user_id: int):
+    return count_comments_by_user(user_id)
 
 
 def remove_comment(comment_id: int, user_id: int):

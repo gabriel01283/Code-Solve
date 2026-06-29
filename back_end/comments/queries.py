@@ -58,6 +58,24 @@ def get_all_comments():
     ]
 
 
+def count_comments_by_user(user_id: int):
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT COUNT(*)
+        FROM comments
+        WHERE user_id = %s
+    """, (user_id,))
+
+    total = cur.fetchone()[0]
+
+    cur.close()
+    conn.close()
+
+    return total
+
+
 def delete_comment(comment_id: int, user_id: int):
     conn = get_connection()
     cur = conn.cursor()

@@ -20,7 +20,8 @@ from back_end.auth.dependencies import get_current_user
 from back_end.comments.service import (
     create_comment,
     list_comments,
-    remove_comment
+    remove_comment,
+    get_user_comments_count
 )
 
 from back_end.languages.service import (
@@ -181,10 +182,13 @@ def perfil(user_id: int = Depends(get_current_user)):
             "error": "user not found"
         }
 
+    comments_count = get_user_comments_count(user_id)
+
     return {
         "id": user[0],
         "username": user[1],
-        "email": user[2]
+        "email": user[2],
+        "comments_count": comments_count
     }
 
 
