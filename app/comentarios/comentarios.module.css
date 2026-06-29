@@ -260,3 +260,135 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- RESPOSTAS ---------- */
+
+.respostasArea {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.respostasArea h4 {
+  color: #ffffff;
+  margin-bottom: 14px;
+  font-size: .95rem;
+}
+
+.semRespostas {
+  color: #8fa1c7;
+  font-size: .9rem;
+  margin-bottom: 14px;
+}
+
+.respostasLista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.respostaCard {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+  border-left: 3px solid #00eaff;
+}
+
+.respostaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.respostaHeader strong {
+  color: #fff;
+  font-size: .92rem;
+}
+
+.respostaHeader span {
+  color: #8fa1c7;
+  font-size: .75rem;
+}
+
+.respostaCard p {
+  color: #dce6ff;
+  line-height: 1.6;
+}
+
+.respostaForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.respostaForm textarea {
+  min-height: 90px;
+  resize: vertical;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,234,255,.2);
+  background: rgba(4,8,24,.6);
+  color: white;
+  outline: none;
+  font-family: inherit;
+}
+
+.respostaForm textarea:focus {
+  border-color: #00eaff;
+}
+
+.respostaForm button {
+  width: fit-content;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(135deg,#00c8ff,#7c3aed);
+}
+
+.btnDeletarResposta {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(255,70,100,.12);
+  color: #ff8ca0;
+  border: 1px solid rgba(255,70,100,.35);
+}
+
+.loginRespostaAviso {
+  color: #8fa1c7;
+  font-size: .9rem;
+  margin-top: 12px;
+}
+
+.comentarioAcoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btnReport {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fbbf24;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: 0.25s;
+}
+
+.btnReport:hover {
+  background: rgba(251, 191, 36, 0.2);
+  transform: translateY(-1px);
+}

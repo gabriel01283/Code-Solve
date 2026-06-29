@@ -11,7 +11,7 @@ def get_connection():
 
     if database_url:
         return psycopg2.connect(database_url)
-
+    
     return psycopg2.connect(
         database=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),

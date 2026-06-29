@@ -43,6 +43,12 @@ from back_end.comment_replies.service import (
     remove_reply
 )
 
+from back_end.reports.service import (
+    create_report,
+    list_reports,
+    remove_report
+)
+
 
 app = FastAPI()
 
@@ -87,6 +93,10 @@ class LanguageCreate(BaseModel):
 
 class ReplyCreate(BaseModel):
     content: str
+
+
+class ReportCreate(BaseModel):
+    reason: str
 
 
 # -------- REGISTER --------
@@ -425,6 +435,57 @@ def delete_existing_reply(
         user_id
     )
 
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": result["message"]
+    }
+
+# -------- CREATE REPORT --------
+@app.post("/reports/{comment_id}")
+def create_new_report(
+    comment_id: int,
+    report: ReportCreate,
+    user_id: int = Depends(get_current_user)
+):
+
+    result = create_report(
+        user_id,
+        comment_id,
+        report.reason
+    )
+
+    if not result["success"]:
+        return {
+            "error": result["error"]
+        }
+
+    return {
+        "message": "report created",
+        "report": result["report"]
+    }
+
+
+# -------- LIST REPORTS --------
+@app.get("/reports")
+def get_reports():
+
+    reports = list_reports()
+
+    return {
+        "reports": reports
+    }
+
+
+# -------- DELETE REPORT --------
+@app.delete("/reports/{report_id}")
+def delete_existing_report(report_id: int):
+
+    result = remove_report(report_id)
+    
     if not result["success"]:
         return {
             "error": result["error"]

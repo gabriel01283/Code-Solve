@@ -60,7 +60,7 @@ def create_tables():
             FOREIGN KEY (language_id)
             REFERENCES languages(id)
             ON DELETE CASCADE,
-
+        
         CONSTRAINT unique_user_interest
             UNIQUE (user_id, language_id)
     );
@@ -86,6 +86,29 @@ def create_tables():
     );
     """)
 
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS reports (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        comment_id INTEGER NOT NULL,
+        reason VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+        CONSTRAINT fk_report_user
+            FOREIGN KEY (user_id)
+            REFERENCES users(id)
+            ON DELETE CASCADE,
+
+        CONSTRAINT fk_report_comment
+            FOREIGN KEY (comment_id)
+            REFERENCES comments(id)
+            ON DELETE CASCADE,
+
+        CONSTRAINT unique_report
+            UNIQUE (user_id, comment_id)
+    );
+    """)
     conn.commit()
     cur.close()
-    conn.close()
+    conn.close()  
+  
