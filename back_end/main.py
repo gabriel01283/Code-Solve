@@ -232,7 +232,7 @@ def delete_existing_comment(
     comment_id: int,
     user_id: int = Depends(get_current_user)
 ):
-
+    
     result = remove_comment(
         comment_id,
         user_id
