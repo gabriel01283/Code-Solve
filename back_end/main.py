@@ -189,7 +189,7 @@ def create_new_comment(
         user_id,
         comment.content
     )
-
+    
     if not result["success"]:
         return {
             "error": result["error"]

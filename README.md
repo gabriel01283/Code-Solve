@@ -1,272 +1,89 @@
-# Solve Code
+# Solve Code — Next.js
 
-## Sobre o projeto
+Frontend do projeto **Solve Code** migrado para **Next.js 16 (App Router)**.  
+O backend FastAPI permanece igual ao original, sem alterações.
 
-O **Solve Code** é uma aplicação web criada para auxiliar estudantes iniciantes no aprendizado de programação. O sistema apresenta conteúdos sobre linguagens de programação e permite que usuários se cadastrem, façam login, acessem seu perfil e interajam por meio de comentários.
+---
 
-O projeto foi desenvolvido para a disciplina **Programação para Web**, utilizando front-end, API REST, autenticação com JWT, banco de dados PostgreSQL e deploy online.
+## Estrutura
 
-## Deploy
-
-Front-end:
-
-```text
-https://code-solve-front.onrender.com
 ```
-
-Back-end/API:
-
-```text
-https://code-solve.onrender.com
-```
-
-Documentação da API:
-
-```text
-https://code-solve.onrender.com/docs
-```
-
-## Funcionalidades
-
-* Página inicial do projeto
-* Páginas de conteúdos sobre linguagens de programação
-* Página sobre o site
-* Página de desenvolvedores
-* Cadastro de usuários
-* Login de usuários
-* Perfil do usuário autenticado
-* Criação de comentários
-* Listagem de comentários
-* Exclusão de comentários
-* Cadastro de linguagens
-* Listagem de linguagens
-* Busca de linguagem por ID
-* Exclusão de linguagens
-* Autenticação com JWT
-* Senhas protegidas com hash
-
-## Tecnologias utilizadas
-
-### Front-end
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Back-end
-
-* Python
-* FastAPI
-* Uvicorn
-* Pydantic
-* Python-Jose
-* Bcrypt
-* Python-dotenv
-
-### Banco de dados
-
-* PostgreSQL
-* Psycopg2
-* Supabase
-
-### Deploy
-
-* Render
-
-### Versionamento
-
-* Git
-* GitHub
-
-## Estrutura do projeto
-
-```text
-Code-Solve/
-│
-├── back_end/
-│   ├── auth/
-│   ├── comments/
-│   ├── database/
-│   ├── languages/
-│   ├── usuarios/
-│   └── main.py
-│
-├── parte_HTML/
+code-solve-next/
+├── app/
+│   ├── layout.tsx            # Layout raiz
+│   ├── globals.css           # Estilos globais (fundo animado, navbar, cards home)
+│   ├── page.tsx              # Página inicial (/)
+│   ├── components/Navbar.tsx # Navbar reutilizável
+│   ├── login/                # /login
+│   ├── cadastro/             # /cadastro
+│   ├── perfil/               # /perfil (protegida por token)
+│   ├── comentarios/          # /comentarios
 │   ├── cards/
-│   ├── comentarios/
-│   ├── criadores/
-│   ├── sobre/
-│   ├── usuario/
-│   ├── cards_geral.html
-│   └── index.html
-│
-├── parte_CSS/
-│
-├── img/
-│
-├── document/
-│
-├── index.html
-├── requirements.txt
-├── Procfile
-├── .gitignore
-└── README.md
+│   │   ├── page.tsx          # /cards (todos os cards)
+│   │   └── linguagens/[slug] # /cards/linguagens/python, /java, etc.
+│   ├── sobre/                # /sobre
+│   └── desenvolvedores/      # /desenvolvedores
+├── back_end/                 # Backend FastAPI (sem alterações)
+├── lib/
+│   ├── api.ts                # Helpers: API_URL, getToken, isLoggedIn, logout
+│   └── languageContent.json  # Conteúdo HTML das páginas de linguagens
+├── public/                   # Imagens e assets
+├── requirements.txt          # Dependências Python
+└── .env.local                # Variáveis de ambiente
 ```
 
-## Como executar o projeto localmente
+---
 
-### 1. Clonar o repositório
+## Como rodar
+
+### 1. Frontend (Next.js)
 
 ```bash
-git clone https://github.com/gabriel01283/Code-Solve.git
-cd Code-Solve
+cd code-solve-next
+npm install
+npm run dev
 ```
 
-### 2. Criar ambiente virtual
+Acesse: http://localhost:3000
 
-```bash
-python -m venv .venv
-```
-
-No Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-### 3. Instalar dependências
+### 2. Backend (FastAPI) — em outro terminal
 
 ```bash
 pip install -r requirements.txt
+uvicorn back_end.main:app --reload --port 8000
 ```
 
-### 4. Configurar variáveis de ambiente
+### 3. Conectar ao backend local
 
-Crie um arquivo `.env` na raiz do projeto.
+Edite `.env.local`:
 
-Exemplo usando banco local:
-
-```env
-SECRET_KEY=sua_chave_secreta_aqui
-DB_NAME=nome_do_banco
-DB_USER=usuario_do_banco
-DB_PASSWORD=senha_do_banco
-DB_HOST=localhost
-DB_PORT=5432
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
-Exemplo usando banco online:
+---
 
-```env
-SECRET_KEY=sua_chave_secreta_aqui
-DATABASE_URL=sua_url_do_banco_aqui
-```
+## Funcionalidades mantidas
 
-O arquivo `.env` não deve ser enviado para o GitHub.
+- Página inicial com cards de linguagens
+- Todos os Cards (linguagens, frameworks, Git, APIs, banco de dados)
+- Páginas de conteúdo de cada linguagem (Python, Java, C++, JS, C#, Go, Rust, Kotlin, Swift, HTML, CSS)
+- Login com JWT / Cadastro / Perfil com interesses
+- Comentários (listar, criar, excluir)
+- Adicionar interesses via botões nos cards
+- Páginas Sobre e Desenvolvedores
+- Proteção de rota do perfil
 
-### 5. Configurar o banco de dados
+## Mapeamento de rotas
 
-O projeto utiliza PostgreSQL.
-
-As tabelas são criadas pelo back-end ao iniciar a aplicação, utilizando o arquivo:
-
-```text
-back_end/database/init_db.py
-```
-
-Cada desenvolvedor deve usar as próprias configurações de banco, como nome do banco, usuário, senha, host e porta.
-
-### 6. Executar o back-end
-
-```bash
-uvicorn back_end.main:app --reload
-```
-
-A API local ficará disponível em:
-
-```text
-http://127.0.0.1:8000
-```
-
-A documentação automática da API local pode ser acessada em:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-### 7. Executar o front-end
-
-O front-end pode ser executado com uma extensão como **Live Server** ou outro servidor local.
-
-Página inicial:
-
-```text
-parte_HTML/index.html
-```
-
-## Endpoints principais
-
-### Usuários
-
-```http
-POST /register
-POST /login
-GET /perfil
-```
-
-### Comentários
-
-```http
-GET /comments
-POST /comments
-DELETE /comments/{comment_id}
-```
-
-### Linguagens
-
-```http
-GET /languages
-POST /languages
-GET /languages/{language_id}
-DELETE /languages/{language_id}
-```
-
-As rotas de perfil, criação de comentário, exclusão de comentário, criação de linguagem e exclusão de linguagem exigem autenticação JWT.
-
-## Banco de dados
-
-O sistema utiliza PostgreSQL para armazenar os dados da aplicação.
-
-Tabelas principais:
-
-* `users`
-* `comments`
-* `languages`
-
-A tabela `comments` possui relação com a tabela `users`.
-
-## Segurança
-
-* As senhas dos usuários são armazenadas com hash utilizando bcrypt.
-* A autenticação é feita com JWT.
-* Informações sensíveis devem ficar em variáveis de ambiente e não devem ser enviadas para o repositório.
-* O arquivo `.env` está protegido pelo `.gitignore`.
-
-## Melhorias futuras
-
-* Implementar controle de permissões com RBAC
-* Adicionar painel administrativo
-* Melhorar o tratamento de erros da API
-* Melhorar a interface da área de comentários
-* Adicionar edição de comentários
-* Adicionar edição de perfil do usuário
-
-## Desenvolvedores
-
-Gabriel Saraiva
-
-Maria Clara
-
-## Licença
-
-Projeto desenvolvido para fins acadêmicos.
+| Rota Next.js | HTML original |
+|---|---|
+| `/` | `index.html` |
+| `/login` | `usuario/login.html` |
+| `/cadastro` | `usuario/cadastro.html` |
+| `/perfil` | `usuario/perfil.html` |
+| `/comentarios` | `comentarios/comentarios.html` |
+| `/cards` | `cards_geral.html` |
+| `/cards/linguagens/python` | `cards/linguagens/python.html` |
+| `/sobre` | `sobre/sobre_o_site.html` |
+| `/desenvolvedores` | `criadores/criadores.html` |

@@ -1,0 +1,85 @@
+.section {
+  margin-bottom: 64px;
+}
+
+.section h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #00f0ff;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.section > p {
+  font-family: "Share Tech Mono", monospace;
+  color: #9dafc9;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  background: rgba(4, 8, 18, 0.75);
+  backdrop-filter: blur(12px);
+  color: #c8d4e8;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+a.card:hover {
+  border-color: rgba(0, 240, 255, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 22px rgba(0, 240, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.cardWrapper button {
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(0, 240, 255, 0.06);
+  color: #00f0ff;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cardWrapper button:hover {
+  background: rgba(0, 240, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

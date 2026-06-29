@@ -1,0 +1,94 @@
+.main {
+  width: min(1000px, 92%);
+  margin: 64px auto 96px;
+}
+
+.title {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #f8fafc;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(59, 130, 246, 0.5);
+  margin-bottom: 40px;
+}
+
+.creatorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.creatorCard {
+  padding: 28px 24px;
+  min-height: 380px;
+  background: rgba(10, 20, 40, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 18px;
+  text-align: center;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+.creatorCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: rgba(59, 130, 246, 0.7);
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.25),
+    0 0 60px rgba(59, 130, 246, 0.12);
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: 2px solid rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.creatorCard h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.creatorCard p {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  transition: 0.2s ease;
+}
+
+.links a:hover {
+  transform: scale(1.2);
+  border-color: #60a5fa;
+  box-shadow:
+    0 0 15px rgba(96, 165, 250, 0.4),
+    0 0 30px rgba(96, 165, 250, 0.2);
+}
