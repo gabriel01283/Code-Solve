@@ -369,12 +369,6 @@ O Code Solve foi desenvolvido para colocar em prática os principais conceitos d
 
 ---
 
-# 👥 Equipe
-
-Projeto desenvolvido para a disciplina de **Programação Web**.
-
----
-
 # 📄 Licença
 
 Este projeto possui finalidade exclusivamente acadêmica e não possui fins comerciais.
