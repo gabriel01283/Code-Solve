@@ -347,7 +347,7 @@ def add_new_interest(
 def get_user_interests(
     user_id: int = Depends(get_current_user)
 ):
-
+    
     interests = list_user_interests(user_id)
 
     return {
