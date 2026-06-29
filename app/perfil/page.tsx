@@ -110,7 +110,7 @@ export default function PerfilPage() {
             <strong>{commentsCount}</strong>
             <p>Comentários</p>
           </div>
-
+          
           <div className={styles.statCard}>
             <span>💻</span>
             <strong>{interests.length}</strong>
