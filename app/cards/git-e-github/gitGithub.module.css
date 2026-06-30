@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(0, 240, 255, 0.12), transparent 35%),
+    linear-gradient(180deg, #050508 0%, #090914 55%, #030306 100%);
+  color: #c9d3df;
+  padding-bottom: 80px;
+}
+
+.main {
+  width: min(920px, 88%);
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.section {
+  margin-bottom: 56px;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(13, 13, 22, 0.78);
+  border: 1px solid rgba(0, 240, 255, 0.16);
+  box-shadow: 0 0 28px rgba(0, 240, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.section h1,
+.section h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.section h1 {
+  font-size: 34px;
+}
+
+.section h2 {
+  font-size: 25px;
+  color: #67e8f9;
+}
+
+.section p {
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.section ul,
+.section ol {
+  padding-left: 24px;
+}
+
+.section li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.codeBlock {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 14px;
+  padding: 18px;
+  overflow-x: auto;
+  color: #e2e8f0;
+  margin: 18px 0;
+}
+
+.codeBlock code {
+  font-family: Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.card {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .main {
+    width: 92%;
+    padding-top: 60px;
+  }
+
+  .section {
+    padding: 22px;
+  }
+
+  .section h1 {
+    font-size: 28px;
+  }
+}
