@@ -26,13 +26,9 @@ O projeto foi desenvolvido utilizando uma arquitetura **Full Stack**, separando 
 
 # 🌐 Deploy
 
-## Front-end
+## Site
 
-https://code-solve-front.onrender.com
-
-## Back-end (API)
-
-https://code-solve.onrender.com
+https://code-solve-next.onrender.com
 
 ## Documentação da API (Swagger)
 

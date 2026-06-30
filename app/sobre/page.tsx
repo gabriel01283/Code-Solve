@@ -61,9 +61,9 @@ export default function SobrePage() {
             </li>
 
             <li>
-              <strong>Cards de Programação</strong> — Reúnem conteúdos sobre
-              linguagens de programação. Ao clicar em um card, o usuário acessa
-              uma página com informações específicas sobre aquela linguagem.
+              <strong>Cards</strong> — Reúnem conteúdos sobre
+              linguagens de programação,Banco de dados,APIs e Frameworks. Ao clicar em um card, o usuário acessa
+              uma página com informações específicas sobre o tema abordado nele.
             </li>
 
             <li>

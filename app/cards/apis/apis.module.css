@@ -1,0 +1,183 @@
+.page {
+  --primary: #00f0ff;
+  --secondary: #306998;
+  --text: #c9d3df;
+  --panel: #0d0d16;
+
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--primary) 18%, transparent), transparent 32%),
+    radial-gradient(circle at bottom left, color-mix(in srgb, var(--secondary) 14%, transparent), transparent 30%),
+    linear-gradient(180deg, #050508 0%, #090914 55%, #030306 100%);
+  padding-bottom: 80px;
+  overflow-x: hidden;
+}
+
+.rest {
+  --primary: #00f0ff;
+  --secondary: #306998;
+}
+
+.crud {
+  --primary: #ffd43b;
+  --secondary: #306998;
+}
+
+.endpoints {
+  --primary: #7f52ff;
+  --secondary: #c711e1;
+}
+
+.httpMethods {
+  --primary: #fa7343;
+  --secondary: #f05138;
+}
+
+.json {
+  --primary: #42b883;
+  --secondary: #35495e;
+}
+
+.graphql {
+  --primary: #e10098;
+  --secondary: #ff6ac1;
+}
+
+.rateLimit {
+  --primary: #dc382d;
+  --secondary: #ff6b5f;
+}
+
+.swagger {
+  --primary: #85ea2d;
+  --secondary: #4f9f1f;
+}
+
+.webhooks {
+  --primary: #00dc82;
+  --secondary: #36e4da;
+}
+
+.main {
+  width: min(920px, 88%);
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.section {
+  margin-bottom: 56px;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(13, 13, 22, 0.78);
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+  box-shadow: 0 0 28px color-mix(in srgb, var(--primary) 10%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.section h1,
+.section h2,
+.section h3 {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.section h1 {
+  font-size: 34px;
+}
+
+.section h2 {
+  font-size: 25px;
+  color: var(--primary);
+}
+
+.section h3 {
+  font-size: 21px;
+  color: var(--secondary);
+}
+
+.section p {
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.section ul,
+.section ol {
+  padding-left: 24px;
+}
+
+.section li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.codeBlock {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  border-radius: 14px;
+  padding: 18px;
+  overflow-x: auto;
+  color: #e2e8f0;
+  margin: 18px 0;
+}
+
+.codeBlock code {
+  font-family: Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.card {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, transparent);
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.table th,
+.table td {
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  padding: 14px;
+  text-align: left;
+}
+
+.table th {
+  color: #fff;
+  background: color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+.table td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 700px) {
+  .main {
+    width: 92%;
+    padding-top: 60px;
+  }
+
+  .section {
+    padding: 22px;
+  }
+
+  .section h1 {
+    font-size: 28px;
+  }
+}
