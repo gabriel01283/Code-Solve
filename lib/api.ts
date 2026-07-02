@@ -1,4 +1,4 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://code-solve.onrender.com";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://code-solve-back.onrender.com";
 
 export function getToken(): string | null {
   if (typeof window === "undefined") return null;
