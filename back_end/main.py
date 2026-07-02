@@ -99,6 +99,11 @@ class ReplyCreate(BaseModel):
 class ReportCreate(BaseModel):
     reason: str
 
+# ---------- ENDPOINT MOSTRAR BACKEND ----------
+@app.get("/")
+def home():
+    return {"message": "Backend funcionando"}
+
 
 # -------- REGISTER --------
 @app.post("/register")
