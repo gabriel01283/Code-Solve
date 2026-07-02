@@ -36,7 +36,7 @@ https://code-solve-back.onrender.com
 
 ## Documentação da API (Swagger)
 
-https://code-solve.onrender.com/docs
+https://code-solve-back.onrender.com/docs
 
 ---
 
